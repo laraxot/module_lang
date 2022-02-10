@@ -60,7 +60,7 @@ use Modules\Xot\Services\RouteService;
 //------ traits ---
 
 /**
- * Modules\Xot\Models\Traits\LinkedTrait.
+ * Modules\Lang\Models\Traits\LinkedTrait.
  *
  * @property \Modules\LU\Models\User|null $user
  * @property \Modules\Lang\Models\Post    $post
