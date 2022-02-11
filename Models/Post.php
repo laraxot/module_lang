@@ -256,7 +256,10 @@ class Post extends Model {
 
     public const SEARCHABLE_FIELDS = ['title', 'guid', 'txt'];
 
-    public function toSearchableArray(): array {
+    /**
+     * @return array
+     */
+    public function toSearchableArray() {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
 }//end class
