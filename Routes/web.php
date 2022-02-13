@@ -11,6 +11,8 @@
 |
 */
 
-Route::prefix('lang')->group(function() {
-    Route::get('/', 'LangController@index');
-});
+Route::prefix('lang')->group(
+    function () {
+        Route::get('/', 'LangController@index');
+    }
+);

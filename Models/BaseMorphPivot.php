@@ -10,7 +10,8 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseMorphPivot.
  */
-abstract class BaseMorphPivot extends MorphPivot {
+abstract class BaseMorphPivot extends MorphPivot
+{
     use Updater;
 
     protected $connection = 'mysql'; // this will use the specified database connection
