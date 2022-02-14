@@ -59,7 +59,7 @@ trait LinkedTrait
 
         if (false === $alias) {
             $data = [];
-            $panel = PanelService::get($this);
+            $panel = PanelService::make()->get($this);
             $alias = $panel->postType();
             $data['model'][$alias] = $class;
             TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
@@ -324,7 +324,7 @@ trait LinkedTrait
     public function getUrlAttribute($value) {
 
         //return $this->getPostAttr(__FUNCTION__, $value);
-        return PanelService::get($this)->url();
+        return PanelService::make()->get($this)->url();
     }
 
     //*/
@@ -539,7 +539,7 @@ trait LinkedTrait
     {
         $item_guid = str_replace('%20', '%', $item_guid);
         $item_guid = str_replace(' ', '%', $item_guid);
-        $panel = PanelService::get($this);
+        $panel = PanelService::make()->get($this);
         $other_lang = Post::query()
             ->where('post_type', $panel->postType())
             ->where('guid', 'like', $item_guid)
