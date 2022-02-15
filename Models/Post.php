@@ -100,7 +100,6 @@ use Modules\Xot\Traits\Updater;
  * @property string|null                     $linkable_type
  * @property int|null                        $views_count
  * @property Model|\Eloquent                 $linkable
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post query()
@@ -167,17 +166,17 @@ class Post extends Model {
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrlLang($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
- * @mixin  \Eloquent
- *
+ * @mixin \Eloquent
  * @property string|null $type
  * @property string|null $price
  * @property string|null $price_currency
  * @property int|null    $views
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Post wherePrice($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post wherePriceCurrency($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+ * @mixin IdeHelperPost
  */
 class Post extends Model
 {
