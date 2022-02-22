@@ -192,6 +192,7 @@ class Post extends Model {
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
  * @mixin IdeHelperPost
+ * @property int|null $auth_user_id
  */
 class Post extends Model {
     //use Cachable;
