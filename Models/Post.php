@@ -586,8 +586,8 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
- * @mixin IdeHelperPost
  * @property int|null $auth_user_id
+ * @mixin IdeHelperPost
  */
 class Post extends Model {
     //use Cachable;
