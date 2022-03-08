@@ -521,7 +521,7 @@ trait LinkedTrait
                 ->select('title', 'guid', 'subtitle')
                 ->where('lang', $this->lang)
                 ->where('post.post_type', $this->post_type)
-                //->limit(1)
+
             ;
         });
         */
@@ -594,7 +594,7 @@ trait LinkedTrait
                 ->select('title', 'guid', 'subtitle')
                 ->where('lang', $this->lang)
                 ->where('post.post_type', $this->post_type)
-                //->limit(1)
+
             ;
         });
         */
