@@ -1165,7 +1165,9 @@ trait LinkedTrait
             $panel = PanelService::make()->get($this);
             $alias = $panel->postType();
             $data['model'][$alias] = $class;
+           
             dddx($data);
+            
             throw new Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
             TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
         }
