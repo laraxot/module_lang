@@ -225,6 +225,9 @@ class Post extends Model {
         return $value;
     }
 
+    /**
+     * ---
+     */
     public function getGuidAttribute(?string $value): ?string {
         if (is_string($value) && $value!='' && false === strpos($value, ' ')) {
             return $value;
