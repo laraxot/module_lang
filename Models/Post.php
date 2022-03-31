@@ -225,11 +225,13 @@ class Post extends Model {
         return $value;
     }
 
+    /**
+     * ---
+     */
     public function getGuidAttribute(?string $value): ?string {
-        if (is_string($value) && false === strpos($value, ' ')) {
+        if (is_string($value) && $value!='' && false === strpos($value, ' ')) {
             return $value;
         }
-        //dddx($this->title);
         $value = $this->title;
         if ('' == $value) {
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
