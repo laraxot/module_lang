@@ -1117,11 +1117,9 @@ use Illuminate\Database\Eloquent\Relations\Relation;
 //use Illuminate\Support\Facades\URL;
 //use Laravel\Scout\Searchable;
 use Illuminate\Support\Facades\App;
-//----- models------
 use Illuminate\Support\Facades\Auth;
 //use Modules\Blog\Models\Favorite;
 use Illuminate\Support\Facades\Route;
-//----- services -----
 use Illuminate\Support\Str;
 use Modules\Lang\Models\Post;
 use Modules\LU\Models\User;
@@ -1431,7 +1429,7 @@ trait LinkedTrait {
     }
     */
     public function setGuidAttribute(?string $value): void {
-        if ('' == $value && null != $this->post) {
+        if (('' == $value || $value == null ) && null != $this->post) {
             $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
             $res = $this->post->save();
         }
