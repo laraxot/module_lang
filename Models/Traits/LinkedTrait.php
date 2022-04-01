@@ -48,6 +48,7 @@ trait LinkedTrait {
     //------- relationships ------------
 
     /**
+     * ----
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * @throws \ReflectionException
      */
@@ -60,12 +61,10 @@ trait LinkedTrait {
             $data = [];
             $panel = PanelService::make()->get($this);
             $alias = $panel->postType();
-            $data['model'][$alias] = $class;
+            $data[$alias] = $class;
+            TenantService::saveConfig(['name' => 'morph_map', 'data' => $data]);
+            throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
 
-            //dddx($data);
-
-            throw new Exception('[class: '.$class.']['.__LINE__.']['.class_basename(__CLASS__).']');
-            TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
         }
 
         if (null == Relation::getMorphedModel((string) $alias)) {
@@ -501,7 +500,6 @@ trait LinkedTrait {
                 ->select('title', 'guid', 'subtitle')
                 ->where('lang', $this->lang)
                 ->where('post.post_type', $this->post_type)
-
             ;
         });
         */
@@ -572,7 +570,6 @@ trait LinkedTrait {
                 ->select('title', 'guid', 'subtitle')
                 ->where('lang', $this->lang)
                 ->where('post.post_type', $this->post_type)
-
             ;
         });
         */

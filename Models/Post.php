@@ -104,7 +104,10 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+<<<<<<< HEAD
+=======
  * @property int|null $auth_user_id
+>>>>>>> 7d158231dbb15c2a7f78061d1759eaca0a8a011e
  * @mixin IdeHelperPost
  */
 class Post extends Model {
@@ -225,6 +228,13 @@ class Post extends Model {
         return $value;
     }
 
+<<<<<<< HEAD
+    public function getGuidAttribute(?string $value): ?string {
+        if (is_string($value) && false === strpos($value, ' ')) {
+            return $value;
+        }
+        //dddx($this->title);
+=======
     /**
      * ---
      */
@@ -232,6 +242,7 @@ class Post extends Model {
         if (is_string($value) && $value!='' && false === strpos($value, ' ')) {
             return $value;
         }
+>>>>>>> 7d158231dbb15c2a7f78061d1759eaca0a8a011e
         $value = $this->title;
         if ('' == $value) {
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
