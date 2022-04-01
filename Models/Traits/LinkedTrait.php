@@ -100,9 +100,11 @@ trait LinkedTrait {
         return $this->morphMany(Image::class, 'post');
     }
 
+    /*commento*/
+
     /* spostato in Favorite.php
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
-    public function favorites() {
+    public function favorites()  {
         return $this->morphMany(Favorite::class, 'post');
     }
     */
