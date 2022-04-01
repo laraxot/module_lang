@@ -1338,7 +1338,7 @@ trait LinkedTrait {
             $alias = $panel->postType();
             $data['model'][$alias] = $class;
             TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
-            throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
+            //throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
 
         }
 
