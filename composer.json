@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
     "name": "nwidart/lang",
     "description": "",
@@ -22,28 +21,3 @@
         }
     }
 }
-=======
-{
-    "name": "nwidart/lang",
-    "description": "",
-    "authors": [
-        {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
-        }
-    ],
-    "extra": {
-        "laravel": {
-            "providers": [],
-            "aliases": {
-
-            }
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "Modules\\Lang\\": ""
-        }
-    }
-}
->>>>>>> 7d158231dbb15c2a7f78061d1759eaca0a8a011e
