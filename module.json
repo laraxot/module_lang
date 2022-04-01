@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "name": "Lang",
     "alias": "lang",
@@ -11,3 +12,34 @@
     "files": [],
     "requires": []
 }
+=======
+<<<<<<< HEAD
+{
+    "name": "Lang",
+    "alias": "lang",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Lang\\Providers\\LangServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
+=======
+{
+    "name": "Lang",
+    "alias": "lang",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Lang\\Providers\\LangServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
+>>>>>>> 7d158231dbb15c2a7f78061d1759eaca0a8a011e
+>>>>>>> 7c8dc604d14632a47f200e924bdb9090c0699702
