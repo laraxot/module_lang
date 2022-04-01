@@ -1498,6 +1498,7 @@ trait LinkedTrait {
     //------- relationships ------------
 
     /**
+     * ----
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * @throws \ReflectionException
      */
