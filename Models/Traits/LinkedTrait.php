@@ -1536,8 +1536,6 @@ trait LinkedTrait {
 =======
 >>>>>>> 9c926b0 (.)
 
-            //dddx($data);
-
             throw new Exception('[class: '.$class.']['.__LINE__.']['.class_basename(__CLASS__).']');
 <<<<<<< HEAD
 >>>>>>> a346cb3 (.)
