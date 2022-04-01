@@ -1551,7 +1551,7 @@ trait LinkedTrait {
 =======
 >>>>>>> 5c1c4a8 (.)
             TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
-            throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
+            //throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
 
         }
 
