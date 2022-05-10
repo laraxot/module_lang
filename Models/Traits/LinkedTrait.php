@@ -322,6 +322,10 @@ trait LinkedTrait {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
     */
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 00ded98 (.)
     public function setTitleAttribute(?string $value): void {
         $this->setPostAttr(__FUNCTION__, $value);
     }
@@ -329,8 +333,13 @@ trait LinkedTrait {
     public function setSubtitleAttribute(?string $value): void {
         $this->setPostAttr(__FUNCTION__, $value);
     }
+<<<<<<< HEAD
 
 
+=======
+    
+    
+>>>>>>> 00ded98 (.)
     public function setGuidAttribute(?string $value): void {
         if (('' == $value || null == $value) && null != $this->post) {
             $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
@@ -378,11 +387,15 @@ trait LinkedTrait {
         $data['lang'] = App::getLocale();
         //$this->post->$name=$value;
         //$res=$this->post->save();
+<<<<<<< HEAD
         if(is_object($this->post)){
             $this->post->update($data);
         }else{
             $this->post()->updateOrCreate($data);
         }
+=======
+        $this->post()->updateOrCreate($data);
+>>>>>>> 00ded98 (.)
         //dddx($res);
         /*
         $rows=$this->post();
