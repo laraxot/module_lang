@@ -13,11 +13,11 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\Relations\Relation;
-//use Illuminate\Support\Facades\URL;
-//use Laravel\Scout\Searchable;
+// use Illuminate\Support\Facades\URL;
+// use Laravel\Scout\Searchable;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
-//use Modules\Blog\Models\Favorite;
+// use Modules\Blog\Models\Favorite;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use Modules\Lang\Models\Post;
@@ -29,7 +29,7 @@ use Modules\Xot\Services\RouteService;
 
 // per dizionario morph
 
-//------ traits ---
+// ------ traits ---
 
 /**
  * Modules\Lang\Models\Traits\LinkedTrait.
@@ -45,10 +45,11 @@ trait LinkedTrait {
         return RouteService::inAdmin() ? 'id' : 'guid';
     }
 
-    //------- relationships ------------
+    // ------- relationships ------------
 
     /**
-     * ----
+     * ----.
+     *
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * @throws \ReflectionException
      */
@@ -64,7 +65,6 @@ trait LinkedTrait {
             $data[$alias] = $class;
             TenantService::saveConfig(['name' => 'morph_map', 'data' => $data]);
             throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
-
         }
 
         if (null == Relation::getMorphedModel((string) $alias)) {
@@ -75,12 +75,12 @@ trait LinkedTrait {
             );
         }
 
-        return $this->morphOne(Post::class, 'post')//, null, 'id')
+        return $this->morphOne(Post::class, 'post')// , null, 'id')
             ->where('lang', App::getLocale());
     }
 
     public function posts(): MorphMany {
-        return $this->morphMany(Post::class, 'post')//, null, 'id')
+        return $this->morphMany(Post::class, 'post')// , null, 'id')
             ->where('lang', App::getLocale());
     }
 
@@ -88,7 +88,7 @@ trait LinkedTrait {
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne
      */
     public function postLang(string $lang) {
-        return $this->morphOne(Post::class, 'post')//, null, 'id')
+        return $this->morphOne(Post::class, 'post')// , null, 'id')
             ->where('lang', $lang);
     }
 
@@ -99,7 +99,7 @@ trait LinkedTrait {
         return $this->morphMany(Image::class, 'post');
     }
 
-    /*commento*/
+    /* commento */
 
     /* spostato in Favorite.php
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
@@ -158,7 +158,7 @@ trait LinkedTrait {
     public function morphRelatedWithKey(string $related, bool $inverse, string $table_key): MorphToMany {
         $name = 'post';
         $pivot = $this->getTableMorph($related, $inverse);
-        //$pivot_fields = app($pivot)->getFillable();
+        // $pivot_fields = app($pivot)->getFillable();
         $model_name = Str::snake(class_basename($this));
         $related_name = Str::snake(class_basename($related));
         if ($inverse) {
@@ -206,11 +206,11 @@ trait LinkedTrait {
         return $relation->using($pivot)
             ->withPivot($pivot_fields)
             ->withTimestamps()
-            ->with(['post']) //Eager
+            ->with(['post']) // Eager
         ;
     }
 
-    //------- mutators -------------
+    // ------- mutators -------------
 
     /**
      * @return bool|mixed|string
@@ -266,17 +266,17 @@ trait LinkedTrait {
         }
 
         if (isset($this->pivot) && Str::startsWith($name, 'pivot_')) { // solo le url dipendono dal pivot
-            return $this->pivot->$name; //.'#PIVOT';
+            return $this->pivot->$name; // .'#PIVOT';
         }
 
         if (isset($this->post) && is_object($this->post)) {
-            return $this->post->$name; //.'#NO-PIVOT';
+            return $this->post->$name; // .'#NO-PIVOT';
         }
 
         return $value;
     }
 
-    //---- da mettere i mancanti ---
+    // ---- da mettere i mancanti ---
 
     public function getTitleAttribute(?string $value): ?string {
         return $this->getPostAttr(__FUNCTION__, $value);
@@ -298,7 +298,7 @@ trait LinkedTrait {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
 
-    //*
+    // *
 
     //
     // @param mixed $value
@@ -322,28 +322,7 @@ trait LinkedTrait {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
     */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-   
->>>>>>> 00ded98 (.)
-=======
 
->>>>>>> 460f514 (.)
-=======
->>>>>>> c974820 (up)
-=======
-   
->>>>>>> 00ded98 (.)
-=======
-
->>>>>>> 460f514 (.)
-=======
->>>>>>> c974820 (up)
     public function setTitleAttribute(?string $value): void {
         $this->setPostAttr(__FUNCTION__, $value);
     }
@@ -351,38 +330,7 @@ trait LinkedTrait {
     public function setSubtitleAttribute(?string $value): void {
         $this->setPostAttr(__FUNCTION__, $value);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-    
-    
->>>>>>> 00ded98 (.)
-=======
-
-
->>>>>>> 460f514 (.)
-=======
-
-
->>>>>>> c974820 (up)
-=======
-    
-    
->>>>>>> 00ded98 (.)
-=======
-
-
->>>>>>> 460f514 (.)
-=======
-
-
->>>>>>> c974820 (up)
     public function setGuidAttribute(?string $value): void {
         if (('' == $value || null == $value) && null != $this->post) {
             $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
@@ -416,7 +364,7 @@ trait LinkedTrait {
         return $this->setPostAttr(__FUNCTION__, $value);
     }
     */
-    //--- attribute e' risertvato
+    // --- attribute e' risertvato
 
     /**
      * @param mixed $value
@@ -428,39 +376,13 @@ trait LinkedTrait {
         $name = Str::snake($name);
         $data = [$name => $value];
         $data['lang'] = App::getLocale();
-        //$this->post->$name=$value;
-        //$res=$this->post->save();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 460f514 (.)
-=======
->>>>>>> c974820 (up)
-=======
->>>>>>> 460f514 (.)
-=======
->>>>>>> c974820 (up)
-        if(is_object($this->post)){
+        // $this->post->$name=$value;
+        // $res=$this->post->save();
+        if (is_object($this->post)) {
             $this->post->update($data);
-        }else{
+        } else {
             $this->post()->updateOrCreate($data);
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        $this->post()->updateOrCreate($data);
-<<<<<<< HEAD
->>>>>>> 00ded98 (.)
-=======
->>>>>>> 460f514 (.)
-=======
->>>>>>> 00ded98 (.)
-=======
->>>>>>> 460f514 (.)
-        //dddx($res);
         /*
         $rows=$this->post();
         $sql = Str::replaceArray('?', $rows->getBindings(), $rows->toSql());
@@ -527,7 +449,7 @@ trait LinkedTrait {
     }
     //*/
 
-    //----------------------------------------------
+    // ----------------------------------------------
     /* deprecated
     public function imageResizeSrc(array $params){
         return '['.__FILE__.']['.__LINE__.']';
@@ -565,7 +487,7 @@ trait LinkedTrait {
         return view()->make($view)->with('row', $this->post)->with($roots);
     }
     //*/
-    //------------------------------------
+    // ------------------------------------
 
     /**
      * Undocumented function.
@@ -575,7 +497,7 @@ trait LinkedTrait {
     public function item(string $guid) {
         $post = app(Post::class);
         $post_table = $post->getTable();
-        //$post_table = with(new Post())->getTable();
+        // $post_table = with(new Post())->getTable();
         if (RouteService::inAdmin()) {
             $rows = $this->join($post_table, $post_table.'.post_id', '=', $this->getTable().'.id')
                 ->where('lang', $this->lang)
@@ -622,10 +544,10 @@ trait LinkedTrait {
             $up = $other_lang->replicate();
             $up->lang = App::getLocale();
             $up->save();
-            //$row = self::firstOrCreate(['post_id' => $up->post_id]);
-            //$row = $this->firstOrCreate(['post_id' => $up->post_id]);
+            // $row = self::firstOrCreate(['post_id' => $up->post_id]);
+            // $row = $this->firstOrCreate(['post_id' => $up->post_id]);
 
-            //return $row;
+            // return $row;
         }
     }
 
@@ -635,10 +557,10 @@ trait LinkedTrait {
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeOfItem($query, string $guid) {
-        //getRouteKeyName
+        // getRouteKeyName
         if (RouteService::inAdmin()) {
             return $query->where('post_id', $guid);
-        //return $query->where('post.post_id',$guid);
+        // return $query->where('post.post_id',$guid);
         } else {
             return $query->whereHas(
                 'post',
@@ -655,7 +577,7 @@ trait LinkedTrait {
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeWithPost($query, string $guid) {
-        return $query; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        return $query; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         /* depreated ??
         $post_table = with(new Post())->getTable();
 
@@ -669,7 +591,7 @@ trait LinkedTrait {
         */
     }
 
-    //---------------------------------
+    // ---------------------------------
     /*
     public function listItemSchemaOrg(array $params){
         $tmp = explode('\\', get_class($this));
