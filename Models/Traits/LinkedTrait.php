@@ -55,7 +55,7 @@ trait LinkedTrait {
      */
     public function post(): MorphOne {
         $models = TenantService::config('morph_map');
-        $class = get_class($this);
+        $class = static::class;
         $alias = collect($models)->search($class);
 
         if (false === $alias) {
@@ -67,7 +67,7 @@ trait LinkedTrait {
             throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
         }
 
-        if (null == Relation::getMorphedModel((string) $alias)) {
+        if (null === Relation::getMorphedModel((string) $alias)) {
             Relation::morphMap(
                 [
                     $alias => $class,
@@ -101,12 +101,12 @@ trait LinkedTrait {
 
     /* commento */
 
-    /* spostato in Favorite.php
-     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
-    public function favorites()  {
-        return $this->morphMany(Favorite::class, 'post');
+    /** spostato in Favorite.php
     }
-    */
+     * @param mixed $related
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
 
     /* -- messo in hasprofileTrait
     public function user():\Illuminate\Database\Eloquent\Relations\HasOne {
@@ -121,34 +121,33 @@ trait LinkedTrait {
     }
     */
 
-    /* spostato in Favorite.php
+    /** spostato in Favorite.php
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
-
     public function myFavorites() {
         return $this->morphMany(Favorite::class, 'post')
             ->where('user_id', Auth::id());
     }
      */
 
-    /* spostato in Favorite.php
+    /** spostato in Favorite.php
      * @return bool
     public function isMyFavorited() {
         return $this->favorites()
             ->where('user_id', Auth::id())->count() > 0;
     }
-    */
+     */
 
     /**
      * @param object|string $related
      */
     public function getTableMorph($related, bool $inverse): string {
         if ($inverse) {
-            $pivot = get_class($this).'Morph';
+            $pivot = static::class.'Morph';
         } else {
-            if (is_string($related)) {
+            if (\is_string($related)) {
                 $pivot = $related.'Morph';
             } else {
-                $pivot = get_class($related).'Morph';
+                $pivot = \get_class($related).'Morph';
             }
         }
 
@@ -193,7 +192,7 @@ trait LinkedTrait {
         $pivot = $this->getTableMorph($related, $inverse);
         $pivot_fields = app($pivot)->getFillable();
 
-        if (null != $table_key) {
+        if (null !== $table_key) {
             $relation = $this->morphRelatedWithKey($related, $inverse, $table_key);
         } else {
             if ($inverse) {
@@ -216,7 +215,7 @@ trait LinkedTrait {
      * @return bool|mixed|string
      */
     public function postType() {
-        $post_type = collect(config('morph_map'))->search(get_class($this));
+        $post_type = collect(config('morph_map'))->search(static::class);
         if (false === $post_type) {
             $post_type = Str::snake(class_basename($this));
         }
@@ -232,7 +231,7 @@ trait LinkedTrait {
         if (null !== $value) {
             return $value;
         }
-        $post_type = collect(config('morph_map'))->search(get_class($this));
+        $post_type = collect(config('morph_map'))->search(static::class);
         if (false === $post_type) {
             $post_type = Str::snake(class_basename($this));
         }
@@ -256,12 +255,12 @@ trait LinkedTrait {
     public function getPostAttr(string $func, ?string $value) {
         $str0 = 'get';
         $str1 = 'Attribute';
-        $name = substr($func, strlen($str0), -strlen($str1));
+        $name = substr($func, \strlen($str0), -\strlen($str1));
         $name = Str::snake($name);
         if (null !== $value) {
             return $value;
         }
-        if ('Post' == class_basename($this)) {
+        if ('Post' === class_basename($this)) {
             return $this->$name;
         }
 
@@ -269,7 +268,7 @@ trait LinkedTrait {
             return $this->pivot->$name; // .'#PIVOT';
         }
 
-        if (isset($this->post) && is_object($this->post)) {
+        if (isset($this->post) && \is_object($this->post)) {
             return $this->post->$name; // .'#NO-PIVOT';
         }
 
@@ -300,14 +299,14 @@ trait LinkedTrait {
 
     // *
 
-    //
-    // @param mixed $value
-    //
-    // @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-    // @throws \ReflectionException
-    //
-    // @return mixed
-    //
+    /**
+     * @param mixed $value
+     *
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @throws \ReflectionException
+     *
+     * @return mixed
+     */
     /* deprecated
     public function getUrlAttribute($value) {
 
@@ -332,7 +331,7 @@ trait LinkedTrait {
     }
 
     public function setGuidAttribute(?string $value): void {
-        if (('' == $value || null == $value) && null != $this->post) {
+        if (('' === $value || null === $value) && null !== $this->post) {
             $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
             $res = $this->post->save();
         }
@@ -356,14 +355,13 @@ trait LinkedTrait {
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
-    /*
+    /**
      * @param mixed $value
-
     /* deprecated
     public function setRoutenameAttribute(?string $value) {
         return $this->setPostAttr(__FUNCTION__, $value);
     }
-    */
+     */
     // --- attribute e' risertvato
 
     /**
@@ -372,13 +370,13 @@ trait LinkedTrait {
     public function setPostAttr(string $func, $value): void {
         $str0 = 'set';
         $str1 = 'Attribute';
-        $name = substr($func, strlen($str0), -strlen($str1));
+        $name = substr($func, \strlen($str0), -\strlen($str1));
         $name = Str::snake($name);
         $data = [$name => $value];
         $data['lang'] = App::getLocale();
         // $this->post->$name=$value;
         // $res=$this->post->save();
-        if (is_object($this->post)) {
+        if (\is_object($this->post)) {
             $this->post->update($data);
         } else {
             $this->post()->updateOrCreate($data);
@@ -540,7 +538,7 @@ trait LinkedTrait {
             ->where('post_type', $panel->postType())
             ->where('guid', 'like', $item_guid)
             ->first();
-        if (is_object($other_lang)) {
+        if (\is_object($other_lang)) {
             $up = $other_lang->replicate();
             $up->lang = App::getLocale();
             $up->save();

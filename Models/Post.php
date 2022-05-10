@@ -6,14 +6,14 @@ namespace Modules\Lang\Models;
 
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 use Illuminate\Database\Eloquent\Model;
-//--- traits ---
+// --- traits ---
 use Illuminate\Support\Str;
-//use Laravel\Scout\Searchable;
+// use Laravel\Scout\Searchable;
 use Modules\Xot\Traits\Updater;
 
-//---- services --
+// ---- services --
 
-//--- models ---
+// --- models ---
 
 /**
  * NO BaseModel.
@@ -55,6 +55,7 @@ use Modules\Xot\Traits\Updater;
  * @property string|null                     $linkable_type
  * @property int|null                        $views_count
  * @property Model|\Eloquent                 $linkable
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post query()
@@ -95,22 +96,25 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrlLang($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
  * @mixin \Eloquent
+ *
  * @property string|null $type
  * @property string|null $price
  * @property string|null $price_currency
  * @property int|null    $views
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Post wherePrice($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post wherePriceCurrency($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+ *
  * @property int|null $auth_user_id
  * @mixin IdeHelperPost
  */
 class Post extends Model {
-    //use Cachable;
+    // use Cachable;
     use Updater;
-    //use Searchable;
+    // use Searchable;
     /**
      * @var string
      */
@@ -125,13 +129,13 @@ class Post extends Model {
         'subtitle',
         'post_type',
         'txt',
-        //------ IMAGE ---------
+        // ------ IMAGE ---------
         'image_src', 'image_alt', 'image_title',
-        //------ SEO FIELDS -----
+        // ------ SEO FIELDS -----
         'meta_description', 'meta_keywords', // seo
         'author_id',
-        //------ BUFFER ----
-        'url', 'url_lang', //buffer
+        // ------ BUFFER ----
+        'url', 'url_lang', // buffer
         'image_resize_src', // buffer
     ];
 
@@ -171,7 +175,7 @@ class Post extends Model {
         return inAdmin() ? 'guid' : 'post_id';
     }
     */
-    //-------- relationship ------
+    // -------- relationship ------
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
@@ -199,8 +203,8 @@ class Post extends Model {
     }
     */
 
-    //end function
-    //-------------- MUTATORS ------------------
+    // end function
+    // -------------- MUTATORS ------------------
 
     public function setTitleAttribute(string $value): void {
         $this->attributes['title'] = $value;
@@ -229,14 +233,14 @@ class Post extends Model {
      * ---
      */
     public function getGuidAttribute(?string $value): ?string {
-        if (is_string($value) && $value!='' && false === strpos($value, ' ')) {
+        if (\is_string($value) && '' !== $value && false === strpos($value, ' ')) {
             return $value;
         }
         $value = $this->title;
-        if ('' == $value) {
+        if ('' === $value) {
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
         }
-        if (null == $value) {
+        if (null === $value) {
             $value = 'u-'.rand(1, 1000);
         }
         $value = Str::slug($value);
@@ -247,7 +251,7 @@ class Post extends Model {
     }
 
     public function getTxtAttribute(?string $value): ?string {
-        return null == $value ? '' : $value;
+        return null === $value ? '' : $value;
     }
 
     /*
@@ -264,4 +268,4 @@ class Post extends Model {
     public function toSearchableArray() {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
-}//end class
+}// end class

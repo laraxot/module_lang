@@ -12,7 +12,7 @@ use Modules\Xot\Models\Panels\XotBasePanel;
 class _ModulePanel extends XotBasePanel {
     public function actions(): array {
         return [
-            //new Actions\TestAction(),
+            // new Actions\TestAction(),
         ];
     }
 }
