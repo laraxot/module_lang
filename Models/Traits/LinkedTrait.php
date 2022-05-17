@@ -101,7 +101,7 @@ trait LinkedTrait {
 
     /* commento */
 
-    /** spostato in Favorite.php
+    /** spostato in Favorite.php.
     }
      * @param mixed $related
      *
@@ -121,7 +121,7 @@ trait LinkedTrait {
     }
     */
 
-    /** spostato in Favorite.php
+    /** spostato in Favorite.php.
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
     public function myFavorites() {
         return $this->morphMany(Favorite::class, 'post')
@@ -129,7 +129,7 @@ trait LinkedTrait {
     }
      */
 
-    /** spostato in Favorite.php
+    /** spostato in Favorite.php.
      * @return bool
     public function isMyFavorited() {
         return $this->favorites()
