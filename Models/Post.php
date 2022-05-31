@@ -55,6 +55,7 @@ use Modules\Xot\Traits\Updater;
  * @property string|null                     $linkable_type
  * @property int|null                        $views_count
  * @property Model|\Eloquent                 $linkable
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post query()
@@ -95,17 +96,19 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrlLang($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
  * @mixin \Eloquent
+ *
  * @property string|null $type
  * @property string|null $price
  * @property string|null $price_currency
  * @property int|null    $views
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Post wherePrice($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post wherePriceCurrency($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+ *
  * @property int|null $auth_user_id
- * @mixin IdeHelperPost
  */
 class Post extends Model {
     // use Cachable;
@@ -117,7 +120,7 @@ class Post extends Model {
      *
      * @var bool
      */
-     public static $snakeAttributes = true;
+    public static $snakeAttributes = true;
 
     protected $perPage = 30;
 
@@ -170,7 +173,7 @@ class Post extends Model {
     ];
 
     /**
-     * @var string[]
+     * @var array<string, string>
      */
     protected $casts = [
         'image_resize_src' => 'array',

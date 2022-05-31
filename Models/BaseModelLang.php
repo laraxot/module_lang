@@ -15,6 +15,8 @@ use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseModelLang.
+ *
+ * @property string|null $post_type
  */
 abstract class BaseModelLang extends Model {
     use HasFactory;
@@ -28,7 +30,7 @@ abstract class BaseModelLang extends Model {
      *
      * @var bool
      */
-     public static $snakeAttributes = true;
+    public static $snakeAttributes = true;
 
     protected $perPage = 30;
 

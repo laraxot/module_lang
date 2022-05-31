@@ -55,6 +55,9 @@ trait LinkedTrait {
      */
     public function post(): MorphOne {
         $models = TenantService::config('morph_map');
+        if (! is_array($models)) {
+            $models = [];
+        }
         $class = static::class;
         $alias = collect($models)->search($class);
 
@@ -211,16 +214,17 @@ trait LinkedTrait {
 
     // ------- mutators -------------
 
-    /**
-     * @return bool|mixed|string
-     */
-    public function postType() {
-        $post_type = collect(config('morph_map'))->search(static::class);
+    public function postType(): string {
+        $models = config('morph_map');
+        if (! is_array($models)) {
+            $models = [];
+        }
+        $post_type = collect($models)->search(static::class);
         if (false === $post_type) {
             $post_type = Str::snake(class_basename($this));
         }
 
-        return $post_type;
+        return (string) $post_type;
     }
 
     public function getUserHandleAttribute(?string $value): ?string {
@@ -231,12 +235,16 @@ trait LinkedTrait {
         if (null !== $value) {
             return $value;
         }
+
+        return $this->postType();
+        /*
         $post_type = collect(config('morph_map'))->search(static::class);
         if (false === $post_type) {
             $post_type = Str::snake(class_basename($this));
         }
 
         return (string) $post_type;
+        */
     }
 
     public function getLangAttribute(?string $value): ?string {
@@ -299,13 +307,13 @@ trait LinkedTrait {
 
     // *
 
-    /**
-     * @param mixed $value
+    /*
+     * param mixed $value
      *
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @throws \ReflectionException
+     * throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * throws \ReflectionException
      *
-     * @return mixed
+     * return mixed
      */
     /* deprecated
     public function getUrlAttribute($value) {
@@ -355,12 +363,12 @@ trait LinkedTrait {
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
-    /**
+    /*
      * @param mixed $value
-    /* deprecated
-    public function setRoutenameAttribute(?string $value) {
-        return $this->setPostAttr(__FUNCTION__, $value);
-    }
+    * deprecated
+    *public function setRoutenameAttribute(?string $value) {
+    *    return $this->setPostAttr(__FUNCTION__, $value);
+    *}
      */
     // --- attribute e' risertvato
 
@@ -376,11 +384,15 @@ trait LinkedTrait {
         $data['lang'] = App::getLocale();
         // $this->post->$name=$value;
         // $res=$this->post->save();
+        /*
+        Else branch is unreachable because previous condition is always true.
         if (\is_object($this->post)) {
             $this->post->update($data);
         } else {
             $this->post()->updateOrCreate($data);
         }
+        */
+        $this->post->update($data);
         /*
         $rows=$this->post();
         $sql = Str::replaceArray('?', $rows->getBindings(), $rows->toSql());

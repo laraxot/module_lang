@@ -5,17 +5,18 @@ declare(strict_types=1);
 namespace Modules\Lang\Casts;
 
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
+use Modules\Lang\Models\BaseModelLang;
 
 class LangField implements CastsAttributes {
     /**
      * Cast the given value.
      *
-     * @param \Illuminate\Database\Eloquent\Model $model
-     * @param string                              $key
-     * @param mixed                               $value
-     * @param array                               $attributes
+     * @param BaseModelLang $model
+     * @param string        $key
+     * @param mixed         $value
+     * @param array         $attributes
      *
-     * @return \App\Models\Address
+     * @return mixed
      */
     public function get($model, $key, $value, $attributes) {
         return $model->post->{$key};
@@ -24,10 +25,10 @@ class LangField implements CastsAttributes {
     /**
      * Prepare the given value for storage.
      *
-     * @param \Illuminate\Database\Eloquent\Model $model
-     * @param string                              $key
-     * @param \App\Models\Address                 $value
-     * @param array                               $attributes
+     * @param BaseModelLang $model
+     * @param string        $key
+     * @param mixed         $value
+     * @param array         $attributes
      *
      * @return array
      */
