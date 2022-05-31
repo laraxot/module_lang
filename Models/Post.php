@@ -16,59 +16,48 @@ use Modules\Xot\Traits\Updater;
 // --- models ---
 
 /**
- * NO BaseModel.
+ * Modules\Lang\Models\Post
  *
- * @property int                             $id
- * @property int|null                        $user_id
- * @property int|null                        $post_id
- * @property string|null                     $lang
- * @property string|null                     $title
- * @property string|null                     $subtitle
- * @property string|null                     $guid
- * @property string|null                     $post_type
- * @property string|null                     $txt
- * @property string|null                     $image_src
- * @property string|null                     $image_alt
- * @property string|null                     $image_title
- * @property string|null                     $meta_description
- * @property string|null                     $meta_keywords
- * @property int|null                        $author_id
+ * @property int $id
+ * @property int|null $user_id
+ * @property string|null $post_type
+ * @property int|null $post_id
+ * @property string|null $lang
+ * @property string|null $title
+ * @property string|null $subtitle
+ * @property string|null $guid
+ * @property string|null $txt
+ * @property string|null $image_src
+ * @property string|null $image_alt
+ * @property string|null $image_title
+ * @property string|null $meta_description
+ * @property string|null $meta_keywords
+ * @property int|null $author_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null                        $category_id
- * @property string|null                     $image
- * @property string|null                     $created_by
- * @property string|null                     $updated_by
- * @property \Illuminate\Support\Carbon|null $deleted_at
- * @property string|null                     $deleted_by
- * @property string|null                     $deleted_ip
- * @property string|null                     $created_ip
- * @property string|null                     $updated_ip
- * @property string|null                     $content
- * @property int|null                        $published
- * @property string|null                     $url
- * @property array|null                      $url_lang
- * @property array|null                      $image_resize_src
- * @property string|null                     $linked_count
- * @property string|null                     $related_count
- * @property string|null                     $relatedrev_count
- * @property string|null                     $linkable_type
- * @property int|null                        $views_count
- * @property Model|\Eloquent                 $linkable
- *
+ * @property int|null $category_id
+ * @property string|null $image
+ * @property string|null $content
+ * @property int|null $published
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property string|null $url
+ * @property array|null $url_lang
+ * @property array|null $image_resize_src
+ * @property string|null $linked_count
+ * @property string|null $related_count
+ * @property string|null $relatedrev_count
+ * @property string|null $linkable_type
+ * @property int|null $views_count
+ * @property-read Model|\Eloquent $linkable
  * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post query()
- * @method static \Illuminate\Database\Eloquent\Builder|Post whereAuthUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereAuthorId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereCategoryId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereContent($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Post whereCreatedIp($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Post whereDeletedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Post whereDeletedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Post whereDeletedIp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereGuid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereImage($value)
@@ -91,24 +80,11 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereTxt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUpdatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Post whereUpdatedIp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrlLang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
  * @mixin \Eloquent
- *
- * @property string|null $type
- * @property string|null $price
- * @property string|null $price_currency
- * @property int|null    $views
- *
- * @method static \Illuminate\Database\Eloquent\Builder|Post wherePrice($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Post wherePriceCurrency($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
- *
- * @property int|null $auth_user_id
  */
 class Post extends Model {
     // use Cachable;

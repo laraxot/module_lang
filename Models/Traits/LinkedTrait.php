@@ -67,7 +67,8 @@ trait LinkedTrait {
             $alias = $panel->postType();
             $data[$alias] = $class;
             TenantService::saveConfig(['name' => 'morph_map', 'data' => $data]);
-            throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
+            //throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
+            
         }
 
         if (null === Relation::getMorphedModel((string) $alias)) {
