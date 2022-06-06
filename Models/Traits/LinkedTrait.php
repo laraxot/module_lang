@@ -493,6 +493,9 @@ trait LinkedTrait {
     /* deprecated ??
     public function linkedFormFields():array {
         $roots = Post::getRoots();
+        
+         @phpstan-var view-string
+        
         $view = 'blog::admin.partials.'.Str::snake(class_basename($this));
 
         return view()->make($view)->with('row', $this->post)->with($roots);
