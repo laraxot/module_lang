@@ -393,7 +393,12 @@ trait LinkedTrait {
             $this->post()->updateOrCreate($data);
         }
         */
-        $this->post->update($data);
+        $post=$this->post;
+        if($post==null){
+            $this->post()->updateOrCreate($data);
+        }else{
+            $post->update($data);
+        }
         /*
         $rows=$this->post();
         $sql = Str::replaceArray('?', $rows->getBindings(), $rows->toSql());
