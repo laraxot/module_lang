@@ -11,6 +11,77 @@ use Illuminate\Support\Str;
 // use Laravel\Scout\Searchable;
 use Modules\Xot\Traits\Updater;
 
+/**
+ * Modules\Lang\Models\Post
+ *
+ * @property int $id
+ * @property int|null $user_id
+ * @property string|null $post_type
+ * @property int|null $post_id
+ * @property string|null $lang
+ * @property string|null $title
+ * @property string|null $subtitle
+ * @property string|null $guid
+ * @property string|null $txt
+ * @property string|null $image_src
+ * @property string|null $image_alt
+ * @property string|null $image_title
+ * @property string|null $meta_description
+ * @property string|null $meta_keywords
+ * @property int|null $author_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int|null $category_id
+ * @property string|null $image
+ * @property string|null $content
+ * @property int|null $published
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property string|null $url
+ * @property array|null $url_lang
+ * @property array|null $image_resize_src
+ * @property string|null $linked_count
+ * @property string|null $related_count
+ * @property string|null $relatedrev_count
+ * @property string|null $linkable_type
+ * @property int|null $views_count
+ * @property-read Model|\Eloquent $linkable
+ * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereAuthorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereGuid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereImageAlt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereImageResizeSrc($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereImageSrc($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereImageTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereLang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereLinkableType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereLinkedCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereMetaDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereMetaKeywords($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePostId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePostType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePublished($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereRelatedCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereRelatedrevCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereSubtitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereTxt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrlLang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
+ * @mixin \Eloquent
+ */
 class Post extends Model {
     // use Cachable;
     use Updater;
