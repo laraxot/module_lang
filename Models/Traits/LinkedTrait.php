@@ -334,6 +334,7 @@ trait LinkedTrait {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> a657603 (up)
@@ -346,6 +347,8 @@ trait LinkedTrait {
 =======
 >>>>>>> a8259ca (.)
 =======
+>>>>>>> 3a10392 (.)
+=======
    
 >>>>>>> 00ded98 (.)
 =======
@@ -356,7 +359,13 @@ trait LinkedTrait {
 =======
 =======
 >>>>>>> c974820 (up)
+<<<<<<< HEAD
 >>>>>>> a8259ca (.)
+=======
+=======
+   
+>>>>>>> 00ded98 (.)
+>>>>>>> 3a10392 (.)
     public function setTitleAttribute(?string $value): void {
         $this->setPostAttr(__FUNCTION__, $value);
     }
@@ -367,6 +376,7 @@ trait LinkedTrait {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -392,7 +402,14 @@ trait LinkedTrait {
 
 
 >>>>>>> c974820 (up)
+<<<<<<< HEAD
 >>>>>>> a8259ca (.)
+=======
+=======
+    
+    
+>>>>>>> 00ded98 (.)
+>>>>>>> 3a10392 (.)
     public function setGuidAttribute(?string $value): void {
         if (('' === $value || null === $value) && null !== $this->post) {
             $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
@@ -473,9 +490,12 @@ trait LinkedTrait {
 >>>>>>> fe7880a (.)
 =======
         $this->post()->updateOrCreate($data);
+<<<<<<< HEAD
 >>>>>>> 00ded98 (.)
 =======
 >>>>>>> 460f514 (.)
+=======
+>>>>>>> 00ded98 (.)
         //dddx($res);
 >>>>>>> 8552e91 (.)
         /*
