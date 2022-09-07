@@ -36,6 +36,9 @@ use Modules\Xot\Traits\Updater;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 94c6235 (.)
  * @property int|null $category_id
  * @property string|null $image
  * @property string|null $content
@@ -51,6 +54,7 @@ use Modules\Xot\Traits\Updater;
  * @property string|null $linkable_type
  * @property int|null $views_count
  * @property-read Model|\Eloquent $linkable
+<<<<<<< HEAD
 =======
  * @property int|null                        $category_id
  * @property string|null                     $image
@@ -81,6 +85,8 @@ use Modules\Xot\Traits\Updater;
 =======
  *
 >>>>>>> 3b26375 (.)
+=======
+>>>>>>> 94c6235 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post query()
@@ -119,6 +125,7 @@ use Modules\Xot\Traits\Updater;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  *
 =======
@@ -143,6 +150,8 @@ use Modules\Xot\Traits\Updater;
 >>>>>>> bf66904 (up)
 =======
 >>>>>>> 3b26375 (.)
+=======
+>>>>>>> 94c6235 (.)
  */
 class Post extends Model {
     // use Cachable;

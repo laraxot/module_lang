@@ -77,11 +77,16 @@ trait LinkedTrait {
             $data[$alias] = $class;
             TenantService::saveConfig(['name' => 'morph_map', 'data' => $data]);
 <<<<<<< HEAD
+<<<<<<< HEAD
             //throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
             
 =======
             throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
 >>>>>>> a72e892 (.)
+=======
+            //throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
+            
+>>>>>>> 94c6235 (.)
         }
 
         if (null === Relation::getMorphedModel((string) $alias)) {
