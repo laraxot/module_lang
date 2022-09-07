@@ -56,11 +56,17 @@ trait LinkedTrait {
     public function post(): MorphOne {
         $models = TenantService::config('morph_map');
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! is_array($models)) {
             $models = [];
         }
 =======
 >>>>>>> bf66904 (up)
+=======
+        if (! is_array($models)) {
+            $models = [];
+        }
+>>>>>>> 3b26375 (.)
         $class = static::class;
         $alias = collect($models)->search($class);
 
@@ -247,12 +253,16 @@ trait LinkedTrait {
     // ------- mutators -------------
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3b26375 (.)
     public function postType(): string {
         $models = config('morph_map');
         if (! is_array($models)) {
             $models = [];
         }
         $post_type = collect($models)->search(static::class);
+<<<<<<< HEAD
 =======
     /**
      * @return bool|mixed|string
@@ -260,6 +270,8 @@ trait LinkedTrait {
     public function postType() {
         $post_type = collect(config('morph_map'))->search(static::class);
 >>>>>>> bf66904 (up)
+=======
+>>>>>>> 3b26375 (.)
         if (false === $post_type) {
             $post_type = Str::snake(class_basename($this));
         }
@@ -276,11 +288,17 @@ trait LinkedTrait {
             return $value;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         return $this->postType();
         /*
 =======
 >>>>>>> bf66904 (up)
+=======
+
+        return $this->postType();
+        /*
+>>>>>>> 3b26375 (.)
         $post_type = collect(config('morph_map'))->search(static::class);
         if (false === $post_type) {
             $post_type = Str::snake(class_basename($this));
@@ -359,6 +377,7 @@ trait LinkedTrait {
     // *
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /*
      * param mixed $value
      *
@@ -369,12 +388,20 @@ trait LinkedTrait {
 =======
     /**
      * @param mixed $value
+=======
+    /*
+     * param mixed $value
+>>>>>>> 3b26375 (.)
      *
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @throws \ReflectionException
+     * throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * throws \ReflectionException
      *
+<<<<<<< HEAD
      * @return mixed
 >>>>>>> bf66904 (up)
+=======
+     * return mixed
+>>>>>>> 3b26375 (.)
      */
     /* deprecated
     public function getUrlAttribute($value) {
@@ -529,14 +556,18 @@ trait LinkedTrait {
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
-    /**
+    /*
      * @param mixed $value
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3b26375 (.)
     * deprecated
     *public function setRoutenameAttribute(?string $value) {
     *    return $this->setPostAttr(__FUNCTION__, $value);
     *}
+<<<<<<< HEAD
      */
 =======
 
@@ -550,6 +581,8 @@ trait LinkedTrait {
     */
 >>>>>>> a72e892 (.)
 =======
+=======
+>>>>>>> 3b26375 (.)
      */
 >>>>>>> bf66904 (up)
     // --- attribute e' risertvato
@@ -606,6 +639,7 @@ trait LinkedTrait {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         */
         $post=$this->post;
         if($post==null){
@@ -632,6 +666,10 @@ trait LinkedTrait {
 >>>>>>> 8552e91 (.)
 =======
 >>>>>>> a72e892 (.)
+=======
+        */
+        $this->post->update($data);
+>>>>>>> 3b26375 (.)
         /*
         $rows=$this->post();
         $sql = Str::replaceArray('?', $rows->getBindings(), $rows->toSql());

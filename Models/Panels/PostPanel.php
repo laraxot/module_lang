@@ -23,6 +23,7 @@ class PostPanel extends XotBasePanel {
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      * The columns that should be searched.
      *
@@ -84,6 +85,8 @@ class PostPanel extends XotBasePanel {
 
     /**
 >>>>>>> bf66904 (up)
+=======
+>>>>>>> 3b26375 (.)
      * Get the fields displayed by the resource.
         'value'=>'..',
      */

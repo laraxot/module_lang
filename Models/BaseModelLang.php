@@ -37,6 +37,9 @@ abstract class BaseModelLang extends Model {
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3b26375 (.)
     public static $snakeAttributes = true;
 
     protected $perPage = 30;

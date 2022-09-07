@@ -73,10 +73,14 @@ use Modules\Xot\Traits\Updater;
  * @property int|null                        $views_count
  * @property Model|\Eloquent                 $linkable
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 >>>>>>> bf66904 (up)
 =======
 >>>>>>> f8ed9b1 (up)
+=======
+ *
+>>>>>>> 3b26375 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post query()
@@ -114,22 +118,31 @@ use Modules\Xot\Traits\Updater;
  * @mixin \Eloquent
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  *
 =======
 >>>>>>> f8ed9b1 (up)
+=======
+ *
+>>>>>>> 3b26375 (.)
  * @property string|null $type
  * @property string|null $price
  * @property string|null $price_currency
  * @property int|null    $views
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Post wherePrice($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post wherePriceCurrency($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+ *
  * @property int|null $auth_user_id
+<<<<<<< HEAD
  * @mixin IdeHelperPost
 >>>>>>> bf66904 (up)
+=======
+>>>>>>> 3b26375 (.)
  */
 class Post extends Model {
     // use Cachable;
@@ -148,10 +161,14 @@ class Post extends Model {
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static $snakeAttributes = true;
 =======
      public static $snakeAttributes = true;
 >>>>>>> f8ed9b1 (up)
+=======
+    public static $snakeAttributes = true;
+>>>>>>> 3b26375 (.)
 
     protected $perPage = 30;
 
@@ -328,7 +345,11 @@ class Post extends Model {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }// end class
 =======
 }// end class
 >>>>>>> bf66904 (up)
+=======
+}// end class
+>>>>>>> 3b26375 (.)
