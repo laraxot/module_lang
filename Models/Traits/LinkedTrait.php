@@ -330,7 +330,10 @@ trait LinkedTrait {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
     */
+<<<<<<< HEAD
 
+=======
+>>>>>>> a657603 (up)
     public function setTitleAttribute(?string $value): void {
         $this->setPostAttr(__FUNCTION__, $value);
     }
@@ -339,6 +342,10 @@ trait LinkedTrait {
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a657603 (up)
     public function setGuidAttribute(?string $value): void {
         if (('' === $value || null === $value) && null !== $this->post) {
             $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
@@ -383,11 +390,17 @@ trait LinkedTrait {
         $name = Str::snake($name);
         $data = [$name => $value];
         $data['lang'] = App::getLocale();
+<<<<<<< HEAD
         // $this->post->$name=$value;
         // $res=$this->post->save();
         /*
         Else branch is unreachable because previous condition is always true.
         if (\is_object($this->post)) {
+=======
+        //$this->post->$name=$value;
+        //$res=$this->post->save();
+        if(is_object($this->post)){
+>>>>>>> a657603 (up)
             $this->post->update($data);
         } else {
             $this->post()->updateOrCreate($data);
