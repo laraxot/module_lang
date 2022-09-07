@@ -22,9 +22,6 @@ class PostPanel extends XotBasePanel {
     public static string $title = 'title';
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
      * The columns that should be searched.
      *
      * @var array

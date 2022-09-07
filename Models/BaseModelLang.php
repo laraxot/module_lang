@@ -23,11 +23,6 @@ abstract class BaseModelLang extends Model {
     // use Searchable;
     use LinkedTrait;
     use Updater;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8cd2dc5 (up)
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -35,37 +30,9 @@ abstract class BaseModelLang extends Model {
      *
      * @var bool
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3b26375 (.)
     public static $snakeAttributes = true;
 
     protected $perPage = 30;
-=======
->>>>>>> bf66904 (up)
-=======
-/**
- * Indicates whether attributes are snake cased on arrays.
- *
- * @see  https://laravel-news.com/6-eloquent-secrets
-* 
- * @var bool
- */
-// public static $snakeAttributes = true;
-
-protected $perPage = 30;
-
->>>>>>> 21b326a (up)
-=======
-    // public static $snakeAttributes = true;
-=======
-     public static $snakeAttributes = true;
->>>>>>> f8ed9b1 (up)
-
-    protected $perPage = 30;
->>>>>>> 8cd2dc5 (up)
 
     protected $connection = 'mysql'; // this will use the specified database connection
 

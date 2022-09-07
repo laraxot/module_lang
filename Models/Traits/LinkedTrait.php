@@ -16,12 +16,10 @@ use Illuminate\Database\Eloquent\Relations\Relation;
 // use Illuminate\Support\Facades\URL;
 // use Laravel\Scout\Searchable;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Auth;
 // use Modules\Blog\Models\Favorite;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use Modules\Lang\Models\Post;
-use Modules\LU\Models\User;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Models\Image;
 use Modules\Xot\Services\PanelService;
@@ -55,18 +53,9 @@ trait LinkedTrait {
      */
     public function post(): MorphOne {
         $models = TenantService::config('morph_map');
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! is_array($models)) {
             $models = [];
         }
-=======
->>>>>>> bf66904 (up)
-=======
-        if (! is_array($models)) {
-            $models = [];
-        }
->>>>>>> 3b26375 (.)
         $class = static::class;
         $alias = collect($models)->search($class);
 
@@ -76,17 +65,7 @@ trait LinkedTrait {
             $alias = $panel->postType();
             $data[$alias] = $class;
             TenantService::saveConfig(['name' => 'morph_map', 'data' => $data]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-            //throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
-            
-=======
-            throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
->>>>>>> a72e892 (.)
-=======
-            //throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
-            
->>>>>>> 94c6235 (.)
+            // throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
         }
 
         if (null === Relation::getMorphedModel((string) $alias)) {
@@ -120,68 +99,6 @@ trait LinkedTrait {
     public function images() {
         return $this->morphMany(Image::class, 'post');
     }
-
-    /* commento */
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    /** spostato in Favorite.php.
-=======
-    /** spostato in Favorite.php
->>>>>>> bf66904 (up)
-=======
-    /** spostato in Favorite.php.
->>>>>>> 8cd2dc5 (up)
-    }
-     * @param mixed $related
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
-     */
-
-    /* -- messo in hasprofileTrait
-    public function user():\Illuminate\Database\Eloquent\Relations\HasOne {
-        return $this->hasOne(User::class);
-    }
-
-    public function profile() {
-        dddx('i');
-        $class = TenantService::model('profile');
-
-        return $this->hasOne($class, 'user_id', 'user_id');
-    }
-    */
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    /** spostato in Favorite.php.
-=======
-    /** spostato in Favorite.php
->>>>>>> bf66904 (up)
-=======
-    /** spostato in Favorite.php.
->>>>>>> 8cd2dc5 (up)
-     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
-    public function myFavorites() {
-        return $this->morphMany(Favorite::class, 'post')
-            ->where('user_id', Auth::id());
-    }
-     */
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    /** spostato in Favorite.php.
-=======
-    /** spostato in Favorite.php
->>>>>>> bf66904 (up)
-=======
-    /** spostato in Favorite.php.
->>>>>>> 8cd2dc5 (up)
-     * @return bool
-    public function isMyFavorited() {
-        return $this->favorites()
-            ->where('user_id', Auth::id())->count() > 0;
-    }
-     */
 
     /**
      * @param object|string $related
@@ -257,26 +174,12 @@ trait LinkedTrait {
 
     // ------- mutators -------------
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3b26375 (.)
     public function postType(): string {
         $models = config('morph_map');
         if (! is_array($models)) {
             $models = [];
         }
         $post_type = collect($models)->search(static::class);
-<<<<<<< HEAD
-=======
-    /**
-     * @return bool|mixed|string
-     */
-    public function postType() {
-        $post_type = collect(config('morph_map'))->search(static::class);
->>>>>>> bf66904 (up)
-=======
->>>>>>> 3b26375 (.)
         if (false === $post_type) {
             $post_type = Str::snake(class_basename($this));
         }
@@ -292,18 +195,9 @@ trait LinkedTrait {
         if (null !== $value) {
             return $value;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         return $this->postType();
         /*
-=======
->>>>>>> bf66904 (up)
-=======
-
-        return $this->postType();
-        /*
->>>>>>> 3b26375 (.)
         $post_type = collect(config('morph_map'))->search(static::class);
         if (false === $post_type) {
             $post_type = Str::snake(class_basename($this));
@@ -342,15 +236,7 @@ trait LinkedTrait {
             return $this->pivot->$name; // .'#PIVOT';
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (isset($this->post) && \is_object($this->post)) {
-=======
-        if (isset($this->post) && is_object($this->post)) {
->>>>>>> a72e892 (.)
-=======
-        if (isset($this->post) && \is_object($this->post)) {
->>>>>>> bf66904 (up)
             return $this->post->$name; // .'#NO-PIVOT';
         }
 
@@ -379,10 +265,6 @@ trait LinkedTrait {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
 
-    // *
-
-<<<<<<< HEAD
-<<<<<<< HEAD
     /*
      * param mixed $value
      *
@@ -390,23 +272,11 @@ trait LinkedTrait {
      * throws \ReflectionException
      *
      * return mixed
-=======
-    /**
-     * @param mixed $value
-=======
-    /*
-     * param mixed $value
->>>>>>> 3b26375 (.)
      *
      * throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * throws \ReflectionException
      *
-<<<<<<< HEAD
      * @return mixed
->>>>>>> bf66904 (up)
-=======
-     * return mixed
->>>>>>> 3b26375 (.)
      */
     /* deprecated
     public function getUrlAttribute($value) {
@@ -422,63 +292,6 @@ trait LinkedTrait {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
     */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> a657603 (up)
-=======
-=======
-   
->>>>>>> 00ded98 (.)
->>>>>>> 8552e91 (.)
-=======
-=======
->>>>>>> a8259ca (.)
-=======
->>>>>>> 3a10392 (.)
-=======
->>>>>>> c19280f (.)
-=======
->>>>>>> 9e935aa (.)
-=======
-   
->>>>>>> 00ded98 (.)
-=======
-
->>>>>>> 460f514 (.)
-<<<<<<< HEAD
->>>>>>> fe7880a (.)
-=======
-=======
->>>>>>> c974820 (up)
-<<<<<<< HEAD
->>>>>>> a8259ca (.)
-=======
-=======
-   
->>>>>>> 00ded98 (.)
-<<<<<<< HEAD
->>>>>>> 3a10392 (.)
-=======
-=======
-
->>>>>>> 460f514 (.)
-<<<<<<< HEAD
->>>>>>> c19280f (.)
-=======
-=======
->>>>>>> c974820 (up)
->>>>>>> 9e935aa (.)
-=======
-
->>>>>>> a72e892 (.)
     public function setTitleAttribute(?string $value): void {
         $this->setPostAttr(__FUNCTION__, $value);
     }
@@ -487,55 +300,6 @@ trait LinkedTrait {
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> a657603 (up)
-=======
-=======
-    
-    
->>>>>>> 00ded98 (.)
-<<<<<<< HEAD
->>>>>>> 8552e91 (.)
-=======
-=======
-
-
->>>>>>> 460f514 (.)
-<<<<<<< HEAD
->>>>>>> fe7880a (.)
-=======
-=======
-
-
->>>>>>> c974820 (up)
-<<<<<<< HEAD
->>>>>>> a8259ca (.)
-=======
-=======
-    
-    
->>>>>>> 00ded98 (.)
-<<<<<<< HEAD
->>>>>>> 3a10392 (.)
-=======
-=======
-
-
->>>>>>> 460f514 (.)
-<<<<<<< HEAD
->>>>>>> c19280f (.)
-=======
-=======
-
-
->>>>>>> c974820 (up)
->>>>>>> 9e935aa (.)
-=======
->>>>>>> a72e892 (.)
     public function setGuidAttribute(?string $value): void {
         if (('' === $value || null === $value) && null !== $this->post) {
             $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
@@ -563,234 +327,153 @@ trait LinkedTrait {
 
     /*
      * @param mixed $value
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3b26375 (.)
     * deprecated
     *public function setRoutenameAttribute(?string $value) {
     *    return $this->setPostAttr(__FUNCTION__, $value);
     *}
-<<<<<<< HEAD
      */
-=======
 
-=======
->>>>>>> bf66904 (up)
     /* deprecated
     public function setRoutenameAttribute(?string $value) {
         return $this->setPostAttr(__FUNCTION__, $value);
     }
-<<<<<<< HEAD
+
     */
->>>>>>> a72e892 (.)
-=======
-=======
->>>>>>> 3b26375 (.)
-     */
->>>>>>> bf66904 (up)
     // --- attribute e' risertvato
 
-    /**
-     * @param mixed $value
-     */
-    public function setPostAttr(string $func, $value): void {
-        $str0 = 'set';
-        $str1 = 'Attribute';
-        $name = substr($func, \strlen($str0), -\strlen($str1));
-        $name = Str::snake($name);
-        $data = [$name => $value];
-        $data['lang'] = App::getLocale();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // $this->post->$name=$value;
-        // $res=$this->post->save();
-        /*
-        Else branch is unreachable because previous condition is always true.
-        if (\is_object($this->post)) {
-=======
-        //$this->post->$name=$value;
-        //$res=$this->post->save();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 460f514 (.)
-=======
->>>>>>> c974820 (up)
-=======
->>>>>>> 460f514 (.)
-=======
->>>>>>> c974820 (up)
-        if(is_object($this->post)){
->>>>>>> a657603 (up)
-=======
-        // $this->post->$name=$value;
-        // $res=$this->post->save();
-<<<<<<< HEAD
-        if (is_object($this->post)) {
->>>>>>> a72e892 (.)
-=======
-        if (\is_object($this->post)) {
->>>>>>> bf66904 (up)
-            $this->post->update($data);
-        } else {
-            $this->post()->updateOrCreate($data);
-        }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        */
-        $post=$this->post;
-        if($post==null){
-            $this->post()->updateOrCreate($data);
-        }else{
-            $post->update($data);
-        }
-=======
-=======
->>>>>>> fe7880a (.)
-=======
->>>>>>> c19280f (.)
-=======
-        $this->post()->updateOrCreate($data);
-<<<<<<< HEAD
->>>>>>> 00ded98 (.)
-=======
->>>>>>> 460f514 (.)
-=======
->>>>>>> 00ded98 (.)
-=======
->>>>>>> 460f514 (.)
-        //dddx($res);
->>>>>>> 8552e91 (.)
-=======
->>>>>>> a72e892 (.)
-=======
-        */
-<<<<<<< HEAD
-        $this->post->update($data);
->>>>>>> 3b26375 (.)
-=======
-        $post=$this->post;
-        if($post==null){
-            $this->post()->updateOrCreate($data);
-        }else{
-            $post->update($data);
-        }
->>>>>>> cb238c4 (up)
-        /*
-        $rows=$this->post();
-        $sql = Str::replaceArray('?', $rows->getBindings(), $rows->toSql());
-        dddx(
-            [
-                'data'=>$data,
-                'name'=>$name,
-                'res'=>$res->toSql(),
-                'this'=>$this,
-                'sql'=>$sql,
-            ]
-        );
-        */
-        unset($this->attributes[$name]);
-    }
+   /**
+    * @param mixed $value
+    */
+   public function setPostAttr(string $func, $value): void {
+       $str0 = 'set';
+       $str1 = 'Attribute';
+       $name = substr($func, \strlen($str0), -\strlen($str1));
+       $name = Str::snake($name);
+       $data = [$name => $value];
+       $data['lang'] = App::getLocale();
+       // $this->post->$name=$value;
+       // $res=$this->post->save();
+       /*
+       Else branch is unreachable because previous condition is always true.
+       if (\is_object($this->post)) {
+           $this->post->update($data);
+       } else {
+           $this->post()->updateOrCreate($data);
+       }
+       */
+       $post = $this->post;
+       if (null == $post) {
+           $this->post()->updateOrCreate($data);
+       } else {
+           $post->update($data);
+       }
+       /*
+       $rows=$this->post();
+       $sql = Str::replaceArray('?', $rows->getBindings(), $rows->toSql());
+       dddx(
+           [
+               'data'=>$data,
+               'name'=>$name,
+               'res'=>$res->toSql(),
+               'this'=>$this,
+               'sql'=>$sql,
+           ]
+       );
+       */
+       unset($this->attributes[$name]);
+   }
 
     /*//deprecated ??
-    public function urlActFunc($func, $value) {
-        $str0 = 'get';
-        $str1 = 'Attribute';
-        $name = substr($func, strlen($str0), -strlen($str1));
-        $act = Str::snake($name);
-        $act = substr($act, 0, -4);
-        $url = RouteService::urlModel(['model' => $this, 'act' => $act]);
+   public function urlActFunc($func, $value) {
+       $str0 = 'get';
+       $str1 = 'Attribute';
+       $name = substr($func, strlen($str0), -strlen($str1));
+       $act = Str::snake($name);
+       $act = substr($act, 0, -4);
+       $url = RouteService::urlModel(['model' => $this, 'act' => $act]);
 
-        return $url;
-    }
+       return $url;
+   }
 
 
-    public function getEditUrlAttribute($value) {
-        return $this->urlActFunc(__FUNCTION__, $value);
-    }
+   public function getEditUrlAttribute($value) {
+       return $this->urlActFunc(__FUNCTION__, $value);
+   }
 
-    public function getMoveupUrlAttribute($value) {
-        return $this->urlActFunc(__FUNCTION__, $value);
-    }
+   public function getMoveupUrlAttribute($value) {
+       return $this->urlActFunc(__FUNCTION__, $value);
+   }
 
-    public function getMovedownUrlAttribute($value) {
-        return $this->urlActFunc(__FUNCTION__, $value);
-    }
+   public function getMovedownUrlAttribute($value) {
+       return $this->urlActFunc(__FUNCTION__, $value);
+   }
 
-    public function getShowUrlAttribute($value) {
-        return $this->urlActFunc(__FUNCTION__, $value);
-    }
+   public function getShowUrlAttribute($value) {
+       return $this->urlActFunc(__FUNCTION__, $value);
+   }
 
-    public function getIndexEditUrlAttribute($value) {
-        return $this->urlActFunc(__FUNCTION__, $value);
-    }
+   public function getIndexEditUrlAttribute($value) {
+       return $this->urlActFunc(__FUNCTION__, $value);
+   }
 
-    public function getCreateUrlAttribute($value) {
-        return $this->urlActFunc(__FUNCTION__, $value);
-    }
+   public function getCreateUrlAttribute($value) {
+       return $this->urlActFunc(__FUNCTION__, $value);
+   }
 
-    public function getUpdateUrlAttribute($value) {
-        return $this->urlActFunc(__FUNCTION__, $value);
-    }
+   public function getUpdateUrlAttribute($value) {
+       return $this->urlActFunc(__FUNCTION__, $value);
+   }
 
-    public function getDestroyUrlAttribute($value) {
-        return $this->urlActFunc(__FUNCTION__, $value);
-    }
+   public function getDestroyUrlAttribute($value) {
+       return $this->urlActFunc(__FUNCTION__, $value);
+   }
 
-    public function getDetachUrlAttribute($value) {
-        return $this->urlActFunc(__FUNCTION__, $value);
-    }
-    //*/
+   public function getDetachUrlAttribute($value) {
+       return $this->urlActFunc(__FUNCTION__, $value);
+   }
+   //*/
 
     // ----------------------------------------------
     /* deprecated
-    public function imageResizeSrc(array $params){
-        return '['.__FILE__.']['.__LINE__.']';
-        $value = null;
-        if (isset($this->post)) {
-            $value = $this->post->imageResizeSrc($params);
-        }
+   public function imageResizeSrc(array $params){
+       return '['.__FILE__.']['.__LINE__.']';
+       $value = null;
+       if (isset($this->post)) {
+           $value = $this->post->imageResizeSrc($params);
+       }
 
-        return $value;
-    }
+       return $value;
+   }
 
-    public function image_html(array $params){
-        $value = null;
-        if (isset($this->post)) {
-            $value = $this->post->image_html($params);
-        }
+   public function image_html(array $params){
+       $value = null;
+       if (isset($this->post)) {
+           $value = $this->post->image_html($params);
+       }
 
-        return $value;
-    }
+       return $value;
+   }
 
-    public function urlLang(array $params){
-        return '['.__FILE__.']['.__LINE__.']';
-        if (! isset($this->post)) {
-            return '#';
-        }
+   public function urlLang(array $params){
+       return '['.__FILE__.']['.__LINE__.']';
+       if (! isset($this->post)) {
+           return '#';
+       }
 
-        return $this->post->urlLang($params);
-    }
-    */
+       return $this->post->urlLang($params);
+   }
+   */
     /* deprecated ??
-    public function linkedFormFields():array {
-        $roots = Post::getRoots();
-        
-         @phpstan-var view-string
-        
-        $view = 'blog::admin.partials.'.Str::snake(class_basename($this));
+   public function linkedFormFields():array {
+       $roots = Post::getRoots();
 
-        return view()->make($view)->with('row', $this->post)->with($roots);
-    }
-    //*/
+        @phpstan-var view-string
+
+       $view = 'blog::admin.partials.'.Str::snake(class_basename($this));
+
+       return view()->make($view)->with('row', $this->post)->with($roots);
+   }
+   //*/
     // ------------------------------------
 
     /**
