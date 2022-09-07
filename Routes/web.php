@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 /*
@@ -21,3 +22,5 @@ Route::prefix('lang')->group(
     }
 );
 >>>>>>> bf66904 (up)
+=======
+>>>>>>> b4e80c0 (.)
