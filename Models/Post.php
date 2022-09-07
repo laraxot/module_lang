@@ -132,6 +132,9 @@ class Post extends Model {
     use Updater;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8cd2dc5 (up)
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -139,6 +142,7 @@ class Post extends Model {
      *
      * @var bool
      */
+<<<<<<< HEAD
     public static $snakeAttributes = true;
 
     protected $perPage = 30;
@@ -154,8 +158,11 @@ class Post extends Model {
  * @var bool
  */
 // public static $snakeAttributes = true;
+=======
+    // public static $snakeAttributes = true;
+>>>>>>> 8cd2dc5 (up)
 
-protected $perPage = 30;
+    protected $perPage = 30;
 
 >>>>>>> 21b326a (up)
     // use Searchable;

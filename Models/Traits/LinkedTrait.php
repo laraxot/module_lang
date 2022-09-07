@@ -113,10 +113,14 @@ trait LinkedTrait {
     /* commento */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** spostato in Favorite.php.
 =======
     /** spostato in Favorite.php
 >>>>>>> bf66904 (up)
+=======
+    /** spostato in Favorite.php.
+>>>>>>> 8cd2dc5 (up)
     }
      * @param mixed $related
      *
@@ -137,10 +141,14 @@ trait LinkedTrait {
     */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** spostato in Favorite.php.
 =======
     /** spostato in Favorite.php
 >>>>>>> bf66904 (up)
+=======
+    /** spostato in Favorite.php.
+>>>>>>> 8cd2dc5 (up)
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
     public function myFavorites() {
         return $this->morphMany(Favorite::class, 'post')
@@ -149,10 +157,14 @@ trait LinkedTrait {
      */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** spostato in Favorite.php.
 =======
     /** spostato in Favorite.php
 >>>>>>> bf66904 (up)
+=======
+    /** spostato in Favorite.php.
+>>>>>>> 8cd2dc5 (up)
      * @return bool
     public function isMyFavorited() {
         return $this->favorites()
