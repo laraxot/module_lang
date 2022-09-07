@@ -131,6 +131,7 @@ class Post extends Model {
     // use Cachable;
     use Updater;
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -144,6 +145,19 @@ class Post extends Model {
 
 =======
 >>>>>>> bf66904 (up)
+=======
+/**
+ * Indicates whether attributes are snake cased on arrays.
+ *
+ * @see  https://laravel-news.com/6-eloquent-secrets
+* 
+ * @var bool
+ */
+// public static $snakeAttributes = true;
+
+protected $perPage = 30;
+
+>>>>>>> 21b326a (up)
     // use Searchable;
     /**
      * @var string
