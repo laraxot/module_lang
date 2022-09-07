@@ -673,8 +673,17 @@ trait LinkedTrait {
 >>>>>>> a72e892 (.)
 =======
         */
+<<<<<<< HEAD
         $this->post->update($data);
 >>>>>>> 3b26375 (.)
+=======
+        $post=$this->post;
+        if($post==null){
+            $this->post()->updateOrCreate($data);
+        }else{
+            $post->update($data);
+        }
+>>>>>>> cb238c4 (up)
         /*
         $rows=$this->post();
         $sql = Str::replaceArray('?', $rows->getBindings(), $rows->toSql());
