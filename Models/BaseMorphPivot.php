@@ -24,6 +24,7 @@ abstract class BaseMorphPivot extends MorphPivot {
      * @var bool
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
      public static $snakeAttributes = true;
 
     protected $perPage = 30;
@@ -42,6 +43,9 @@ protected $perPage = 30;
 >>>>>>> 21b326a (up)
 =======
     // public static $snakeAttributes = true;
+=======
+     public static $snakeAttributes = true;
+>>>>>>> f8ed9b1 (up)
 
     protected $perPage = 30;
 >>>>>>> 8cd2dc5 (up)
