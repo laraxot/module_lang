@@ -67,8 +67,12 @@ trait LinkedTrait {
             $alias = $panel->postType();
             $data[$alias] = $class;
             TenantService::saveConfig(['name' => 'morph_map', 'data' => $data]);
+<<<<<<< HEAD
             //throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
             
+=======
+            throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
+>>>>>>> a72e892 (.)
         }
 
         if (null === Relation::getMorphedModel((string) $alias)) {
@@ -277,7 +281,11 @@ trait LinkedTrait {
             return $this->pivot->$name; // .'#PIVOT';
         }
 
+<<<<<<< HEAD
         if (isset($this->post) && \is_object($this->post)) {
+=======
+        if (isset($this->post) && is_object($this->post)) {
+>>>>>>> a72e892 (.)
             return $this->post->$name; // .'#NO-PIVOT';
         }
 
@@ -337,6 +345,7 @@ trait LinkedTrait {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> a657603 (up)
@@ -383,6 +392,9 @@ trait LinkedTrait {
 =======
 >>>>>>> c974820 (up)
 >>>>>>> 9e935aa (.)
+=======
+
+>>>>>>> a72e892 (.)
     public function setTitleAttribute(?string $value): void {
         $this->setPostAttr(__FUNCTION__, $value);
     }
@@ -390,13 +402,8 @@ trait LinkedTrait {
     public function setSubtitleAttribute(?string $value): void {
         $this->setPostAttr(__FUNCTION__, $value);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -443,6 +450,8 @@ trait LinkedTrait {
 
 >>>>>>> c974820 (up)
 >>>>>>> 9e935aa (.)
+=======
+>>>>>>> a72e892 (.)
     public function setGuidAttribute(?string $value): void {
         if (('' === $value || null === $value) && null !== $this->post) {
             $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
@@ -470,11 +479,20 @@ trait LinkedTrait {
 
     /*
      * @param mixed $value
+<<<<<<< HEAD
     * deprecated
     *public function setRoutenameAttribute(?string $value) {
     *    return $this->setPostAttr(__FUNCTION__, $value);
     *}
      */
+=======
+
+    /* deprecated
+    public function setRoutenameAttribute(?string $value) {
+        return $this->setPostAttr(__FUNCTION__, $value);
+    }
+    */
+>>>>>>> a72e892 (.)
     // --- attribute e' risertvato
 
     /**
@@ -487,6 +505,7 @@ trait LinkedTrait {
         $name = Str::snake($name);
         $data = [$name => $value];
         $data['lang'] = App::getLocale();
+<<<<<<< HEAD
 <<<<<<< HEAD
         // $this->post->$name=$value;
         // $res=$this->post->save();
@@ -511,10 +530,16 @@ trait LinkedTrait {
 >>>>>>> c974820 (up)
         if(is_object($this->post)){
 >>>>>>> a657603 (up)
+=======
+        // $this->post->$name=$value;
+        // $res=$this->post->save();
+        if (is_object($this->post)) {
+>>>>>>> a72e892 (.)
             $this->post->update($data);
         } else {
             $this->post()->updateOrCreate($data);
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -542,6 +567,8 @@ trait LinkedTrait {
 >>>>>>> 460f514 (.)
         //dddx($res);
 >>>>>>> 8552e91 (.)
+=======
+>>>>>>> a72e892 (.)
         /*
         $rows=$this->post();
         $sql = Str::replaceArray('?', $rows->getBindings(), $rows->toSql());
