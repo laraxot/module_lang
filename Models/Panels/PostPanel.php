@@ -22,6 +22,68 @@ class PostPanel extends XotBasePanel {
     public static string $title = 'title';
 
     /**
+<<<<<<< HEAD
+=======
+     * The columns that should be searched.
+     *
+     * @var array
+     */
+    public static $search = [
+    ];
+
+    /**
+     * The relationships that should be eager loaded on index queries.
+     */
+    public function with(): array {
+        return [];
+    }
+
+    public function search(): array {
+        return [];
+    }
+
+    /**
+     * on select the option id.
+     *
+     * quando aggiungi un campo select, è il numero della chiave
+     * che viene messo come valore su value="id"
+     *
+     * @return int|string|null
+     */
+    public function optionId(Model $row) {
+        return $row->getKey();
+    }
+
+    /**
+     * on select the option label.
+     *
+     * @param mixed $row
+     */
+    public function optionLabel($row): string {
+        return $row->area_define_name;
+    }
+
+    /**
+     * index navigation.
+     */
+    public function indexNav(): ?\Illuminate\Contracts\Support\Renderable {
+        return null;
+    }
+
+    /**
+     * Build an "index" query for the given resource.
+     *
+     * @param RowsContract $query
+     *
+     * @return RowsContract
+     */
+    public static function indexQuery(array $data, $query) {
+        // return $query->where('user_id', $request->user()->id);
+        return $query;
+    }
+
+    /**
+>>>>>>> bf66904 (up)
      * Get the fields displayed by the resource.
         'value'=>'..',
      */

@@ -35,6 +35,7 @@ use Modules\Xot\Traits\Updater;
  * @property int|null $author_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+<<<<<<< HEAD
  * @property int|null $category_id
  * @property string|null $image
  * @property string|null $content
@@ -50,6 +51,29 @@ use Modules\Xot\Traits\Updater;
  * @property string|null $linkable_type
  * @property int|null $views_count
  * @property-read Model|\Eloquent $linkable
+=======
+ * @property int|null                        $category_id
+ * @property string|null                     $image
+ * @property string|null                     $created_by
+ * @property string|null                     $updated_by
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property string|null                     $deleted_by
+ * @property string|null                     $deleted_ip
+ * @property string|null                     $created_ip
+ * @property string|null                     $updated_ip
+ * @property string|null                     $content
+ * @property int|null                        $published
+ * @property string|null                     $url
+ * @property array|null                      $url_lang
+ * @property array|null                      $image_resize_src
+ * @property string|null                     $linked_count
+ * @property string|null                     $related_count
+ * @property string|null                     $relatedrev_count
+ * @property string|null                     $linkable_type
+ * @property int|null                        $views_count
+ * @property Model|\Eloquent                 $linkable
+ *
+>>>>>>> bf66904 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post query()
@@ -85,10 +109,28 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
  * @mixin \Eloquent
+<<<<<<< HEAD
+=======
+ *
+ * @property string|null $type
+ * @property string|null $price
+ * @property string|null $price_currency
+ * @property int|null    $views
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePriceCurrency($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+ *
+ * @property int|null $auth_user_id
+ * @mixin IdeHelperPost
+>>>>>>> bf66904 (up)
  */
 class Post extends Model {
     // use Cachable;
     use Updater;
+<<<<<<< HEAD
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -100,6 +142,8 @@ class Post extends Model {
 
     protected $perPage = 30;
 
+=======
+>>>>>>> bf66904 (up)
     // use Searchable;
     /**
      * @var string
@@ -254,4 +298,8 @@ class Post extends Model {
     public function toSearchableArray() {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
+<<<<<<< HEAD
 }// end class
+=======
+}// end class
+>>>>>>> bf66904 (up)

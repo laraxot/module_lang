@@ -55,9 +55,12 @@ trait LinkedTrait {
      */
     public function post(): MorphOne {
         $models = TenantService::config('morph_map');
+<<<<<<< HEAD
         if (! is_array($models)) {
             $models = [];
         }
+=======
+>>>>>>> bf66904 (up)
         $class = static::class;
         $alias = collect($models)->search($class);
 
@@ -109,7 +112,11 @@ trait LinkedTrait {
 
     /* commento */
 
+<<<<<<< HEAD
     /** spostato in Favorite.php.
+=======
+    /** spostato in Favorite.php
+>>>>>>> bf66904 (up)
     }
      * @param mixed $related
      *
@@ -129,7 +136,11 @@ trait LinkedTrait {
     }
     */
 
+<<<<<<< HEAD
     /** spostato in Favorite.php.
+=======
+    /** spostato in Favorite.php
+>>>>>>> bf66904 (up)
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
     public function myFavorites() {
         return $this->morphMany(Favorite::class, 'post')
@@ -137,7 +148,11 @@ trait LinkedTrait {
     }
      */
 
+<<<<<<< HEAD
     /** spostato in Favorite.php.
+=======
+    /** spostato in Favorite.php
+>>>>>>> bf66904 (up)
      * @return bool
     public function isMyFavorited() {
         return $this->favorites()
@@ -219,12 +234,20 @@ trait LinkedTrait {
 
     // ------- mutators -------------
 
+<<<<<<< HEAD
     public function postType(): string {
         $models = config('morph_map');
         if (! is_array($models)) {
             $models = [];
         }
         $post_type = collect($models)->search(static::class);
+=======
+    /**
+     * @return bool|mixed|string
+     */
+    public function postType() {
+        $post_type = collect(config('morph_map'))->search(static::class);
+>>>>>>> bf66904 (up)
         if (false === $post_type) {
             $post_type = Str::snake(class_basename($this));
         }
@@ -240,9 +263,12 @@ trait LinkedTrait {
         if (null !== $value) {
             return $value;
         }
+<<<<<<< HEAD
 
         return $this->postType();
         /*
+=======
+>>>>>>> bf66904 (up)
         $post_type = collect(config('morph_map'))->search(static::class);
         if (false === $post_type) {
             $post_type = Str::snake(class_basename($this));
@@ -282,10 +308,14 @@ trait LinkedTrait {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (isset($this->post) && \is_object($this->post)) {
 =======
         if (isset($this->post) && is_object($this->post)) {
 >>>>>>> a72e892 (.)
+=======
+        if (isset($this->post) && \is_object($this->post)) {
+>>>>>>> bf66904 (up)
             return $this->post->$name; // .'#NO-PIVOT';
         }
 
@@ -316,6 +346,7 @@ trait LinkedTrait {
 
     // *
 
+<<<<<<< HEAD
     /*
      * param mixed $value
      *
@@ -323,6 +354,15 @@ trait LinkedTrait {
      * throws \ReflectionException
      *
      * return mixed
+=======
+    /**
+     * @param mixed $value
+     *
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @throws \ReflectionException
+     *
+     * @return mixed
+>>>>>>> bf66904 (up)
      */
     /* deprecated
     public function getUrlAttribute($value) {
@@ -477,8 +517,9 @@ trait LinkedTrait {
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
-    /*
+    /**
      * @param mixed $value
+<<<<<<< HEAD
 <<<<<<< HEAD
     * deprecated
     *public function setRoutenameAttribute(?string $value) {
@@ -487,12 +528,18 @@ trait LinkedTrait {
      */
 =======
 
+=======
+>>>>>>> bf66904 (up)
     /* deprecated
     public function setRoutenameAttribute(?string $value) {
         return $this->setPostAttr(__FUNCTION__, $value);
     }
+<<<<<<< HEAD
     */
 >>>>>>> a72e892 (.)
+=======
+     */
+>>>>>>> bf66904 (up)
     // --- attribute e' risertvato
 
     /**
@@ -533,8 +580,12 @@ trait LinkedTrait {
 =======
         // $this->post->$name=$value;
         // $res=$this->post->save();
+<<<<<<< HEAD
         if (is_object($this->post)) {
 >>>>>>> a72e892 (.)
+=======
+        if (\is_object($this->post)) {
+>>>>>>> bf66904 (up)
             $this->post->update($data);
         } else {
             $this->post()->updateOrCreate($data);

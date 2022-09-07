@@ -21,6 +21,7 @@ abstract class BaseModel extends Model {
     // use Searchable;
     // use Cachable;
     use Updater;
+<<<<<<< HEAD
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -31,6 +32,8 @@ abstract class BaseModel extends Model {
      public static $snakeAttributes = true;
 
     protected $perPage = 30;
+=======
+>>>>>>> bf66904 (up)
 
     /**
      * @var string

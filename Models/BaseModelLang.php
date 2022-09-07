@@ -23,6 +23,7 @@ abstract class BaseModelLang extends Model {
     // use Searchable;
     use LinkedTrait;
     use Updater;
+<<<<<<< HEAD
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -33,6 +34,8 @@ abstract class BaseModelLang extends Model {
     public static $snakeAttributes = true;
 
     protected $perPage = 30;
+=======
+>>>>>>> bf66904 (up)
 
     protected $connection = 'mysql'; // this will use the specified database connection
 
