@@ -12,40 +12,41 @@ use Illuminate\Support\Str;
 use Modules\Xot\Traits\Updater;
 
 /**
- * Modules\Lang\Models\Post
+ * Modules\Lang\Models\Post.
  *
- * @property int $id
- * @property int|null $user_id
- * @property string|null $post_type
- * @property int|null $post_id
- * @property string|null $lang
- * @property string|null $title
- * @property string|null $subtitle
- * @property string|null $guid
- * @property string|null $txt
- * @property string|null $image_src
- * @property string|null $image_alt
- * @property string|null $image_title
- * @property string|null $meta_description
- * @property string|null $meta_keywords
- * @property int|null $author_id
+ * @property int                             $id
+ * @property int|null                        $user_id
+ * @property string|null                     $post_type
+ * @property int|null                        $post_id
+ * @property string|null                     $lang
+ * @property string|null                     $title
+ * @property string|null                     $subtitle
+ * @property string|null                     $guid
+ * @property string|null                     $txt
+ * @property string|null                     $image_src
+ * @property string|null                     $image_alt
+ * @property string|null                     $image_title
+ * @property string|null                     $meta_description
+ * @property string|null                     $meta_keywords
+ * @property int|null                        $author_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $category_id
- * @property string|null $image
- * @property string|null $content
- * @property int|null $published
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property string|null $url
- * @property array|null $url_lang
- * @property array|null $image_resize_src
- * @property string|null $linked_count
- * @property string|null $related_count
- * @property string|null $relatedrev_count
- * @property string|null $linkable_type
- * @property int|null $views_count
- * @property-read Model|\Eloquent $linkable
+ * @property int|null                        $category_id
+ * @property string|null                     $image
+ * @property string|null                     $content
+ * @property int|null                        $published
+ * @property string|null                     $created_by
+ * @property string|null                     $updated_by
+ * @property string|null                     $url
+ * @property array|null                      $url_lang
+ * @property array|null                      $image_resize_src
+ * @property string|null                     $linked_count
+ * @property string|null                     $related_count
+ * @property string|null                     $relatedrev_count
+ * @property string|null                     $linkable_type
+ * @property int|null                        $views_count
+ * @property Model|\Eloquent                 $linkable
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post query()
@@ -80,6 +81,7 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrlLang($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
+ *
  * @mixin \Eloquent
  */
 class Post extends Model {
