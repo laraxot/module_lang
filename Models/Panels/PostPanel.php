@@ -81,9 +81,6 @@ class PostPanel extends XotBasePanel {
     }
 
     /**
->>>>>>> bf66904 (up)
-=======
->>>>>>> 3b26375 (.)
      * Get the fields displayed by the resource.
         'value'=>'..',
      */
