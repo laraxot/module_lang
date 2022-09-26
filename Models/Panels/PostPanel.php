@@ -6,14 +6,8 @@ namespace Modules\Lang\Models\Panels;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 // --- Services --
 
-=======
-//--- Services --
-
-use Modules\Xot\Contracts\RowsContract;
->>>>>>> c8a63ea (up)
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 class PostPanel extends XotBasePanel {
@@ -60,11 +54,8 @@ class PostPanel extends XotBasePanel {
 
     /**
      * on select the option label.
-<<<<<<< HEAD
      *
      * @param mixed $row
-=======
->>>>>>> c8a63ea (up)
      */
     public function optionLabel($row): string {
         return $row->area_define_name;
@@ -85,11 +76,7 @@ class PostPanel extends XotBasePanel {
      * @return RowsContract
      */
     public static function indexQuery(array $data, $query) {
-<<<<<<< HEAD
         // return $query->where('user_id', $request->user()->id);
-=======
-        //return $query->where('user_id', $request->user()->id);
->>>>>>> c8a63ea (up)
         return $query;
     }
 
@@ -99,164 +86,92 @@ class PostPanel extends XotBasePanel {
      */
     public function fields(): array {
         return [
-<<<<<<< HEAD
             (object) [
-=======
-            0 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'Id',
                 'name' => 'id',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            1 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'Integer',
                 'name' => 'user_id',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            2 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'Bigint',
                 'name' => 'post_id',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            3 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'String',
                 'name' => 'lang',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            4 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'String',
                 'name' => 'guid',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            5 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'String',
                 'name' => 'title',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            6 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'Text',
                 'name' => 'subtitle',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            7 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'String',
                 'name' => 'post_type',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            8 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'Text',
                 'name' => 'txt',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            9 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'String',
                 'name' => 'image_src',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            10 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'String',
                 'name' => 'image_alt',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            11 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'String',
                 'name' => 'image_title',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            12 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'Text',
                 'name' => 'meta_description',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            13 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'Text',
                 'name' => 'meta_keywords',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            14 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'Integer',
                 'name' => 'author_id',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            15 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'String',
                 'name' => 'url',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            16 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'Text',
                 'name' => 'url_lang',
                 'comment' => null,
             ],
-<<<<<<< HEAD
             (object) [
-=======
-            17 => (object) [
->>>>>>> c8a63ea (up)
                 'type' => 'Text',
                 'name' => 'image_resize_src',
                 'comment' => null,
