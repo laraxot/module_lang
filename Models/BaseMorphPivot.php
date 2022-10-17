@@ -14,6 +14,7 @@ abstract class BaseMorphPivot extends MorphPivot
 {
     use Updater;
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -27,6 +28,9 @@ abstract class BaseMorphPivot extends MorphPivot
 =======
 
 >>>>>>> 13065fd (.)
+=======
+
+>>>>>>> 1242904 (.)
     protected $connection = 'mysql'; // this will use the specified database connection
 
     /**
@@ -50,10 +54,14 @@ abstract class BaseMorphPivot extends MorphPivot
     public $timestamps = true;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // protected $attributes = ['related_type' => 'cuisine_cat'];
 =======
     //protected $attributes = ['related_type' => 'cuisine_cat'];
 >>>>>>> 13065fd (.)
+=======
+    //protected $attributes = ['related_type' => 'cuisine_cat'];
+>>>>>>> 1242904 (.)
 
     /**
      * @var string[]

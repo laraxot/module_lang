@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <head>
     <meta charset="utf-8">
@@ -21,6 +22,8 @@
 </body>
 
 =======
+=======
+>>>>>>> 1242904 (.)
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,5 +40,8 @@
         {{-- Laravel Mix - JS File --}}
         {{-- <script src="{{ mix('js/lang.js') }}"></script> --}}
     </body>
+<<<<<<< HEAD
 >>>>>>> 13065fd (.)
+=======
+>>>>>>> 1242904 (.)
 </html>

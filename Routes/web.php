@@ -1,10 +1,13 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 >>>>>>> 13065fd (.)
+=======
+>>>>>>> 1242904 (.)
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +19,7 @@ declare(strict_types=1);
 |
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -24,9 +28,15 @@ Route::prefix('lang')->group(function() {
 });
 >>>>>>> 13065fd (.)
 =======
+=======
+
+>>>>>>> 1242904 (.)
 Route::prefix('lang')->group(
     function () {
         Route::get('/', 'LangController@index');
     }
 );
+<<<<<<< HEAD
 >>>>>>> f7ae34c (.)
+=======
+>>>>>>> 1242904 (.)

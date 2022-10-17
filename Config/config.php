@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -9,4 +10,8 @@ return [
 return [
     'name' => 'Lang'
 >>>>>>> 13065fd (.)
+=======
+return [
+    'name' => 'Lang'
+>>>>>>> 1242904 (.)
 ];
