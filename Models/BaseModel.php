@@ -22,6 +22,7 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
+<<<<<<< HEAD
 abstract class BaseModel extends Model {
 <<<<<<< HEAD
     use HasFactory;
@@ -39,6 +40,10 @@ abstract class BaseModel extends Model {
 
     protected $perPage = 30;
 =======
+=======
+abstract class BaseModel extends Model
+{
+>>>>>>> f7ae34c (.)
     use Updater;
     //use Searchable;
     //use Cachable;
@@ -103,10 +108,15 @@ abstract class BaseModel extends Model {
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
+<<<<<<< HEAD
     protected static function newFactory() {
 <<<<<<< HEAD
         return FactoryService::newFactory(static::class);
 =======
+=======
+    protected static function newFactory()
+    {
+>>>>>>> f7ae34c (.)
         return FactoryService::newFactory(get_called_class());
 >>>>>>> 13065fd (.)
     }
