@@ -4,12 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Models;
 
+<<<<<<< HEAD
 // //use Laravel\Scout\Searchable;
 // ---------- traits
 // //use Laravel\Scout\Searchable;
 // ---------- traits
 // //use Laravel\Scout\Searchable;
 // ---------- traits
+=======
+////use Laravel\Scout\Searchable;
+//---------- traits
+>>>>>>> 13065fd (.)
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -19,6 +24,7 @@ use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseModelLang.
+<<<<<<< HEAD
  *
  * @property string|null $post_type
  */
@@ -37,6 +43,14 @@ abstract class BaseModelLang extends Model {
     public static $snakeAttributes = true;
 
     protected $perPage = 30;
+=======
+ */
+abstract class BaseModelLang extends Model {
+    use Updater;
+    //use Searchable;
+    use LinkedTrait;
+    use HasFactory;
+>>>>>>> 13065fd (.)
 
     protected $connection = 'mysql'; // this will use the specified database connection
 
@@ -46,11 +60,18 @@ abstract class BaseModelLang extends Model {
     protected $fillable = ['id'];
 
     /**
+<<<<<<< HEAD
      * @var array<string, string>
      */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
         // 'published_at' => 'datetime:Y-m-d', // da verificare
+=======
+     * @var array
+     */
+    protected $casts = [
+        //'published_at' => 'datetime:Y-m-d', // da verificare
+>>>>>>> 13065fd (.)
     ];
 
     /**
@@ -69,10 +90,17 @@ abstract class BaseModelLang extends Model {
     public $incrementing = true;
 
     /**
+<<<<<<< HEAD
      * @var array<int, string>
      */
     protected $hidden = [
         // 'password'
+=======
+     * @var array
+     */
+    protected $hidden = [
+        //'password'
+>>>>>>> 13065fd (.)
     ];
 
     /**
@@ -80,13 +108,27 @@ abstract class BaseModelLang extends Model {
      */
     public $timestamps = true;
 
+<<<<<<< HEAD
+=======
+    //-----------
+    /*
+    protected $id;
+    protected $post;
+    protected $lang;
+    */
+
+>>>>>>> 13065fd (.)
     /**
      * Create a new factory instance for the model.
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
     protected static function newFactory() {
+<<<<<<< HEAD
         return FactoryService::newFactory(static::class);
         // return FactoryService::newFactory(get_called_class());
+=======
+        return FactoryService::newFactory(get_called_class());
+>>>>>>> 13065fd (.)
     }
 }
