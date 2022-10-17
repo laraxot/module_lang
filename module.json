@@ -1,59 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> db43a41 (.)
-{
-    "name": "Lang",
-    "alias": "lang",
-    "description": "",
-    "keywords": [],
-    "priority": 0,
-    "providers": [
-        "Modules\\Lang\\Providers\\LangServiceProvider"
-    ],
-    "aliases": {},
-    "files": [],
-    "requires": []
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 13065fd (.)
-=======
-}
->>>>>>> 1242904 (.)
-=======
-=======
->>>>>>> b2f15d7 (.)
-=======
->>>>>>> 88c573f (.)
-{
-    "name": "Lang",
-    "alias": "lang",
-    "description": "",
-    "keywords": [],
-    "priority": 0,
-    "providers": [
-        "Modules\\Lang\\Providers\\LangServiceProvider"
-    ],
-    "aliases": {},
-    "files": [],
-    "requires": []
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> cfb7936 (.)
-=======
->>>>>>> b2f15d7 (.)
-=======
-}
->>>>>>> db43a41 (.)
-=======
 {
     "name": "Lang",
     "alias": "lang",
@@ -67,7 +11,3 @@
     "files": [],
     "requires": []
 }
->>>>>>> c521047 (.)
-=======
-}
->>>>>>> 88c573f (.)
