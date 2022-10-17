@@ -6,6 +6,7 @@ namespace Modules\Lang\Models;
 
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 // --- traits ---
 use Illuminate\Support\Str;
 // use Laravel\Scout\Searchable;
@@ -27,6 +28,113 @@ class Post extends Model {
 
     protected $perPage = 30;
 
+=======
+//--- traits ---
+use Illuminate\Support\Str;
+//use Laravel\Scout\Searchable;
+use Modules\Xot\Traits\Updater;
+
+//---- services --
+
+//--- models ---
+
+/**
+ * NO BaseModel.
+ *
+ * @property int                             $id
+ * @property int|null                        $user_id
+ * @property int|null                        $post_id
+ * @property string|null                     $lang
+ * @property string|null                     $title
+ * @property string|null                     $subtitle
+ * @property string|null                     $guid
+ * @property string|null                     $post_type
+ * @property string|null                     $txt
+ * @property string|null                     $image_src
+ * @property string|null                     $image_alt
+ * @property string|null                     $image_title
+ * @property string|null                     $meta_description
+ * @property string|null                     $meta_keywords
+ * @property int|null                        $author_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int|null                        $category_id
+ * @property string|null                     $image
+ * @property string|null                     $created_by
+ * @property string|null                     $updated_by
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property string|null                     $deleted_by
+ * @property string|null                     $deleted_ip
+ * @property string|null                     $created_ip
+ * @property string|null                     $updated_ip
+ * @property string|null                     $content
+ * @property int|null                        $published
+ * @property string|null                     $url
+ * @property array|null                      $url_lang
+ * @property array|null                      $image_resize_src
+ * @property string|null                     $linked_count
+ * @property string|null                     $related_count
+ * @property string|null                     $relatedrev_count
+ * @property string|null                     $linkable_type
+ * @property int|null                        $views_count
+ * @property Model|\Eloquent                 $linkable
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereAuthUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereAuthorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereCreatedIp($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereDeletedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereDeletedIp($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereGuid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereImageAlt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereImageResizeSrc($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereImageSrc($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereImageTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereLang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereLinkableType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereLinkedCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereMetaDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereMetaKeywords($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePostId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePostType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePublished($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereRelatedCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereRelatedrevCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereSubtitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereTxt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUpdatedIp($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrlLang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
+ * @mixin \Eloquent
+ *
+ * @property string|null $type
+ * @property string|null $price
+ * @property string|null $price_currency
+ * @property int|null    $views
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePriceCurrency($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
+ */
+class Post extends Model {
+    //use Cachable;
+    use Updater;
+    //use Searchable;
+>>>>>>> 13065fd (.)
     /**
      * @var string
      */
@@ -41,6 +149,7 @@ class Post extends Model {
         'subtitle',
         'post_type',
         'txt',
+<<<<<<< HEAD
         // ------ IMAGE ---------
         'image_src', 'image_alt', 'image_title',
         // ------ SEO FIELDS -----
@@ -55,6 +164,15 @@ class Post extends Model {
         'author_id',
         // ------ BUFFER ----
         'url', 'url_lang', // buffer
+=======
+        //------ IMAGE ---------
+        'image_src', 'image_alt', 'image_title',
+        //------ SEO FIELDS -----
+        'meta_description', 'meta_keywords', // seo
+        'author_id',
+        //------ BUFFER ----
+        'url', 'url_lang', //buffer
+>>>>>>> 13065fd (.)
         'image_resize_src', // buffer
     ];
 
@@ -82,7 +200,11 @@ class Post extends Model {
     ];
 
     /**
+<<<<<<< HEAD
      * @var array<string, string>
+=======
+     * @var string[]
+>>>>>>> 13065fd (.)
      */
     protected $casts = [
         'image_resize_src' => 'array',
@@ -94,7 +216,11 @@ class Post extends Model {
         return inAdmin() ? 'guid' : 'post_id';
     }
     */
+<<<<<<< HEAD
     // -------- relationship ------
+=======
+    //-------- relationship ------
+>>>>>>> 13065fd (.)
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
@@ -122,7 +248,12 @@ class Post extends Model {
     }
     */
 
+<<<<<<< HEAD
     // -------------- MUTATORS ------------------
+=======
+    //end function
+    //-------------- MUTATORS ------------------
+>>>>>>> 13065fd (.)
 
     public function setTitleAttribute(string $value): void {
         $this->attributes['title'] = $value;
@@ -147,6 +278,7 @@ class Post extends Model {
         return $value;
     }
 
+<<<<<<< HEAD
     /**
      * ---.
      */
@@ -159,6 +291,18 @@ class Post extends Model {
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
         }
         if (null === $value) {
+=======
+    public function getGuidAttribute(?string $value): ?string {
+        if (is_string($value) && false === strpos($value, ' ')) {
+            return $value;
+        }
+        //dddx($this->title);
+        $value = $this->title;
+        if ('' == $value) {
+            $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
+        }
+        if (null == $value) {
+>>>>>>> 13065fd (.)
             $value = 'u-'.rand(1, 1000);
         }
         $value = Str::slug($value);
@@ -169,7 +313,11 @@ class Post extends Model {
     }
 
     public function getTxtAttribute(?string $value): ?string {
+<<<<<<< HEAD
         return null === $value ? '' : $value;
+=======
+        return null == $value ? '' : $value;
+>>>>>>> 13065fd (.)
     }
 
     /*
@@ -180,6 +328,7 @@ class Post extends Model {
 
     public const SEARCHABLE_FIELDS = ['title', 'guid', 'txt'];
 
+<<<<<<< HEAD
     /**
      * @return array
      */
@@ -187,3 +336,9 @@ class Post extends Model {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
 }// end class
+=======
+    public function toSearchableArray(): array {
+        return $this->only(self::SEARCHABLE_FIELDS);
+    }
+}//end class
+>>>>>>> 13065fd (.)
