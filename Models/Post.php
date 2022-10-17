@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -480,6 +481,8 @@ class Post extends Model {
 }//end class
 >>>>>>> 1242904 (.)
 =======
+=======
+>>>>>>> c2e2665 (.)
 <?php
 
 declare(strict_types=1);
@@ -537,6 +540,7 @@ use Modules\Xot\Traits\Updater;
  * @property string|null                     $linkable_type
  * @property int|null                        $views_count
  * @property Model|\Eloquent                 $linkable
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post query()
@@ -577,15 +581,18 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrlLang($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
  * @mixin \Eloquent
+ *
  * @property string|null $type
  * @property string|null $price
  * @property string|null $price_currency
  * @property int|null    $views
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Post wherePrice($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post wherePriceCurrency($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+ *
  * @property int|null $auth_user_id
  * @mixin IdeHelperPost
  */
@@ -745,6 +752,7 @@ class Post extends Model {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
 }//end class
+<<<<<<< HEAD
 >>>>>>> 2a85bc8 (.)
 =======
 <?php
@@ -1022,3 +1030,5 @@ class Post extends Model {
 =======
 >>>>>>> 409ff992cc550f4020e3e135d12e5befd84dadaf
 >>>>>>> 2a85bc8 (.)
+=======
+>>>>>>> c2e2665 (.)
