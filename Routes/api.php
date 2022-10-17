@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> 13065fd (.)
 use Illuminate\Http\Request;
 
 /*
@@ -14,6 +17,7 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+<<<<<<< HEAD
 /*
 Route::middleware('auth:api')->get(
     '/lang', function (Request $request) {
@@ -21,3 +25,9 @@ Route::middleware('auth:api')->get(
     }
 );
 */
+=======
+
+Route::middleware('auth:api')->get('/lang', function (Request $request) {
+    return $request->user();
+});
+>>>>>>> 13065fd (.)
