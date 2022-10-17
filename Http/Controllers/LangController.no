@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 namespace Modules\Lang\Http\Controllers;
@@ -79,6 +80,8 @@ class LangController extends Controller
     }
 }
 =======
+=======
+>>>>>>> eec8c0a (.)
 <?php
 
 namespace Modules\Lang\Http\Controllers;
@@ -158,4 +161,7 @@ class LangController extends Controller
         //
     }
 }
+<<<<<<< HEAD
 >>>>>>> b2f15d7 (.)
+=======
+>>>>>>> eec8c0a (.)

@@ -593,9 +593,13 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property int|null $auth_user_id
 =======
 >>>>>>> b2f15d7 (.)
+=======
+ * @property int|null $auth_user_id
+>>>>>>> eec8c0a (.)
  * @mixin IdeHelperPost
  */
 class Post extends Model {
