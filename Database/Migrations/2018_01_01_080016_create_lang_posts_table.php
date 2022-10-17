@@ -14,7 +14,8 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreatePostsTable.
  */
-class CreateLangPostsTable extends XotBaseMigration {
+class CreateLangPostsTable extends XotBaseMigration
+{
     protected ?string $model_class = Post::class;
 
     /**
@@ -22,10 +23,15 @@ class CreateLangPostsTable extends XotBaseMigration {
      *
      * @return void
      */
+<<<<<<< HEAD
     public function up() {
 <<<<<<< HEAD
         // -- CREATE --
 =======
+=======
+    public function up()
+    {
+>>>>>>> f7ae34c (.)
         //-- CREATE --
 >>>>>>> e07d6f0 (.)
         $this->tableCreate(
@@ -46,11 +52,15 @@ class CreateLangPostsTable extends XotBaseMigration {
                 $table->timestamps();
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
         );
 
         // -- UPDATE --
 =======
             );
+=======
+        );
+>>>>>>> f7ae34c (.)
 
         //-- UPDATE --
 >>>>>>> e07d6f0 (.)
