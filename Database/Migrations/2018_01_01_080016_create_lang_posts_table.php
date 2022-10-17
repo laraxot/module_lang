@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7c8dc60 (.)
 <?php
 
 declare(strict_types=1);
@@ -245,6 +248,7 @@ class CreateLangPostsTable extends XotBaseMigration
     //end down
 }//end class
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e07d6f0 (.)
 =======
 >>>>>>> 1242904 (.)
@@ -416,3 +420,5 @@ class CreateLangPostsTable extends XotBaseMigration
 >>>>>>> cfb7936 (.)
 =======
 >>>>>>> b2f15d7 (.)
+=======
+>>>>>>> 7c8dc60 (.)

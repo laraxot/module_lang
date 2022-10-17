@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7c8dc60 (.)
 <?php
 
 declare(strict_types=1);
@@ -169,6 +172,7 @@ abstract class BaseModelLang extends Model
 >>>>>>> 1242904 (.)
     }
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> b2f15d7 (.)
@@ -259,3 +263,5 @@ abstract class BaseModelLang extends Model
 >>>>>>> cfb7936 (.)
 =======
 >>>>>>> b2f15d7 (.)
+=======
+>>>>>>> 7c8dc60 (.)
