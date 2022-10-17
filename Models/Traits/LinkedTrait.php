@@ -1628,6 +1628,7 @@ trait LinkedTrait
     }
     */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setGuidAttribute(?string $value): void
     {
         if ('' == $value && null != $this->post) {
@@ -1635,6 +1636,11 @@ trait LinkedTrait
     public function setGuidAttribute(?string $value): void {
         if (('' == $value || $value == null ) && null != $this->post) {
 >>>>>>> 62e70ad (.)
+=======
+    public function setGuidAttribute(?string $value): void
+    {
+        if (('' == $value || $value == null) && null != $this->post) {
+>>>>>>> 8967e6e (.)
             $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
             $res = $this->post->save();
         }
