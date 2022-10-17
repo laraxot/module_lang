@@ -115,6 +115,7 @@ trait LinkedTrait
             $data = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             $panel = PanelService::make()->get($this);
             $alias = $panel->postType();
             $data[$alias] = $class;
@@ -136,6 +137,9 @@ trait LinkedTrait
 =======
             $panel = PanelService::get($this);
 >>>>>>> b13e4c1 (.)
+=======
+            $panel = PanelService::make()->get($this);
+>>>>>>> d128701 (.)
             $alias = $panel->postType();
             $data['model'][$alias] = $class;
             TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
@@ -468,7 +472,7 @@ trait LinkedTrait
     public function getUrlAttribute($value) {
 
         //return $this->getPostAttr(__FUNCTION__, $value);
-        return PanelService::get($this)->url();
+        return PanelService::make()->get($this)->url();
     }
 
     //*/
@@ -741,6 +745,7 @@ trait LinkedTrait
         $item_guid = str_replace(' ', '%', $item_guid);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $panel = PanelService::make()->get($this);
         $panel = PanelService::make()->get($this);
 =======
@@ -749,6 +754,9 @@ trait LinkedTrait
 =======
         $panel = PanelService::get($this);
 >>>>>>> b13e4c1 (.)
+=======
+        $panel = PanelService::make()->get($this);
+>>>>>>> d128701 (.)
         $other_lang = Post::query()
             ->where('post_type', $panel->postType())
             ->where('guid', 'like', $item_guid)
