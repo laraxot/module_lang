@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * ---.
  */
@@ -20,11 +21,17 @@
 =======
 <?php
 >>>>>>> b2f15d7 (.)
+=======
+/**
+ * ---.
+ */
+>>>>>>> 9c926b0 (.)
 
 declare(strict_types=1);
 
 namespace Modules\Lang\Models\Traits;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,11 +42,15 @@ use Exception;
 >>>>>>> 1242904 (.)
 =======
 >>>>>>> b2f15d7 (.)
+=======
+use Exception;
+>>>>>>> 9c926b0 (.)
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\Relations\Relation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1450,6 +1461,8 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\Relations\Relation;
+=======
+>>>>>>> 9c926b0 (.)
 //use Illuminate\Support\Facades\URL;
 //use Laravel\Scout\Searchable;
 use Illuminate\Support\Facades\App;
@@ -1501,6 +1514,7 @@ trait LinkedTrait {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             dddx($data);
             
@@ -1519,11 +1533,16 @@ trait LinkedTrait {
 >>>>>>> 176a6b7 (.)
             throw new Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
 =======
+=======
+>>>>>>> 9c926b0 (.)
 
             //dddx($data);
 
             throw new Exception('[class: '.$class.']['.__LINE__.']['.class_basename(__CLASS__).']');
+<<<<<<< HEAD
 >>>>>>> a346cb3 (.)
+=======
+>>>>>>> 9c926b0 (.)
             TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
         }
 
@@ -1794,10 +1813,13 @@ trait LinkedTrait {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setGuidAttribute(?string $value): void
     {
         if ('' == $value && null != $this->post) {
 =======
+=======
+>>>>>>> 9c926b0 (.)
     public function setGuidAttribute(?string $value): void {
         if (('' == $value || $value == null ) && null != $this->post) {
 >>>>>>> 62e70ad (.)
@@ -1809,7 +1831,10 @@ trait LinkedTrait {
 =======
     public function setGuidAttribute(?string $value): void {
         if (('' == $value || null == $value) && null != $this->post) {
+<<<<<<< HEAD
 >>>>>>> a346cb3 (.)
+=======
+>>>>>>> 9c926b0 (.)
             $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
             $res = $this->post->save();
         }
@@ -1978,10 +2003,13 @@ trait LinkedTrait {
                 ->where('lang', $this->lang)
                 ->where('post.post_type', $this->post_type)
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //->limit(1)
 =======
 
 >>>>>>> 0e42143 (.)
+=======
+>>>>>>> 9c926b0 (.)
             ;
         });
         */
@@ -2043,10 +2071,13 @@ trait LinkedTrait {
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeWithPost($query, string $guid) {
+<<<<<<< HEAD
 =======
     public function scopeWithPost($query, string $guid)
     {
 >>>>>>> b2f15d7 (.)
+=======
+>>>>>>> 9c926b0 (.)
         return $query; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         /* depreated ??
         $post_table = with(new Post())->getTable();
@@ -2058,6 +2089,7 @@ trait LinkedTrait {
                 ->where('post.post_type', $this->post_type)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //->limit(1)
 =======
 
@@ -2065,6 +2097,8 @@ trait LinkedTrait {
 =======
                 //->limit(1)
 >>>>>>> b2f15d7 (.)
+=======
+>>>>>>> 9c926b0 (.)
             ;
         });
         */
