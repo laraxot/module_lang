@@ -18,7 +18,15 @@ declare(strict_types=1);
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 Route::prefix('lang')->group(function() {
     Route::get('/', 'LangController@index');
 });
 >>>>>>> 13065fd (.)
+=======
+Route::prefix('lang')->group(
+    function () {
+        Route::get('/', 'LangController@index');
+    }
+);
+>>>>>>> f7ae34c (.)
