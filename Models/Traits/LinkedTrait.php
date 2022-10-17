@@ -1348,9 +1348,14 @@ trait LinkedTrait
 >>>>>>> f32e6cc (.)
 =======
            
+<<<<<<< HEAD
             dddx($data);
             
 >>>>>>> 63cb905 (.)
+=======
+            //dddx($data);
+
+>>>>>>> 176a6b7 (.)
             throw new Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
             TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
         }
