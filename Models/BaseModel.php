@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Lang\Models;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 // use Laravel\Scout\Searchable;
 // ---------- traits
@@ -13,6 +14,11 @@ namespace Modules\Lang\Models;
 //use Laravel\Scout\Searchable;
 //---------- traits
 >>>>>>> 13065fd (.)
+=======
+//use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+//use Laravel\Scout\Searchable;
+//---------- traits
+>>>>>>> 1242904 (.)
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -22,6 +28,7 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 abstract class BaseModel extends Model {
 <<<<<<< HEAD
@@ -44,11 +51,18 @@ abstract class BaseModel extends Model {
 abstract class BaseModel extends Model
 {
 >>>>>>> f7ae34c (.)
+=======
+abstract class BaseModel extends Model
+{
+>>>>>>> 1242904 (.)
     use Updater;
     //use Searchable;
     //use Cachable;
     use HasFactory;
+<<<<<<< HEAD
 >>>>>>> 13065fd (.)
+=======
+>>>>>>> 1242904 (.)
 
     /**
      * @var string
@@ -61,16 +75,22 @@ abstract class BaseModel extends Model
     protected $fillable = ['id'];
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var array<string, string>
      */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
 =======
+=======
+>>>>>>> 1242904 (.)
      * @var array
      */
     protected $casts = [
         //'published_at' => 'datetime:Y-m-d', // da verificare
+<<<<<<< HEAD
 >>>>>>> 13065fd (.)
+=======
+>>>>>>> 1242904 (.)
     ];
 
     /**
@@ -87,16 +107,22 @@ abstract class BaseModel extends Model
     public $incrementing = true;
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var array<int, string>
      */
     protected $hidden = [
         // 'password'
 =======
+=======
+>>>>>>> 1242904 (.)
      * @var array
      */
     protected $hidden = [
         //'password'
+<<<<<<< HEAD
 >>>>>>> 13065fd (.)
+=======
+>>>>>>> 1242904 (.)
     ];
     /**
      * @var bool
@@ -109,6 +135,7 @@ abstract class BaseModel extends Model
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected static function newFactory() {
 <<<<<<< HEAD
         return FactoryService::newFactory(static::class);
@@ -119,5 +146,10 @@ abstract class BaseModel extends Model
 >>>>>>> f7ae34c (.)
         return FactoryService::newFactory(get_called_class());
 >>>>>>> 13065fd (.)
+=======
+    protected static function newFactory()
+    {
+        return FactoryService::newFactory(get_called_class());
+>>>>>>> 1242904 (.)
     }
 }

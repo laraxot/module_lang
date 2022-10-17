@@ -5,10 +5,14 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // --- models --
 =======
 //--- models --
 >>>>>>> e07d6f0 (.)
+=======
+//--- models --
+>>>>>>> 1242904 (.)
 use Modules\Lang\Models\Post;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
@@ -25,6 +29,7 @@ class CreateLangPostsTable extends XotBaseMigration
      * @return void
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function up() {
 <<<<<<< HEAD
         // -- CREATE --
@@ -35,6 +40,11 @@ class CreateLangPostsTable extends XotBaseMigration
 >>>>>>> f7ae34c (.)
         //-- CREATE --
 >>>>>>> e07d6f0 (.)
+=======
+    public function up()
+    {
+        //-- CREATE --
+>>>>>>> 1242904 (.)
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
@@ -54,6 +64,7 @@ class CreateLangPostsTable extends XotBaseMigration
             }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         );
 
         // -- UPDATE --
@@ -65,16 +76,25 @@ class CreateLangPostsTable extends XotBaseMigration
 
         //-- UPDATE --
 >>>>>>> e07d6f0 (.)
+=======
+        );
+
+        //-- UPDATE --
+>>>>>>> 1242904 (.)
         $this->tableUpdate(
             function (Blueprint $table) {
                 // if (!$this->hasColumn( 'post_type')) {
                 //     $table->string('post_type', 40)->after('type')->index()->nullable();
                 // }
 <<<<<<< HEAD
+<<<<<<< HEAD
                 // Class 'Doctrine\DBAL\Driver\PDOMySql\Driver' not found
 =======
                 //Class 'Doctrine\DBAL\Driver\PDOMySql\Driver' not found
 >>>>>>> e07d6f0 (.)
+=======
+                //Class 'Doctrine\DBAL\Driver\PDOMySql\Driver' not found
+>>>>>>> 1242904 (.)
                 /*
                 $schema_builder = Schema::getConnection()
                     ->getDoctrineSchemaManager()
@@ -151,16 +171,21 @@ class CreateLangPostsTable extends XotBaseMigration
 
                 if (! $this->hasColumn('views_count')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $table->integer('views_count')->nullable(); // contatore di visualizzazioni
 =======
                     $table->integer('views_count')->nullable(); //contatore di visualizzazioni
 >>>>>>> e07d6f0 (.)
+=======
+                    $table->integer('views_count')->nullable(); //contatore di visualizzazioni
+>>>>>>> 1242904 (.)
                 }
 
                 if (! $this->hasColumn('user_id')) {
                     $table->integer('user_id')->nullable()->after('id');
                 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 // ------- CHANGE INDEX-------
 
@@ -170,6 +195,11 @@ class CreateLangPostsTable extends XotBaseMigration
 
                 //Doctrine\DBAL\Driver\PDOMySql\Driver
 >>>>>>> e07d6f0 (.)
+=======
+                //------- CHANGE INDEX-------
+
+                //Doctrine\DBAL\Driver\PDOMySql\Driver
+>>>>>>> 1242904 (.)
                 /*
                 $schema_builder = Schema::getConnection()
                     ->getDoctrineSchemaManager()
@@ -186,23 +216,33 @@ class CreateLangPostsTable extends XotBaseMigration
                 }
                 */
 <<<<<<< HEAD
+<<<<<<< HEAD
                 // -------- CHANGE FIELD -------------
 =======
                 //-------- CHANGE FIELD -------------
 >>>>>>> e07d6f0 (.)
+=======
+                //-------- CHANGE FIELD -------------
+>>>>>>> 1242904 (.)
                 $table->text('subtitle')->nullable()->change();
             }
         );
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // end up
 
     // end down
 }// end class
 =======
+=======
+>>>>>>> 1242904 (.)
     //end up
 
     //end down
 }//end class
+<<<<<<< HEAD
 >>>>>>> e07d6f0 (.)
+=======
+>>>>>>> 1242904 (.)
