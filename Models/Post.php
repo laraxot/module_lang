@@ -118,7 +118,11 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrlLang($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
+<<<<<<< HEAD
  * @mixin  \Eloquent
+=======
+ * @mixin \Eloquent
+>>>>>>> 36a1443 (.)
  *
  * @property string|null $type
  * @property string|null $price
@@ -129,9 +133,12 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post wherePriceCurrency($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
+<<<<<<< HEAD
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+>>>>>>> 36a1443 (.)
  */
-class Post extends Model
-{
+class Post extends Model {
     //use Cachable;
     use Updater;
     //use Searchable;
@@ -226,8 +233,7 @@ class Post extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
-    public function linkable()
-    {
+    public function linkable() {
         return $this->morphTo('post');
     }
 
@@ -257,8 +263,7 @@ class Post extends Model
     //-------------- MUTATORS ------------------
 >>>>>>> 13065fd (.)
 
-    public function setTitleAttribute(string $value): void
-    {
+    public function setTitleAttribute(string $value): void {
         $this->attributes['title'] = $value;
         $this->attributes['guid'] = Str::slug($value);
     }
@@ -266,8 +271,7 @@ class Post extends Model
     /**
      * Undocumented function.
      */
-    public function getTitleAttribute(?string $value): ?string
-    {
+    public function getTitleAttribute(?string $value): ?string {
         if (null !== $value) {
             return $value;
         }
@@ -282,6 +286,7 @@ class Post extends Model
         return $value;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     /**
@@ -302,6 +307,9 @@ class Post extends Model
     public function getGuidAttribute(?string $value): ?string
     {
 >>>>>>> f7ae34c (.)
+=======
+    public function getGuidAttribute(?string $value): ?string {
+>>>>>>> 36a1443 (.)
         if (is_string($value) && false === strpos($value, ' ')) {
             return $value;
         }
@@ -322,6 +330,7 @@ class Post extends Model
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getTxtAttribute(?string $value): ?string {
 <<<<<<< HEAD
         return null === $value ? '' : $value;
@@ -330,6 +339,9 @@ class Post extends Model
     public function getTxtAttribute(?string $value): ?string
     {
 >>>>>>> f7ae34c (.)
+=======
+    public function getTxtAttribute(?string $value): ?string {
+>>>>>>> 36a1443 (.)
         return null == $value ? '' : $value;
 >>>>>>> 13065fd (.)
     }
@@ -350,6 +362,7 @@ class Post extends Model
      * @return array
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toSearchableArray() {
 <<<<<<< HEAD
         return $this->only(self::SEARCHABLE_FIELDS);
@@ -363,6 +376,9 @@ class Post extends Model
     public function toSearchableArray()
     {
 >>>>>>> f7ae34c (.)
+=======
+    public function toSearchableArray() {
+>>>>>>> 36a1443 (.)
         return $this->only(self::SEARCHABLE_FIELDS);
     }
 }//end class
