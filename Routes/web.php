@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> 13065fd (.)
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,3 +15,10 @@ declare(strict_types=1);
 | contains the "web" middleware group. Now create something great!
 |
 */
+<<<<<<< HEAD
+=======
+
+Route::prefix('lang')->group(function() {
+    Route::get('/', 'LangController@index');
+});
+>>>>>>> 13065fd (.)

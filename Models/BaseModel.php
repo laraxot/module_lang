@@ -4,9 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Models;
 
+<<<<<<< HEAD
 // use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 // use Laravel\Scout\Searchable;
 // ---------- traits
+=======
+//use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+//use Laravel\Scout\Searchable;
+//---------- traits
+>>>>>>> 13065fd (.)
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -17,6 +23,7 @@ use Modules\Xot\Traits\Updater;
  * Class BaseModel.
  */
 abstract class BaseModel extends Model {
+<<<<<<< HEAD
     use HasFactory;
     // use Searchable;
     // use Cachable;
@@ -31,6 +38,12 @@ abstract class BaseModel extends Model {
     public static $snakeAttributes = true;
 
     protected $perPage = 30;
+=======
+    use Updater;
+    //use Searchable;
+    //use Cachable;
+    use HasFactory;
+>>>>>>> 13065fd (.)
 
     /**
      * @var string
@@ -42,10 +55,17 @@ abstract class BaseModel extends Model {
      */
     protected $fillable = ['id'];
     /**
+<<<<<<< HEAD
      * @var array<string, string>
      */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
+=======
+     * @var array
+     */
+    protected $casts = [
+        //'published_at' => 'datetime:Y-m-d', // da verificare
+>>>>>>> 13065fd (.)
     ];
 
     /**
@@ -61,10 +81,17 @@ abstract class BaseModel extends Model {
      */
     public $incrementing = true;
     /**
+<<<<<<< HEAD
      * @var array<int, string>
      */
     protected $hidden = [
         // 'password'
+=======
+     * @var array
+     */
+    protected $hidden = [
+        //'password'
+>>>>>>> 13065fd (.)
     ];
     /**
      * @var bool
@@ -77,6 +104,10 @@ abstract class BaseModel extends Model {
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
     protected static function newFactory() {
+<<<<<<< HEAD
         return FactoryService::newFactory(static::class);
+=======
+        return FactoryService::newFactory(get_called_class());
+>>>>>>> 13065fd (.)
     }
 }
