@@ -8,6 +8,7 @@ mix.setPublicPath('../../public').mergeManifest();
 
 mix.js(__dirname + '/Resources/assets/js/app.js', 'js/lang.js')
 <<<<<<< HEAD
+<<<<<<< HEAD
     .sass(__dirname + '/Resources/assets/sass/app.scss', 'css/lang.css');
 
 if (mix.inProduction()) {
@@ -27,6 +28,9 @@ mix.js(__dirname + '/Resources/assets/js/app.js', 'js/lang.js')
 =======
     .sass( __dirname + '/Resources/assets/sass/app.scss', 'css/lang.css');
 >>>>>>> 13065fd (.)
+=======
+    .sass(__dirname + '/Resources/assets/sass/app.scss', 'css/lang.css');
+>>>>>>> f7ae34c (.)
 
 if (mix.inProduction()) {
     mix.version();

@@ -16,7 +16,15 @@ use Illuminate\Http\Request;
 |
 */
 
+<<<<<<< HEAD
 Route::middleware('auth:api')->get('/lang', function (Request $request) {
     return $request->user();
 });
 >>>>>>> 13065fd (.)
+=======
+Route::middleware('auth:api')->get(
+    '/lang', function (Request $request) {
+        return $request->user();
+    }
+);
+>>>>>>> f7ae34c (.)
