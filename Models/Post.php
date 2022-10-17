@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -483,6 +484,8 @@ class Post extends Model {
 =======
 =======
 >>>>>>> c2e2665 (.)
+=======
+>>>>>>> b2f15d7 (.)
 <?php
 
 declare(strict_types=1);
@@ -589,7 +592,10 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+<<<<<<< HEAD
  * @property int|null $auth_user_id
+=======
+>>>>>>> b2f15d7 (.)
  * @mixin IdeHelperPost
  */
 class Post extends Model {
@@ -710,6 +716,7 @@ class Post extends Model {
         return $value;
     }
 
+<<<<<<< HEAD
     /**
      * ---
      */
@@ -985,6 +992,8 @@ class Post extends Model {
         return $value;
     }
 
+=======
+>>>>>>> b2f15d7 (.)
     public function getGuidAttribute(?string $value): ?string {
         if (is_string($value) && false === strpos($value, ' ')) {
             return $value;
@@ -1024,9 +1033,12 @@ class Post extends Model {
     }
 }//end class
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cfb7936 (.)
 =======
 >>>>>>> 409ff992cc550f4020e3e135d12e5befd84dadaf
 >>>>>>> 2a85bc8 (.)
 =======
 >>>>>>> c2e2665 (.)
+=======
+>>>>>>> b2f15d7 (.)

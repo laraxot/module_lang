@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -86,6 +87,8 @@ abstract class BaseMorphPivot extends MorphPivot
     ];
 }
 =======
+=======
+>>>>>>> b2f15d7 (.)
 <?php
 
 declare(strict_types=1);
@@ -147,4 +150,7 @@ abstract class BaseMorphPivot extends MorphPivot
         'note',
     ];
 }
+<<<<<<< HEAD
 >>>>>>> cfb7936 (.)
+=======
+>>>>>>> b2f15d7 (.)
