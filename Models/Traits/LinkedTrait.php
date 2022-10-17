@@ -52,7 +52,7 @@ use Modules\Lang\Models\Post;
 use Modules\LU\Models\User;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Models\Image;
-use Modules\Xot\Services\PanelService as Panel;
+use Modules\Xot\Services\PanelService;
 use Modules\Xot\Services\RouteService;
 
 // per dizionario morph
@@ -110,6 +110,7 @@ trait LinkedTrait
         if (false === $alias) {
             $data = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
             $panel = PanelService::make()->get($this);
             $alias = $panel->postType();
             $data[$alias] = $class;
@@ -128,6 +129,9 @@ trait LinkedTrait
         return $this->morphOne(Post::class, 'post')// , null, 'id')
 =======
             $panel = Panel::get($this);
+=======
+            $panel = PanelService::get($this);
+>>>>>>> b13e4c1 (.)
             $alias = $panel->postType();
             $data['model'][$alias] = $class;
             TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
@@ -496,10 +500,14 @@ trait LinkedTrait
 
         //return $this->getPostAttr(__FUNCTION__, $value);
 <<<<<<< HEAD
+<<<<<<< HEAD
         return PanelService::make()->get($this)->url();
 =======
         return Panel::get($this)->url();
 >>>>>>> 13065fd (.)
+=======
+        return PanelService::get($this)->url();
+>>>>>>> b13e4c1 (.)
     }
 
     //*/
@@ -898,10 +906,14 @@ trait LinkedTrait
         $item_guid = str_replace('%20', '%', $item_guid);
         $item_guid = str_replace(' ', '%', $item_guid);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $panel = PanelService::make()->get($this);
 =======
         $panel = Panel::get($this);
 >>>>>>> 13065fd (.)
+=======
+        $panel = PanelService::get($this);
+>>>>>>> b13e4c1 (.)
         $other_lang = Post::query()
             ->where('post_type', $panel->postType())
             ->where('guid', 'like', $item_guid)
