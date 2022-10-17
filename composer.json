@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "name": "nwidart/lang",
     "description": "",
@@ -21,3 +22,28 @@
         }
     }
 }
+=======
+{
+    "name": "nwidart/lang",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Lang\\": ""
+        }
+    }
+}
+>>>>>>> b2f15d7 (.)

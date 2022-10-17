@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b2f15d7 (.)
 /vendor/
 node_modules/
 npm-debug.log
@@ -24,6 +27,7 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -115,3 +119,5 @@ Homestead.json
 *.cache
 
 >>>>>>> 7908e7e (.)
+=======
+>>>>>>> b2f15d7 (.)

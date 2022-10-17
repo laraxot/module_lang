@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,6 +17,9 @@
  * ---
  */
 >>>>>>> a17e7f0 (.)
+=======
+<?php
+>>>>>>> b2f15d7 (.)
 
 declare(strict_types=1);
 
@@ -23,16 +27,20 @@ namespace Modules\Lang\Models\Traits;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Exception;
 =======
 >>>>>>> 13065fd (.)
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\Relations\Relation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // use Illuminate\Support\Facades\URL;
@@ -56,6 +64,8 @@ use Modules\Xot\Services\PanelService;
 =======
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
 use Illuminate\Support\Facades\App;
 //use Illuminate\Support\Facades\URL;
 //use Laravel\Scout\Searchable;
@@ -79,6 +89,7 @@ use Modules\Xot\Services\RouteService;
 /**
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Modules\Xot\Models\Traits\LinkedTrait.
 >>>>>>> 13065fd (.)
 =======
@@ -87,6 +98,9 @@ use Modules\Xot\Services\RouteService;
 =======
  * Modules\Lang\Models\Traits\LinkedTrait.
 >>>>>>> 1242904 (.)
+=======
+ * Modules\Lang\Models\Traits\LinkedTrait.
+>>>>>>> b2f15d7 (.)
  *
  * @property \Modules\LU\Models\User|null $user
  * @property \Modules\Lang\Models\Post    $post
@@ -101,6 +115,7 @@ trait LinkedTrait
         return RouteService::inAdmin() ? 'id' : 'guid';
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     // ------- relationships ------------
@@ -118,12 +133,18 @@ trait LinkedTrait
 
     /**
 >>>>>>> 1242904 (.)
+=======
+    //------- relationships ------------
+
+    /**
+>>>>>>> b2f15d7 (.)
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * @throws \ReflectionException
      */
     public function post(): MorphOne
     {
         $models = TenantService::config('morph_map');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         if (! is_array($models)) {
@@ -136,10 +157,14 @@ trait LinkedTrait
 =======
         $class = get_class($this);
 >>>>>>> 1242904 (.)
+=======
+        $class = get_class($this);
+>>>>>>> b2f15d7 (.)
         $alias = collect($models)->search($class);
 
         if (false === $alias) {
             $data = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -173,6 +198,10 @@ trait LinkedTrait
             $panel = PanelService::make()->get($this);
             $alias = $panel->postType();
 >>>>>>> 1242904 (.)
+=======
+            $panel = PanelService::make()->get($this);
+            $alias = $panel->postType();
+>>>>>>> b2f15d7 (.)
             $data['model'][$alias] = $class;
             TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
         }
@@ -186,6 +215,7 @@ trait LinkedTrait
         }
 
         return $this->morphOne(Post::class, 'post')//, null, 'id')
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 13065fd (.)
             ->where('lang', App::getLocale());
@@ -203,19 +233,25 @@ trait LinkedTrait
         return $this->morphMany(Post::class, 'post')//, null, 'id')
 >>>>>>> 13065fd (.)
 =======
+=======
+>>>>>>> b2f15d7 (.)
             ->where('lang', App::getLocale());
     }
 
     public function posts(): MorphMany
     {
         return $this->morphMany(Post::class, 'post')//, null, 'id')
+<<<<<<< HEAD
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
             ->where('lang', App::getLocale());
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function postLang(string $lang) {
@@ -233,6 +269,11 @@ trait LinkedTrait
     {
         return $this->morphOne(Post::class, 'post')//, null, 'id')
 >>>>>>> 1242904 (.)
+=======
+    public function postLang(string $lang)
+    {
+        return $this->morphOne(Post::class, 'post')//, null, 'id')
+>>>>>>> b2f15d7 (.)
             ->where('lang', $lang);
     }
 
@@ -246,9 +287,12 @@ trait LinkedTrait
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
     /* spostato in Favorite.php
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
     public function favorites() {
@@ -287,15 +331,19 @@ trait LinkedTrait
     */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 13065fd (.)
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
     /**
      * @param object|string $related
      */
     public function getTableMorph($related, bool $inverse): string
     {
         if ($inverse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             $pivot = static::class.'Morph';
@@ -307,6 +355,8 @@ trait LinkedTrait
 =======
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
             $pivot = get_class($this).'Morph';
         } else {
             if (is_string($related)) {
@@ -314,9 +364,12 @@ trait LinkedTrait
             } else {
                 $pivot = get_class($related).'Morph';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 13065fd (.)
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
             }
         }
 
@@ -329,6 +382,7 @@ trait LinkedTrait
         $pivot = $this->getTableMorph($related, $inverse);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // $pivot_fields = app($pivot)->getFillable();
 =======
         //$pivot_fields = app($pivot)->getFillable();
@@ -336,6 +390,9 @@ trait LinkedTrait
 =======
         //$pivot_fields = app($pivot)->getFillable();
 >>>>>>> 1242904 (.)
+=======
+        //$pivot_fields = app($pivot)->getFillable();
+>>>>>>> b2f15d7 (.)
         $model_name = Str::snake(class_basename($this));
         $related_name = Str::snake(class_basename($related));
         if ($inverse) {
@@ -373,6 +430,7 @@ trait LinkedTrait
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (null !== $table_key) {
 =======
         if (null != $table_key) {
@@ -380,6 +438,9 @@ trait LinkedTrait
 =======
         if (null != $table_key) {
 >>>>>>> 1242904 (.)
+=======
+        if (null != $table_key) {
+>>>>>>> b2f15d7 (.)
             $relation = $this->morphRelatedWithKey($related, $inverse, $table_key);
         } else {
             if ($inverse) {
@@ -392,6 +453,7 @@ trait LinkedTrait
         return $relation->using($pivot)
             ->withPivot($pivot_fields)
             ->withTimestamps()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             ->with(['post']) // Eager
@@ -409,6 +471,8 @@ trait LinkedTrait
 =======
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
             ->with(['post']) //Eager
         ;
     }
@@ -422,13 +486,17 @@ trait LinkedTrait
     {
         $post_type = collect(config('morph_map'))->search(get_class($this));
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 13065fd (.)
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
         if (false === $post_type) {
             $post_type = Str::snake(class_basename($this));
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         return (string) $post_type;
@@ -438,6 +506,9 @@ trait LinkedTrait
 =======
         return $post_type;
 >>>>>>> 1242904 (.)
+=======
+        return $post_type;
+>>>>>>> b2f15d7 (.)
     }
 
     public function getUserHandleAttribute(?string $value): ?string
@@ -452,6 +523,7 @@ trait LinkedTrait
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         return $this->postType();
         /*
@@ -462,6 +534,9 @@ trait LinkedTrait
 =======
         $post_type = collect(config('morph_map'))->search(get_class($this));
 >>>>>>> 1242904 (.)
+=======
+        $post_type = collect(config('morph_map'))->search(get_class($this));
+>>>>>>> b2f15d7 (.)
         if (false === $post_type) {
             $post_type = Str::snake(class_basename($this));
         }
@@ -469,11 +544,14 @@ trait LinkedTrait
         return (string) $post_type;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         */
 =======
 >>>>>>> 13065fd (.)
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
     }
 
     public function getLangAttribute(?string $value): ?string
@@ -496,6 +574,7 @@ trait LinkedTrait
         $str1 = 'Attribute';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $name = substr($func, \strlen($str0), -\strlen($str1));
 =======
         $name = substr($func, strlen($str0), -strlen($str1));
@@ -503,10 +582,14 @@ trait LinkedTrait
 =======
         $name = substr($func, strlen($str0), -strlen($str1));
 >>>>>>> 1242904 (.)
+=======
+        $name = substr($func, strlen($str0), -strlen($str1));
+>>>>>>> b2f15d7 (.)
         $name = Str::snake($name);
         if (null !== $value) {
             return $value;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         if ('Post' === class_basename($this)) {
@@ -516,10 +599,14 @@ trait LinkedTrait
 =======
         if ('Post' == class_basename($this)) {
 >>>>>>> 1242904 (.)
+=======
+        if ('Post' == class_basename($this)) {
+>>>>>>> b2f15d7 (.)
             return $this->$name;
         }
 
         if (isset($this->pivot) && Str::startsWith($name, 'pivot_')) { // solo le url dipendono dal pivot
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             return $this->pivot->$name; // .'#PIVOT';
@@ -530,20 +617,26 @@ trait LinkedTrait
 =======
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
             return $this->pivot->$name; //.'#PIVOT';
         }
 
         if (isset($this->post) && is_object($this->post)) {
             return $this->post->$name; //.'#NO-PIVOT';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 13065fd (.)
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
         }
 
         return $value;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     // ---- da mettere i mancanti ---
@@ -553,6 +646,9 @@ trait LinkedTrait
 =======
     //---- da mettere i mancanti ---
 >>>>>>> 1242904 (.)
+=======
+    //---- da mettere i mancanti ---
+>>>>>>> b2f15d7 (.)
 
     public function getTitleAttribute(?string $value): ?string
     {
@@ -581,6 +677,7 @@ trait LinkedTrait
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     /*
      * param mixed $value
      *
@@ -597,6 +694,8 @@ trait LinkedTrait
 =======
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
     //*
 
     //
@@ -608,13 +707,17 @@ trait LinkedTrait
     // @return mixed
     //
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 13065fd (.)
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
     /* deprecated
     public function getUrlAttribute($value) {
 
         //return $this->getPostAttr(__FUNCTION__, $value);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -632,6 +735,9 @@ trait LinkedTrait
 =======
         return PanelService::make()->get($this)->url();
 >>>>>>> 1242904 (.)
+=======
+        return PanelService::make()->get($this)->url();
+>>>>>>> b2f15d7 (.)
     }
 
     //*/
@@ -643,12 +749,16 @@ trait LinkedTrait
     */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     /*
 >>>>>>> 13065fd (.)
 =======
     /*
 >>>>>>> 1242904 (.)
+=======
+    /*
+>>>>>>> b2f15d7 (.)
     public function setTitleAttribute(?string $value): void {
         $this->setPostAttr(__FUNCTION__, $value);
     }
@@ -658,20 +768,26 @@ trait LinkedTrait
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function setGuidAttribute(?string $value): void {
         if (('' === $value || null === $value) && null !== $this->post) {
 =======
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
     */
     public function setGuidAttribute(?string $value): void
     {
         if ('' == $value && null != $this->post) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 13065fd (.)
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
             $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
             $res = $this->post->save();
         }
@@ -702,6 +818,7 @@ trait LinkedTrait
      * @param mixed $value
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     * deprecated
     *public function setRoutenameAttribute(?string $value) {
     *    return $this->setPostAttr(__FUNCTION__, $value);
@@ -711,11 +828,14 @@ trait LinkedTrait
 >>>>>>> 13065fd (.)
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
 
     /* deprecated
     public function setRoutenameAttribute(?string $value) {
         return $this->setPostAttr(__FUNCTION__, $value);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -859,6 +979,8 @@ trait LinkedTrait
 =======
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
     */
     //--- attribute e' risertvato
 
@@ -970,9 +1092,12 @@ trait LinkedTrait
     //*/
     //------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 13065fd (.)
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
 
     /**
      * Undocumented function.
@@ -985,6 +1110,7 @@ trait LinkedTrait
         $post_table = $post->getTable();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // $post_table = with(new Post())->getTable();
 =======
         //$post_table = with(new Post())->getTable();
@@ -992,6 +1118,9 @@ trait LinkedTrait
 =======
         //$post_table = with(new Post())->getTable();
 >>>>>>> 1242904 (.)
+=======
+        //$post_table = with(new Post())->getTable();
+>>>>>>> b2f15d7 (.)
         if (RouteService::inAdmin()) {
             $rows = $this->join($post_table, $post_table.'.post_id', '=', $this->getTable().'.id')
                 ->where('lang', $this->lang)
@@ -999,6 +1128,7 @@ trait LinkedTrait
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->where($post_table.'.post_type', $this->post_type);
 =======
                 ->where($post_table.'.post_type', $this->post_type)
@@ -1010,6 +1140,9 @@ trait LinkedTrait
 =======
                 ->where($post_table.'.post_type', $this->post_type);
 >>>>>>> 1242904 (.)
+=======
+                ->where($post_table.'.post_type', $this->post_type);
+>>>>>>> b2f15d7 (.)
         } else {
             $rows = $this->join($post_table, $post_table.'.post_id', '=', $this->getTable().'.id')
                 ->where('lang', $this->lang)
@@ -1017,6 +1150,7 @@ trait LinkedTrait
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->where($post_table.'.post_type', $this->post_type);
 =======
                 ->where($post_table.'.post_type', $this->post_type)
@@ -1028,6 +1162,9 @@ trait LinkedTrait
 =======
                 ->where($post_table.'.post_type', $this->post_type);
 >>>>>>> 1242904 (.)
+=======
+                ->where($post_table.'.post_type', $this->post_type);
+>>>>>>> b2f15d7 (.)
         }
 
         /*
@@ -1038,12 +1175,16 @@ trait LinkedTrait
                 ->where('post.post_type', $this->post_type)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 //->limit(1)
 >>>>>>> 13065fd (.)
 =======
                 //->limit(1)
 >>>>>>> 1242904 (.)
+=======
+                //->limit(1)
+>>>>>>> b2f15d7 (.)
             ;
         });
         */
@@ -1068,6 +1209,7 @@ trait LinkedTrait
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $panel = PanelService::make()->get($this);
 =======
         $panel = Panel::get($this);
@@ -1081,10 +1223,14 @@ trait LinkedTrait
 =======
         $panel = PanelService::make()->get($this);
 >>>>>>> 1242904 (.)
+=======
+        $panel = PanelService::make()->get($this);
+>>>>>>> b2f15d7 (.)
         $other_lang = Post::query()
             ->where('post_type', $panel->postType())
             ->where('guid', 'like', $item_guid)
             ->first();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         if (\is_object($other_lang)) {
@@ -1098,6 +1244,8 @@ trait LinkedTrait
 =======
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
         if (is_object($other_lang)) {
             $up = $other_lang->replicate();
             $up->lang = App::getLocale();
@@ -1107,9 +1255,12 @@ trait LinkedTrait
 
             //return $row;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 13065fd (.)
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
         }
     }
 
@@ -1118,6 +1269,7 @@ trait LinkedTrait
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function scopeOfItem($query, string $guid) {
@@ -1142,11 +1294,16 @@ trait LinkedTrait
     public function scopeOfItem($query, string $guid)
     {
 >>>>>>> 1242904 (.)
+=======
+    public function scopeOfItem($query, string $guid)
+    {
+>>>>>>> b2f15d7 (.)
         //getRouteKeyName
         if (RouteService::inAdmin()) {
             return $query->where('post_id', $guid);
             //return $query->where('post.post_id',$guid);
         } else {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             return $query->whereHas('post', function ($query) use ($guid): void {
@@ -1156,15 +1313,20 @@ trait LinkedTrait
 =======
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
             return $query->whereHas(
                 'post', function ($query) use ($guid): void {
                     $query->where('guid', $guid);
                 }
             );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f7ae34c (.)
 =======
 >>>>>>> 1242904 (.)
+=======
+>>>>>>> b2f15d7 (.)
         }
     }
 
@@ -1173,6 +1335,7 @@ trait LinkedTrait
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function scopeWithPost($query, string $guid) {
@@ -1880,6 +2043,10 @@ trait LinkedTrait {
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeWithPost($query, string $guid) {
+=======
+    public function scopeWithPost($query, string $guid)
+    {
+>>>>>>> b2f15d7 (.)
         return $query; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         /* depreated ??
         $post_table = with(new Post())->getTable();
@@ -1890,10 +2057,14 @@ trait LinkedTrait {
                 ->where('lang', $this->lang)
                 ->where('post.post_type', $this->post_type)
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //->limit(1)
 =======
 
 >>>>>>> 0e42143 (.)
+=======
+                //->limit(1)
+>>>>>>> b2f15d7 (.)
             ;
         });
         */
@@ -1950,6 +2121,7 @@ trait LinkedTrait {
     */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> cfb7936 (.)
 =======
@@ -1958,3 +2130,6 @@ trait LinkedTrait {
 =======
 }
 >>>>>>> 8251c09 (.)
+=======
+}
+>>>>>>> b2f15d7 (.)

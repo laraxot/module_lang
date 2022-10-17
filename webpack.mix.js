@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const dotenvExpand = require('dotenv-expand');
 dotenvExpand(require('dotenv').config({ path: '../../.env'/*, debug: true*/}));
 
@@ -26,6 +27,8 @@ if (mix.inProduction()) {
     mix.version();
 }
 =======
+=======
+>>>>>>> b2f15d7 (.)
 const dotenvExpand = require('dotenv-expand');
 dotenvExpand(require('dotenv').config({ path: '../../.env'/*, debug: true*/}));
 
@@ -40,4 +43,7 @@ mix.js(__dirname + '/Resources/assets/js/app.js', 'js/lang.js')
 if (mix.inProduction()) {
     mix.version();
 }
+<<<<<<< HEAD
 >>>>>>> cfb7936 (.)
+=======
+>>>>>>> b2f15d7 (.)

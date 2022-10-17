@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 <<<<<<< HEAD
@@ -43,6 +44,8 @@ Route::prefix('lang')->group(
 =======
 >>>>>>> 1242904 (.)
 =======
+=======
+>>>>>>> b2f15d7 (.)
 <?php
 
 /*
@@ -61,6 +64,9 @@ Route::prefix('lang')->group(
         Route::get('/', 'LangController@index');
     }
 );
+<<<<<<< HEAD
 >>>>>>> cfb7936 (.)
 =======
 >>>>>>> ebfe044 (.)
+=======
+>>>>>>> b2f15d7 (.)
