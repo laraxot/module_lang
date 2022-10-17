@@ -1517,6 +1517,7 @@ trait LinkedTrait {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             dddx($data);
             
@@ -1547,6 +1548,8 @@ trait LinkedTrait {
             //$models = getAllModulesModels();
             dddx($alias);
 >>>>>>> da21183 (.)
+=======
+>>>>>>> 5c1c4a8 (.)
             TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
             throw new Exception('[class: '.$class.']['.__LINE__.']['.class_basename(__CLASS__).']');
 
