@@ -1516,6 +1516,7 @@ trait LinkedTrait {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             dddx($data);
             
@@ -1542,7 +1543,13 @@ trait LinkedTrait {
 >>>>>>> a346cb3 (.)
 =======
 >>>>>>> 9c926b0 (.)
+=======
+            //$models = getAllModulesModels();
+            dddx($alias);
+>>>>>>> da21183 (.)
             TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
+            throw new Exception('[class: '.$class.']['.__LINE__.']['.class_basename(__CLASS__).']');
+
         }
 
         if (null == Relation::getMorphedModel((string) $alias)) {
