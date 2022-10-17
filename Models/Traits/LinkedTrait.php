@@ -1511,6 +1511,7 @@ trait LinkedTrait {
             $data = [];
             $panel = PanelService::make()->get($this);
             $alias = $panel->postType();
+<<<<<<< HEAD
             $data['model'][$alias] = $class;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1552,6 +1553,11 @@ trait LinkedTrait {
 >>>>>>> 5c1c4a8 (.)
             TenantService::saveConfig(['name' => 'xra', 'data' => $data]);
             //throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
+=======
+            $data[$alias] = $class;
+            TenantService::saveConfig(['name' => 'morph_map', 'data' => $data]);
+            throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
+>>>>>>> 1eb1ff8 (.)
 
         }
 
