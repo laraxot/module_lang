@@ -60,8 +60,12 @@ use Modules\Xot\Services\RouteService;
 //------ traits ---
 
 /**
+<<<<<<< HEAD
  * Modules\Xot\Models\Traits\LinkedTrait.
 >>>>>>> 13065fd (.)
+=======
+ * Modules\Lang\Models\Traits\LinkedTrait.
+>>>>>>> 61e900c (.)
  *
  * @property \Modules\LU\Models\User|null $user
  * @property \Modules\Lang\Models\Post    $post
