@@ -717,6 +717,9 @@ class Post extends Model {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7c8dc60 (.)
     /**
      * ---
      */
