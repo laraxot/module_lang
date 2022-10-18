@@ -80,10 +80,28 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrlLang($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
+<<<<<<< HEAD
  * @mixin \Eloquent
  */
 class Post extends Model {
     // use Cachable;
+=======
+ * @mixin  \Eloquent
+ *
+ * @property string|null $type
+ * @property string|null $price
+ * @property string|null $price_currency
+ * @property int|null    $views
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePriceCurrency($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
+ */
+class Post extends Model
+{
+    //use Cachable;
+>>>>>>> f7ae34c (.)
     use Updater;
     /**
      * Indicates whether attributes are snake cased on arrays.
@@ -162,7 +180,8 @@ class Post extends Model {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
-    public function linkable() {
+    public function linkable()
+    {
         return $this->morphTo('post');
     }
 
@@ -188,7 +207,8 @@ class Post extends Model {
     // end function
     // -------------- MUTATORS ------------------
 
-    public function setTitleAttribute(string $value): void {
+    public function setTitleAttribute(string $value): void
+    {
         $this->attributes['title'] = $value;
         $this->attributes['guid'] = Str::slug($value);
     }
@@ -196,7 +216,8 @@ class Post extends Model {
     /**
      * Undocumented function.
      */
-    public function getTitleAttribute(?string $value): ?string {
+    public function getTitleAttribute(?string $value): ?string
+    {
         if (null !== $value) {
             return $value;
         }
@@ -211,11 +232,17 @@ class Post extends Model {
         return $value;
     }
 
+<<<<<<< HEAD
     /**
      * ---.
      */
     public function getGuidAttribute(?string $value): ?string {
         if (\is_string($value) && '' !== $value && false === strpos($value, ' ')) {
+=======
+    public function getGuidAttribute(?string $value): ?string
+    {
+        if (is_string($value) && false === strpos($value, ' ')) {
+>>>>>>> f7ae34c (.)
             return $value;
         }
         $value = $this->title;
@@ -232,8 +259,14 @@ class Post extends Model {
         return $value;
     }
 
+<<<<<<< HEAD
     public function getTxtAttribute(?string $value): ?string {
         return null === $value ? '' : $value;
+=======
+    public function getTxtAttribute(?string $value): ?string
+    {
+        return null == $value ? '' : $value;
+>>>>>>> f7ae34c (.)
     }
 
     /*
@@ -247,7 +280,8 @@ class Post extends Model {
     /**
      * @return array
      */
-    public function toSearchableArray() {
+    public function toSearchableArray()
+    {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
 }// end class
