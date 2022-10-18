@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-<<<<<<< HEAD
 // --- models --
-=======
-//--- models --
->>>>>>> e07d6f0 (.)
 use Modules\Lang\Models\Post;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
@@ -24,11 +20,7 @@ class CreateLangPostsTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-<<<<<<< HEAD
         // -- CREATE --
-=======
-        //-- CREATE --
->>>>>>> e07d6f0 (.)
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
@@ -46,25 +38,15 @@ class CreateLangPostsTable extends XotBaseMigration {
                 $table->integer('author_id')->nullable();
                 $table->timestamps();
             }
-<<<<<<< HEAD
         );
 
         // -- UPDATE --
-=======
-            );
-
-        //-- UPDATE --
->>>>>>> e07d6f0 (.)
         $this->tableUpdate(
             function (Blueprint $table) {
                 // if (!$this->hasColumn( 'post_type')) {
                 //     $table->string('post_type', 40)->after('type')->index()->nullable();
                 // }
-<<<<<<< HEAD
                 // Class 'Doctrine\DBAL\Driver\PDOMySql\Driver' not found
-=======
-                //Class 'Doctrine\DBAL\Driver\PDOMySql\Driver' not found
->>>>>>> e07d6f0 (.)
                 /*
                 $schema_builder = Schema::getConnection()
                     ->getDoctrineSchemaManager()
@@ -140,26 +122,16 @@ class CreateLangPostsTable extends XotBaseMigration {
                 }
 
                 if (! $this->hasColumn('views_count')) {
-<<<<<<< HEAD
                     $table->integer('views_count')->nullable(); // contatore di visualizzazioni
-=======
-                    $table->integer('views_count')->nullable(); //contatore di visualizzazioni
->>>>>>> e07d6f0 (.)
                 }
 
                 if (! $this->hasColumn('user_id')) {
                     $table->integer('user_id')->nullable()->after('id');
                 }
 
-<<<<<<< HEAD
                 // ------- CHANGE INDEX-------
 
                 // Doctrine\DBAL\Driver\PDOMySql\Driver
-=======
-                //------- CHANGE INDEX-------
-
-                //Doctrine\DBAL\Driver\PDOMySql\Driver
->>>>>>> e07d6f0 (.)
                 /*
                 $schema_builder = Schema::getConnection()
                     ->getDoctrineSchemaManager()
@@ -175,24 +147,13 @@ class CreateLangPostsTable extends XotBaseMigration {
                     $table->string('lang', 3)->nullable()->index()->change();
                 }
                 */
-<<<<<<< HEAD
                 // -------- CHANGE FIELD -------------
-=======
-                //-------- CHANGE FIELD -------------
->>>>>>> e07d6f0 (.)
                 $table->text('subtitle')->nullable()->change();
             }
         );
     }
 
-<<<<<<< HEAD
     // end up
 
     // end down
 }// end class
-=======
-    //end up
-
-    //end down
-}//end class
->>>>>>> e07d6f0 (.)
