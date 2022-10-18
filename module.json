@@ -7,5 +7,7 @@
     "providers": [
         "Modules\\Lang\\Providers\\LangServiceProvider"
     ],
-    "files": []
+    "aliases": {},
+    "files": [],
+    "requires": []
 }
