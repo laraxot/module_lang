@@ -69,10 +69,14 @@ trait LinkedTrait
         if (false === $alias) {
             $data = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
             $panel = PanelService::make()->get($this);
 =======
             $panel = PanelService::get($this);
 >>>>>>> b13e4c1 (.)
+=======
+            $panel = PanelService::make()->get($this);
+>>>>>>> d128701 (.)
             $alias = $panel->postType();
             $data[$alias] = $class;
             TenantService::saveConfig(['name' => 'morph_map', 'data' => $data]);
@@ -335,10 +339,14 @@ trait LinkedTrait
 
         //return $this->getPostAttr(__FUNCTION__, $value);
 <<<<<<< HEAD
+<<<<<<< HEAD
         return PanelService::make()->get($this)->url();
 =======
         return PanelService::get($this)->url();
 >>>>>>> b13e4c1 (.)
+=======
+        return PanelService::make()->get($this)->url();
+>>>>>>> d128701 (.)
     }
 
     //*/
@@ -611,10 +619,14 @@ trait LinkedTrait
         $item_guid = str_replace('%20', '%', $item_guid);
         $item_guid = str_replace(' ', '%', $item_guid);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $panel = PanelService::make()->get($this);
 =======
         $panel = PanelService::get($this);
 >>>>>>> b13e4c1 (.)
+=======
+        $panel = PanelService::make()->get($this);
+>>>>>>> d128701 (.)
         $other_lang = Post::query()
             ->where('post_type', $panel->postType())
             ->where('guid', 'like', $item_guid)
