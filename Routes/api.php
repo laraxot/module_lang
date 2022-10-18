@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 <<<<<<< HEAD
@@ -7,6 +8,12 @@ declare(strict_types=1);
 
 =======
 >>>>>>> 1242904 (.)
+=======
+<?php
+
+declare(strict_types=1);
+
+>>>>>>> 7c8dc60 (.)
 use Illuminate\Http\Request;
 
 /*
@@ -33,6 +40,7 @@ Route::middleware('auth:api')->get(
         return $request->user();
     }
 );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 */
@@ -67,3 +75,5 @@ Route::middleware('auth:api')->get(
 >>>>>>> cfb7936 (.)
 =======
 >>>>>>> b2f15d7 (.)
+=======
+>>>>>>> 7c8dc60 (.)

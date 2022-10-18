@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -29,6 +30,8 @@ class LangServiceProvider extends XotBaseServiceProvider
     }
 }
 =======
+=======
+>>>>>>> 7c8dc60 (.)
 <?php
 
 declare(strict_types=1);
@@ -58,4 +61,7 @@ class LangServiceProvider extends XotBaseServiceProvider
     {
     }
 }
+<<<<<<< HEAD
 >>>>>>> b2f15d7 (.)
+=======
+>>>>>>> 7c8dc60 (.)

@@ -679,11 +679,21 @@ class Post extends Model {
         return $value;
     }
 
+<<<<<<< HEAD
     public function getGuidAttribute(?string $value): ?string {
         if (is_string($value) && false === strpos($value, ' ')) {
             return $value;
         }
         //dddx($this->title);
+=======
+    /**
+     * ---
+     */
+    public function getGuidAttribute(?string $value): ?string {
+        if (is_string($value) && $value!='' && false === strpos($value, ' ')) {
+            return $value;
+        }
+>>>>>>> 7c8dc60 (.)
         $value = $this->title;
         if ('' == $value) {
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
