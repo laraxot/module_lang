@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1096,6 +1097,8 @@ trait LinkedTrait
     */
 }
 =======
+=======
+>>>>>>> 0e42143 (.)
 <?php
 /**
  * ---
@@ -1619,7 +1622,11 @@ trait LinkedTrait
                 ->select('title', 'guid', 'subtitle')
                 ->where('lang', $this->lang)
                 ->where('post.post_type', $this->post_type)
+<<<<<<< HEAD
                 //->limit(1)
+=======
+
+>>>>>>> 0e42143 (.)
             ;
         });
         */
@@ -1692,7 +1699,11 @@ trait LinkedTrait
                 ->select('title', 'guid', 'subtitle')
                 ->where('lang', $this->lang)
                 ->where('post.post_type', $this->post_type)
+<<<<<<< HEAD
                 //->limit(1)
+=======
+
+>>>>>>> 0e42143 (.)
             ;
         });
         */
@@ -1747,5 +1758,9 @@ trait LinkedTrait
         return $route;
     }
     */
+<<<<<<< HEAD
 }
 >>>>>>> cfb7936 (.)
+=======
+}
+>>>>>>> 0e42143 (.)
