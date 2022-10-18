@@ -31,6 +31,7 @@ use Modules\Xot\Traits\Updater;
  * @property int|null $author_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+<<<<<<< HEAD
  * @property int|null $category_id
  * @property string|null $image
  * @property string|null $content
@@ -46,6 +47,29 @@ use Modules\Xot\Traits\Updater;
  * @property string|null $linkable_type
  * @property int|null $views_count
  * @property-read Model|\Eloquent $linkable
+=======
+ * @property int|null                        $category_id
+ * @property string|null                     $image
+ * @property string|null                     $created_by
+ * @property string|null                     $updated_by
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property string|null                     $deleted_by
+ * @property string|null                     $deleted_ip
+ * @property string|null                     $created_ip
+ * @property string|null                     $updated_ip
+ * @property string|null                     $content
+ * @property int|null                        $published
+ * @property string|null                     $url
+ * @property array|null                      $url_lang
+ * @property array|null                      $image_resize_src
+ * @property string|null                     $linked_count
+ * @property string|null                     $related_count
+ * @property string|null                     $relatedrev_count
+ * @property string|null                     $linkable_type
+ * @property int|null                        $views_count
+ * @property Model|\Eloquent                 $linkable
+ *
+>>>>>>> 36a1443 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post query()
@@ -82,11 +106,14 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
 <<<<<<< HEAD
  * @mixin \Eloquent
+<<<<<<< HEAD
  */
 class Post extends Model {
     // use Cachable;
 =======
  * @mixin  \Eloquent
+=======
+>>>>>>> 36a1443 (.)
  *
  * @property string|null $type
  * @property string|null $price
@@ -97,9 +124,12 @@ class Post extends Model {
  * @method static \Illuminate\Database\Eloquent\Builder|Post wherePriceCurrency($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
+<<<<<<< HEAD
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+>>>>>>> 36a1443 (.)
  */
-class Post extends Model
-{
+class Post extends Model {
     //use Cachable;
 >>>>>>> f7ae34c (.)
     use Updater;
@@ -180,8 +210,7 @@ class Post extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
-    public function linkable()
-    {
+    public function linkable() {
         return $this->morphTo('post');
     }
 
@@ -207,8 +236,7 @@ class Post extends Model
     // end function
     // -------------- MUTATORS ------------------
 
-    public function setTitleAttribute(string $value): void
-    {
+    public function setTitleAttribute(string $value): void {
         $this->attributes['title'] = $value;
         $this->attributes['guid'] = Str::slug($value);
     }
@@ -216,8 +244,7 @@ class Post extends Model
     /**
      * Undocumented function.
      */
-    public function getTitleAttribute(?string $value): ?string
-    {
+    public function getTitleAttribute(?string $value): ?string {
         if (null !== $value) {
             return $value;
         }
@@ -233,6 +260,7 @@ class Post extends Model
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * ---.
      */
@@ -241,6 +269,9 @@ class Post extends Model
 =======
     public function getGuidAttribute(?string $value): ?string
     {
+=======
+    public function getGuidAttribute(?string $value): ?string {
+>>>>>>> 36a1443 (.)
         if (is_string($value) && false === strpos($value, ' ')) {
 >>>>>>> f7ae34c (.)
             return $value;
@@ -260,11 +291,15 @@ class Post extends Model
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getTxtAttribute(?string $value): ?string {
         return null === $value ? '' : $value;
 =======
     public function getTxtAttribute(?string $value): ?string
     {
+=======
+    public function getTxtAttribute(?string $value): ?string {
+>>>>>>> 36a1443 (.)
         return null == $value ? '' : $value;
 >>>>>>> f7ae34c (.)
     }
@@ -280,8 +315,7 @@ class Post extends Model
     /**
      * @return array
      */
-    public function toSearchableArray()
-    {
+    public function toSearchableArray() {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
 }// end class
