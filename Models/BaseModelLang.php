@@ -18,7 +18,15 @@ use Modules\Xot\Traits\Updater;
  *
  * @property string|null $post_type
  */
+<<<<<<< HEAD
 abstract class BaseModelLang extends Model {
+=======
+abstract class BaseModelLang extends Model
+{
+    use Updater;
+    //use Searchable;
+    use LinkedTrait;
+>>>>>>> f7ae34c (.)
     use HasFactory;
     // use Searchable;
     use LinkedTrait;
@@ -87,8 +95,14 @@ abstract class BaseModelLang extends Model {
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
+<<<<<<< HEAD
     protected static function newFactory() {
         return FactoryService::newFactory(static::class);
 		// return FactoryService::newFactory(get_called_class());
+=======
+    protected static function newFactory()
+    {
+        return FactoryService::newFactory(get_called_class());
+>>>>>>> f7ae34c (.)
     }
 }
