@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -437,6 +438,8 @@ class Post extends Model {
 =======
 =======
 >>>>>>> c2e2665 (.)
+=======
+>>>>>>> b2f15d7 (.)
 <?php
 
 declare(strict_types=1);
@@ -545,6 +548,7 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  *
 =======
@@ -553,6 +557,9 @@ use Modules\Xot\Traits\Updater;
 >>>>>>> c2e2665 (.)
  * @mixin IdeHelperPost
  * @property int|null $auth_user_id
+=======
+ * @mixin IdeHelperPost
+>>>>>>> b2f15d7 (.)
  */
 class Post extends Model {
     //use Cachable;
@@ -710,6 +717,7 @@ class Post extends Model {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
 }//end class
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2a85bc8 (.)
 =======
@@ -990,3 +998,5 @@ class Post extends Model {
 >>>>>>> 2a85bc8 (.)
 =======
 >>>>>>> c2e2665 (.)
+=======
+>>>>>>> b2f15d7 (.)

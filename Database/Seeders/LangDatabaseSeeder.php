@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 <<<<<<< HEAD
@@ -36,6 +37,8 @@ class LangDatabaseSeeder extends Seeder
     }
 }
 =======
+=======
+>>>>>>> b2f15d7 (.)
 <?php
 
 namespace Modules\Lang\Database\Seeders;
@@ -57,4 +60,7 @@ class LangDatabaseSeeder extends Seeder
         // $this->call("OthersTableSeeder");
     }
 }
+<<<<<<< HEAD
 >>>>>>> cfb7936 (.)
+=======
+>>>>>>> b2f15d7 (.)
