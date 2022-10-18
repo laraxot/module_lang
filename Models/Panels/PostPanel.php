@@ -6,8 +6,14 @@ namespace Modules\Lang\Models\Panels;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 // --- Services --
 
+=======
+//--- Services --
+
+use Modules\Xot\Contracts\RowsContract;
+>>>>>>> 72f9f7b (.)
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 class PostPanel extends XotBasePanel {
@@ -54,8 +60,11 @@ class PostPanel extends XotBasePanel {
 
     /**
      * on select the option label.
+<<<<<<< HEAD
      *
      * @param mixed $row
+=======
+>>>>>>> 72f9f7b (.)
      */
     public function optionLabel($row): string {
         return $row->area_define_name;
@@ -76,7 +85,11 @@ class PostPanel extends XotBasePanel {
      * @return RowsContract
      */
     public static function indexQuery(array $data, $query) {
+<<<<<<< HEAD
         // return $query->where('user_id', $request->user()->id);
+=======
+        //return $query->where('user_id', $request->user()->id);
+>>>>>>> 72f9f7b (.)
         return $query;
     }
 
@@ -86,92 +99,164 @@ class PostPanel extends XotBasePanel {
      */
     public function fields(): array {
         return [
+<<<<<<< HEAD
             (object) [
+=======
+            0 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'Id',
                 'name' => 'id',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            1 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'Integer',
                 'name' => 'user_id',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            2 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'Bigint',
                 'name' => 'post_id',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            3 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'String',
                 'name' => 'lang',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            4 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'String',
                 'name' => 'guid',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            5 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'String',
                 'name' => 'title',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            6 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'Text',
                 'name' => 'subtitle',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            7 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'String',
                 'name' => 'post_type',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            8 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'Text',
                 'name' => 'txt',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            9 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'String',
                 'name' => 'image_src',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            10 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'String',
                 'name' => 'image_alt',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            11 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'String',
                 'name' => 'image_title',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            12 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'Text',
                 'name' => 'meta_description',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            13 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'Text',
                 'name' => 'meta_keywords',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            14 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'Integer',
                 'name' => 'author_id',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            15 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'String',
                 'name' => 'url',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            16 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'Text',
                 'name' => 'url_lang',
                 'comment' => null,
             ],
+<<<<<<< HEAD
             (object) [
+=======
+            17 => (object) [
+>>>>>>> 72f9f7b (.)
                 'type' => 'Text',
                 'name' => 'image_resize_src',
                 'comment' => null,
