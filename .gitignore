@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b2f15d7 (.)
 /vendor/
@@ -88,6 +89,8 @@ Homestead.json
 *.cache
 >>>>>>> c2e2665 (.)
 =======
+=======
+>>>>>>> eec8c0a (.)
 /vendor/
 node_modules/
 npm-debug.log
@@ -115,6 +118,9 @@ Homestead.json
 *.stackdump
 *.cache
 
+<<<<<<< HEAD
 >>>>>>> 7908e7e (.)
 =======
 >>>>>>> b2f15d7 (.)
+=======
+>>>>>>> eec8c0a (.)

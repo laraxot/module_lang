@@ -549,12 +549,16 @@ use Modules\Xot\Traits\Updater;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  *
 =======
 >>>>>>> 0e42143 (.)
  * @property int|null $auth_user_id
 >>>>>>> c2e2665 (.)
+=======
+ * @property int|null $auth_user_id
+>>>>>>> eec8c0a (.)
  * @mixin IdeHelperPost
  * @property int|null $auth_user_id
 =======
