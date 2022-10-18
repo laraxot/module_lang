@@ -14,10 +14,17 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> f7ae34c (.)
 Route::middleware('auth:api')->get(
     '/lang', function (Request $request) {
         return $request->user();
     }
 );
+<<<<<<< HEAD
 */
+=======
+>>>>>>> f7ae34c (.)
