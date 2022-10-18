@@ -18,3 +18,5 @@
     {{-- Laravel Mix - JS File --}}
     {{-- <script src="{{ mix('js/lang.js') }}"></script> --}}
 </body>
+
+</html>
