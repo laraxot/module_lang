@@ -24,6 +24,10 @@ use Modules\Lang\Models\Post;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Models\Image;
 use Modules\Xot\Services\PanelService;
+<<<<<<< HEAD
+=======
+use Modules\Xot\Services\RouteService;
+>>>>>>> b13e4c1 (.)
 
 // per dizionario morph
 
@@ -64,7 +68,11 @@ trait LinkedTrait
 
         if (false === $alias) {
             $data = [];
+<<<<<<< HEAD
             $panel = PanelService::make()->get($this);
+=======
+            $panel = PanelService::get($this);
+>>>>>>> b13e4c1 (.)
             $alias = $panel->postType();
             $data[$alias] = $class;
             TenantService::saveConfig(['name' => 'morph_map', 'data' => $data]);
@@ -326,7 +334,11 @@ trait LinkedTrait
     public function getUrlAttribute($value) {
 
         //return $this->getPostAttr(__FUNCTION__, $value);
+<<<<<<< HEAD
         return PanelService::make()->get($this)->url();
+=======
+        return PanelService::get($this)->url();
+>>>>>>> b13e4c1 (.)
     }
 
     //*/
@@ -598,7 +610,11 @@ trait LinkedTrait
     {
         $item_guid = str_replace('%20', '%', $item_guid);
         $item_guid = str_replace(' ', '%', $item_guid);
+<<<<<<< HEAD
         $panel = PanelService::make()->get($this);
+=======
+        $panel = PanelService::get($this);
+>>>>>>> b13e4c1 (.)
         $other_lang = Post::query()
             ->where('post_type', $panel->postType())
             ->where('guid', 'like', $item_guid)
