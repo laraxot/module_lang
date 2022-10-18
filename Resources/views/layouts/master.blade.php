@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <<<<<<< HEAD
@@ -41,6 +42,8 @@
 >>>>>>> 1242904 (.)
 </html>
 =======
+=======
+>>>>>>> b2f15d7 (.)
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -60,4 +63,7 @@
         {{-- <script src="{{ mix('js/lang.js') }}"></script> --}}
     </body>
 </html>
+<<<<<<< HEAD
 >>>>>>> cfb7936 (.)
+=======
+>>>>>>> b2f15d7 (.)
