@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -129,6 +130,8 @@ abstract class BaseModel extends Model
     }
 }
 =======
+=======
+>>>>>>> b2f15d7 (.)
 <?php
 
 declare(strict_types=1);
@@ -203,4 +206,7 @@ abstract class BaseModel extends Model
         return FactoryService::newFactory(get_called_class());
     }
 }
+<<<<<<< HEAD
 >>>>>>> cfb7936 (.)
+=======
+>>>>>>> b2f15d7 (.)

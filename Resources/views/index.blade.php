@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('lang::layouts.master')
 
 @section('content')
@@ -7,3 +8,14 @@
         This view is loaded from module: {!! config('lang.name') !!}
     </p>
 @endsection
+=======
+@extends('lang::layouts.master')
+
+@section('content')
+    <h1>Hello World</h1>
+
+    <p>
+        This view is loaded from module: {!! config('lang.name') !!}
+    </p>
+@endsection
+>>>>>>> b2f15d7 (.)

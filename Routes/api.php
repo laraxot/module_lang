@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 <<<<<<< HEAD
@@ -40,6 +41,8 @@ Route::middleware('auth:api')->get(
 =======
 >>>>>>> 1242904 (.)
 =======
+=======
+>>>>>>> b2f15d7 (.)
 <?php
 
 use Illuminate\Http\Request;
@@ -60,4 +63,7 @@ Route::middleware('auth:api')->get(
         return $request->user();
     }
 );
+<<<<<<< HEAD
 >>>>>>> cfb7936 (.)
+=======
+>>>>>>> b2f15d7 (.)
