@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> 1242904 (.)
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,11 +16,17 @@ declare(strict_types=1);
 |
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1242904 (.)
 
 Route::prefix('lang')->group(
     function () {
         Route::get('/', 'LangController@index');
     }
 );
+<<<<<<< HEAD
 >>>>>>> f7ae34c (.)
+=======
+>>>>>>> 1242904 (.)

@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> 1242904 (.)
 use Illuminate\Http\Request;
 
 /*
@@ -15,16 +18,23 @@ use Illuminate\Http\Request;
 |
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
 =======
 
 >>>>>>> f7ae34c (.)
+=======
+
+>>>>>>> 1242904 (.)
 Route::middleware('auth:api')->get(
     '/lang', function (Request $request) {
         return $request->user();
     }
 );
 <<<<<<< HEAD
+<<<<<<< HEAD
 */
 =======
 >>>>>>> f7ae34c (.)
+=======
+>>>>>>> 1242904 (.)

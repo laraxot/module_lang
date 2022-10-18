@@ -4,9 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Models;
 
+<<<<<<< HEAD
 // use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 // use Laravel\Scout\Searchable;
 // ---------- traits
+=======
+//use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+//use Laravel\Scout\Searchable;
+//---------- traits
+>>>>>>> 1242904 (.)
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -17,13 +23,17 @@ use Modules\Xot\Traits\Updater;
  * Class BaseModel.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 abstract class BaseModel extends Model {
 =======
+=======
+>>>>>>> 1242904 (.)
 abstract class BaseModel extends Model
 {
     use Updater;
     //use Searchable;
     //use Cachable;
+<<<<<<< HEAD
 >>>>>>> f7ae34c (.)
     use HasFactory;
     // use Searchable;
@@ -39,6 +49,9 @@ abstract class BaseModel extends Model
     public static $snakeAttributes = true;
 
     protected $perPage = 30;
+=======
+    use HasFactory;
+>>>>>>> 1242904 (.)
 
     /**
      * @var string
@@ -50,10 +63,17 @@ abstract class BaseModel extends Model
      */
     protected $fillable = ['id'];
     /**
+<<<<<<< HEAD
      * @var array<string, string>
      */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
+=======
+     * @var array
+     */
+    protected $casts = [
+        //'published_at' => 'datetime:Y-m-d', // da verificare
+>>>>>>> 1242904 (.)
     ];
 
     /**
@@ -69,10 +89,17 @@ abstract class BaseModel extends Model
      */
     public $incrementing = true;
     /**
+<<<<<<< HEAD
      * @var array<int, string>
      */
     protected $hidden = [
         // 'password'
+=======
+     * @var array
+     */
+    protected $hidden = [
+        //'password'
+>>>>>>> 1242904 (.)
     ];
     /**
      * @var bool
@@ -85,6 +112,7 @@ abstract class BaseModel extends Model
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected static function newFactory() {
         return FactoryService::newFactory(static::class);
 =======
@@ -92,5 +120,10 @@ abstract class BaseModel extends Model
     {
         return FactoryService::newFactory(get_called_class());
 >>>>>>> f7ae34c (.)
+=======
+    protected static function newFactory()
+    {
+        return FactoryService::newFactory(get_called_class());
+>>>>>>> 1242904 (.)
     }
 }
