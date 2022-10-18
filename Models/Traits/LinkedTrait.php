@@ -4,6 +4,7 @@
 <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * ---.
  */
@@ -17,6 +18,11 @@
 =======
 <?php
 >>>>>>> b2f15d7 (.)
+=======
+/**
+ * ---.
+ */
+>>>>>>> 9c926b0 (.)
 
 declare(strict_types=1);
 
@@ -24,16 +30,21 @@ namespace Modules\Lang\Models\Traits;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Exception;
 =======
 >>>>>>> 1242904 (.)
 =======
 >>>>>>> b2f15d7 (.)
+=======
+use Exception;
+>>>>>>> 9c926b0 (.)
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\Relations\Relation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // use Illuminate\Support\Facades\URL;
@@ -1276,6 +1287,8 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\Relations\Relation;
+=======
+>>>>>>> 9c926b0 (.)
 //use Illuminate\Support\Facades\URL;
 //use Laravel\Scout\Searchable;
 use Illuminate\Support\Facades\App;
@@ -1363,9 +1376,17 @@ trait LinkedTrait {
         return $this->morphMany(Image::class, 'post');
     }
 
+<<<<<<< HEAD
     /* spostato in Favorite.php
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
     public function favorites() {
+=======
+    /*commento*/
+
+    /* spostato in Favorite.php
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+    public function favorites()  {
+>>>>>>> 9c926b0 (.)
         return $this->morphMany(Favorite::class, 'post');
     }
     */
@@ -1763,10 +1784,13 @@ trait LinkedTrait {
                 ->where('lang', $this->lang)
                 ->where('post.post_type', $this->post_type)
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //->limit(1)
 =======
 
 >>>>>>> 0e42143 (.)
+=======
+>>>>>>> 9c926b0 (.)
             ;
         });
         */
@@ -1828,10 +1852,13 @@ trait LinkedTrait {
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeWithPost($query, string $guid) {
+<<<<<<< HEAD
         return $query; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 =======
     public function scopeWithPost($query, string $guid)
     {
+=======
+>>>>>>> 9c926b0 (.)
         return $query; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 >>>>>>> b2f15d7 (.)
         /* depreated ??
@@ -1844,6 +1871,7 @@ trait LinkedTrait {
                 ->where('post.post_type', $this->post_type)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //->limit(1)
 =======
 
@@ -1851,6 +1879,8 @@ trait LinkedTrait {
 =======
                 //->limit(1)
 >>>>>>> b2f15d7 (.)
+=======
+>>>>>>> 9c926b0 (.)
             ;
         });
         */
