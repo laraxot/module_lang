@@ -65,15 +65,19 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+/*
 Route::middleware('auth:api')->get(
     '/lang', function (Request $request) {
         return $request->user();
     }
 );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cfb7936 (.)
 =======
 >>>>>>> b2f15d7 (.)
 =======
 >>>>>>> 7c8dc60 (.)
+=======
+*/
+>>>>>>> 0b905ca (.)
