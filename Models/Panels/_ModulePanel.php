@@ -12,8 +12,12 @@ use Modules\Xot\Models\Panels\XotBasePanel;
 class _ModulePanel extends XotBasePanel {
     public function actions(): array {
         return [
+<<<<<<< HEAD
             // new Actions\TestAction(),
             // new Actions\TestAction(),
+=======
+            //new Actions\TestAction(),
+>>>>>>> 72f9f7b (.)
         ];
     }
 }
