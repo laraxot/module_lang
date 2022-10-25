@@ -53,7 +53,7 @@ trait LinkedTrait {
      */
     public function post(): MorphOne {
         $models = TenantService::config('morph_map');
-        if (! is_array($models)) {
+        if (! \is_array($models)) {
             $models = [];
         }
         $class = static::class;
@@ -176,7 +176,7 @@ trait LinkedTrait {
 
     public function postType(): string {
         $models = config('morph_map');
-        if (! is_array($models)) {
+        if (! \is_array($models)) {
             $models = [];
         }
         $post_type = collect($models)->search(static::class);
@@ -265,8 +265,8 @@ trait LinkedTrait {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
 
-    /*
-     * param mixed $value
+    /**
+     * param mixed $value.
      *
      * throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * throws \ReflectionException
@@ -325,13 +325,13 @@ trait LinkedTrait {
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
-    /*
-     * @param mixed $value
+   /**
+    * @param mixed $value
     * deprecated
     *public function setRoutenameAttribute(?string $value) {
     *    return $this->setPostAttr(__FUNCTION__, $value);
     *}
-     */
+    */
 
     /* deprecated
     public function setRoutenameAttribute(?string $value) {
@@ -362,7 +362,7 @@ trait LinkedTrait {
        }
        */
        $post = $this->post;
-       if (null == $post) {
+       if (null === $post) {
            $this->post()->updateOrCreate($data);
        } else {
            $post->update($data);
@@ -463,17 +463,9 @@ trait LinkedTrait {
        return $this->post->urlLang($params);
    }
    */
-    /* deprecated ??
-   public function linkedFormFields():array {
-       $roots = Post::getRoots();
-
-        @phpstan-var view-string
-
-       $view = 'blog::admin.partials.'.Str::snake(class_basename($this));
-
-       return view()->make($view)->with('row', $this->post)->with($roots);
+    /** deprecated ??
    }
-   //*/
+     */
     // ------------------------------------
 
     /**

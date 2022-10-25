@@ -89,6 +89,6 @@ abstract class BaseModelLang extends Model {
      */
     protected static function newFactory() {
         return FactoryService::newFactory(static::class);
-		// return FactoryService::newFactory(get_called_class());
+        // return FactoryService::newFactory(get_called_class());
     }
 }
