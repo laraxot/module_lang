@@ -246,10 +246,29 @@ class Post extends Model {
 
     public const SEARCHABLE_FIELDS = ['title', 'guid', 'txt'];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f348b8b (.)
+>>>>>>> f9f8f99 (rebase)
     /**
      * @return array
      */
     public function toSearchableArray() {
+<<<<<<< HEAD
         return $this->only(self::SEARCHABLE_FIELDS);
     }
 }// end class
+<<<<<<< HEAD
+=======
+=======
+    public function toSearchableArray(): array {
+=======
+>>>>>>> f348b8b (.)
+        return $this->only(self::SEARCHABLE_FIELDS);
+    }
+}//end class
+>>>>>>> 13065fd (.)
+>>>>>>> f9f8f99 (rebase)
