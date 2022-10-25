@@ -14,7 +14,14 @@ class LangController extends Controller
      */
     public function index()
     {
-        return view('lang::index');
+        /**
+* @phpstan-var view-string
+*/
+$view='lang::index';
+$view_params=[
+   'view'=>$view,
+];
+return view($view,$view_params);
     }
 
     /**
@@ -23,7 +30,14 @@ class LangController extends Controller
      */
     public function create()
     {
-        return view('lang::create');
+        /**
+* @phpstan-var view-string
+*/
+$view='lang::create';
+$view_params=[
+   'view'=>$view,
+];
+return view($view,$view_params);
     }
 
     /**
@@ -43,7 +57,14 @@ class LangController extends Controller
      */
     public function show($id)
     {
-        return view('lang::show');
+        /**
+* @phpstan-var view-string
+*/
+$view='lang::show';
+$view_params=[
+   'view'=>$view,
+];
+return view($view,$view_params);
     }
 
     /**
@@ -53,7 +74,14 @@ class LangController extends Controller
      */
     public function edit($id)
     {
-        return view('lang::edit');
+        /**
+* @phpstan-var view-string
+*/
+$view='lang::edit';
+$view_params=[
+   'view'=>$view,
+];
+return view($view,$view_params);
     }
 
     /**
