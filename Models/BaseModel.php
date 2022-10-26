@@ -16,7 +16,6 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
-<<<<<<< HEAD
 abstract class BaseModel extends Model {
     use HasFactory;
     // use Searchable;
@@ -32,19 +31,6 @@ abstract class BaseModel extends Model {
     public static $snakeAttributes = true;
 
     protected $perPage = 30;
-<<<<<<< HEAD
-=======
-=======
-=======
-abstract class BaseModel extends Model
-{
->>>>>>> f7ae34c (.)
-    use Updater;
-    //use Searchable;
-    //use Cachable;
-    use HasFactory;
->>>>>>> 13065fd (.)
->>>>>>> a0605d2 (rebase)
 
     /**
      * @var string
@@ -90,18 +76,7 @@ abstract class BaseModel extends Model
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
-<<<<<<< HEAD
     protected static function newFactory() {
         return FactoryService::newFactory(static::class);
-<<<<<<< HEAD
-=======
-=======
-=======
-    protected static function newFactory()
-    {
->>>>>>> f7ae34c (.)
-        return FactoryService::newFactory(get_called_class());
->>>>>>> 13065fd (.)
->>>>>>> a0605d2 (rebase)
     }
 }
