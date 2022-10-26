@@ -11,7 +11,8 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreatePostsTable.
  */
-class CreateLangPostsTable extends XotBaseMigration {
+class CreateLangPostsTable extends XotBaseMigration
+{
     protected ?string $model_class = Post::class;
 
     /**
@@ -19,7 +20,8 @@ class CreateLangPostsTable extends XotBaseMigration {
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
