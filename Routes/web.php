@@ -12,21 +12,7 @@ declare(strict_types=1);
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-Route::prefix('lang')->group(function() {
+Route::prefix('lang')->group(function () {
     Route::get('/', 'LangController@index');
 });
->>>>>>> 13065fd (.)
-=======
-Route::prefix('lang')->group(
-    function () {
-        Route::get('/', 'LangController@index');
-    }
-);
->>>>>>> f7ae34c (.)
->>>>>>> a0605d2 (rebase)

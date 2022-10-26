@@ -21,20 +21,7 @@ Route::middleware('auth:api')->get(
     }
 );
 */
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
 Route::middleware('auth:api')->get('/lang', function (Request $request) {
     return $request->user();
 });
->>>>>>> 13065fd (.)
-=======
-Route::middleware('auth:api')->get(
-    '/lang', function (Request $request) {
-        return $request->user();
-    }
-);
->>>>>>> f7ae34c (.)
->>>>>>> a0605d2 (rebase)
