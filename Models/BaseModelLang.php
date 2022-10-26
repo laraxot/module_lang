@@ -33,6 +33,18 @@ abstract class BaseModelLang extends Model {
     public static $snakeAttributes = true;
 
     protected $perPage = 30;
+<<<<<<< HEAD
+=======
+=======
+ */
+abstract class BaseModelLang extends Model
+{
+    use Updater;
+    //use Searchable;
+    use LinkedTrait;
+    use HasFactory;
+>>>>>>> 13065fd (.)
+>>>>>>> a0605d2 (rebase)
 
     protected $connection = 'mysql'; // this will use the specified database connection
 
@@ -87,8 +99,20 @@ abstract class BaseModelLang extends Model {
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
+<<<<<<< HEAD
     protected static function newFactory() {
         return FactoryService::newFactory(static::class);
+<<<<<<< HEAD
         // return FactoryService::newFactory(get_called_class());
+=======
+		// return FactoryService::newFactory(get_called_class());
+=======
+=======
+    protected static function newFactory()
+    {
+>>>>>>> f7ae34c (.)
+        return FactoryService::newFactory(get_called_class());
+>>>>>>> 13065fd (.)
+>>>>>>> a0605d2 (rebase)
     }
 }

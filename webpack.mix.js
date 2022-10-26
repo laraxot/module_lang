@@ -7,7 +7,19 @@ require('laravel-mix-merge-manifest');
 mix.setPublicPath('../../public').mergeManifest();
 
 mix.js(__dirname + '/Resources/assets/js/app.js', 'js/lang.js')
+<<<<<<< HEAD
     .sass(__dirname + '/Resources/assets/sass/app.scss', 'css/lang.css');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    .sass(__dirname + '/Resources/assets/sass/app.scss', 'css/lang.css');
+=======
+    .sass( __dirname + '/Resources/assets/sass/app.scss', 'css/lang.css');
+>>>>>>> 13065fd (.)
+=======
+    .sass(__dirname + '/Resources/assets/sass/app.scss', 'css/lang.css');
+>>>>>>> f7ae34c (.)
+>>>>>>> a0605d2 (rebase)
 
 if (mix.inProduction()) {
     mix.version();

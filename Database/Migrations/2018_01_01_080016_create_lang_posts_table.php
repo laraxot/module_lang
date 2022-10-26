@@ -11,7 +11,8 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreatePostsTable.
  */
-class CreateLangPostsTable extends XotBaseMigration {
+class CreateLangPostsTable extends XotBaseMigration
+{
     protected ?string $model_class = Post::class;
 
     /**
@@ -19,8 +20,19 @@ class CreateLangPostsTable extends XotBaseMigration {
      *
      * @return void
      */
+<<<<<<< HEAD
     public function up() {
         // -- CREATE --
+<<<<<<< HEAD
+=======
+=======
+=======
+    public function up()
+    {
+>>>>>>> f7ae34c (.)
+        //-- CREATE --
+>>>>>>> e07d6f0 (.)
+>>>>>>> a0605d2 (rebase)
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
@@ -38,9 +50,25 @@ class CreateLangPostsTable extends XotBaseMigration {
                 $table->integer('author_id')->nullable();
                 $table->timestamps();
             }
+<<<<<<< HEAD
         );
 
         // -- UPDATE --
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        );
+
+        // -- UPDATE --
+=======
+            );
+=======
+        );
+>>>>>>> f7ae34c (.)
+
+        //-- UPDATE --
+>>>>>>> e07d6f0 (.)
+>>>>>>> a0605d2 (rebase)
         $this->tableUpdate(
             function (Blueprint $table) {
                 // if (!$this->hasColumn( 'post_type')) {
