@@ -99,6 +99,32 @@ class Post extends Model {
     protected $perPage = 30;
 
     // use Searchable;
+<<<<<<< HEAD
+=======
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUpdatedIp($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrlLang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
+ * @mixin  \Eloquent
+ *
+ * @property string|null $type
+ * @property string|null $price
+ * @property string|null $price_currency
+ * @property int|null    $views
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePriceCurrency($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereViews($value)
+ */
+class Post extends Model
+{
+    //use Cachable;
+    use Updater;
+    //use Searchable;
+>>>>>>> 13065fd (.)
+>>>>>>> a0605d2 (rebase)
     /**
      * @var string
      */
@@ -164,7 +190,8 @@ class Post extends Model {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
-    public function linkable() {
+    public function linkable()
+    {
         return $this->morphTo('post');
     }
 
@@ -190,7 +217,8 @@ class Post extends Model {
     // end function
     // -------------- MUTATORS ------------------
 
-    public function setTitleAttribute(string $value): void {
+    public function setTitleAttribute(string $value): void
+    {
         $this->attributes['title'] = $value;
         $this->attributes['guid'] = Str::slug($value);
     }
@@ -198,7 +226,8 @@ class Post extends Model {
     /**
      * Undocumented function.
      */
-    public function getTitleAttribute(?string $value): ?string {
+    public function getTitleAttribute(?string $value): ?string
+    {
         if (null !== $value) {
             return $value;
         }
@@ -213,6 +242,11 @@ class Post extends Model {
         return $value;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a0605d2 (rebase)
     /**
      * ---.
      */
@@ -225,6 +259,25 @@ class Post extends Model {
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
         }
         if (null === $value) {
+<<<<<<< HEAD
+=======
+=======
+    public function getGuidAttribute(?string $value): ?string {
+=======
+    public function getGuidAttribute(?string $value): ?string
+    {
+>>>>>>> f7ae34c (.)
+        if (is_string($value) && false === strpos($value, ' ')) {
+            return $value;
+        }
+        //dddx($this->title);
+        $value = $this->title;
+        if ('' == $value) {
+            $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
+        }
+        if (null == $value) {
+>>>>>>> 13065fd (.)
+>>>>>>> a0605d2 (rebase)
             $value = 'u-'.rand(1, 1000);
         }
         $value = Str::slug($value);
@@ -234,8 +287,19 @@ class Post extends Model {
         return $value;
     }
 
+<<<<<<< HEAD
     public function getTxtAttribute(?string $value): ?string {
         return null === $value ? '' : $value;
+<<<<<<< HEAD
+=======
+=======
+=======
+    public function getTxtAttribute(?string $value): ?string
+    {
+>>>>>>> f7ae34c (.)
+        return null == $value ? '' : $value;
+>>>>>>> 13065fd (.)
+>>>>>>> a0605d2 (rebase)
     }
 
     /*
@@ -256,6 +320,7 @@ class Post extends Model {
     /**
      * @return array
      */
+<<<<<<< HEAD
     public function toSearchableArray() {
 <<<<<<< HEAD
         return $this->only(self::SEARCHABLE_FIELDS);
@@ -267,6 +332,10 @@ class Post extends Model {
     public function toSearchableArray(): array {
 =======
 >>>>>>> f348b8b (.)
+=======
+    public function toSearchableArray()
+    {
+>>>>>>> f7ae34c (.)
         return $this->only(self::SEARCHABLE_FIELDS);
     }
 }//end class
