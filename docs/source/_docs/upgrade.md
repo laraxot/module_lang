@@ -11,7 +11,7 @@ Cms onsiste in un pacchetto PHP.
 
 Quindi per aggiornare basta dare il comando in console:
 
-composer update laraxot/module_job
+composer update laraxot/module_lang
 
 Assicurarsi di cancellare la cache delle viste di Laravel dopo l'aggiornamento:
 
@@ -26,5 +26,5 @@ Infine, se si sono pubblicati il file di configurazione o i modelli Blade, assic
 È possibile utilizzare il comando Artisan incorporato per visualizzare le versioni installate dei pacchetti:
 
 ```console
-php artisan module_job:show-versions
+php artisan module_lang:show-versions
 ```

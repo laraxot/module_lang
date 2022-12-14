@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'baseUrl' => 'https://laraxot.github.io/module_geo',
+    'baseUrl' => 'https://laraxot.github.io/module_lang',
     'production' => true,
 
     // DocSearch credentials

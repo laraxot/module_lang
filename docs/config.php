@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Support\Str;
 
-$moduleName = 'Job';
+$moduleName = 'Lang';
 
 return [
     'baseUrl' => '',

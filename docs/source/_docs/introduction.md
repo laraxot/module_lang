@@ -1,11 +1,11 @@
 ---
-title: Introducendo Job
-description: Introduzione a Module Geo
+title: Introducendo Lang
+description: Introduzione a Module Lang
 extends: _layouts.documentation
 section: content
 ---
 
-# Introducendo Lang {#introducendo-job}
+# Introducendo Lang {#introducendo-lang}
 
 
 Il module_lang in Laravel è un pacchetto che serve a gestire le traduzioni in lingua. 

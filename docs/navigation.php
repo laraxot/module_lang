@@ -7,13 +7,13 @@ return [
         'url' => '#',
         'children' => [
             'Introducendo '.$moduleName => [
-                'url' => 'docs/introduzione',
+                'url' => 'docs/introduction',
             ],
             'Installazione' => [
-                'url' => 'docs/installazione',
+                'url' => 'docs/installation',
             ],
             'Aggiornamenti' => [
-                'url' => 'docs/aggiornamenti',
+                'url' => 'docs/upgrade',
             ],
         ],
     ],
