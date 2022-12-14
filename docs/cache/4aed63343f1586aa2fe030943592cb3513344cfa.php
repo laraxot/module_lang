@@ -12,11 +12,16 @@
             ----------------
             <br/>Url: <?php echo e(url('/')); ?>
 
-            <?php $__currentLoopData = $docs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $doc): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>            
+            <?php $__currentLoopData = $docs;
+            $__env->addLoop($__currentLoopData);
+            foreach ($__currentLoopData as $doc) {
+                $__env->incrementLoopIndices();
+                $loop = $__env->getLastLoop(); ?>            
                 <h2><a href="<?php echo e(url($doc->getPath())); ?>"><?php echo e($doc->title); ?></a>
                     
                 </h2>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <?php } $__env->popLoop();
+            $loop = $__env->getLastLoop(); ?>
             ------------------
             
             <div class="flex my-10">
