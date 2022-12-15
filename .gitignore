@@ -1,4 +1,5 @@
 /vendor/
+vendor/
 node_modules/
 npm-debug.log
 yarn-error.log
@@ -25,4 +26,5 @@ Homestead.json
 *.stackdump
 *.cache
 *.lock
+*.log
 
