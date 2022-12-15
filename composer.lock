@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92caeeda06704a8e074b780e55e66584",
+    "content-hash": "9927384d4cb5ed6531cec0010972f41b",
     "packages": [
         {
             "name": "brick/math",
@@ -1349,6 +1349,136 @@
                 "source": "https://github.com/laravel/serializable-closure"
             },
             "time": "2022-09-08T13:45:54+00:00"
+        },
+        {
+            "name": "laraxot/module_cms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laraxot/module_cms.git",
+                "reference": "822226da03d847b865eacb277325c22db8df738b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laraxot/module_cms/zipball/822226da03d847b865eacb277325c22db8df738b",
+                "reference": "822226da03d847b865eacb277325c22db8df738b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.83|^9.30",
+                "laraxot/module_xot": "dev-master",
+                "php": "^8.1",
+                "phpdocumentor/type-resolver": "^1.5",
+                "spatie/laravel-package-tools": "^1.9.0"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.14",
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "inertiajs/inertia-laravel": "^0.6.3",
+                "nesbot/carbon": "^2.63",
+                "nette/php-generator": "^3.5",
+                "nunomaduro/larastan": "^2.0|^1.0.3",
+                "orchestra/testbench": "^6.24|^7.6",
+                "pestphp/pest": "^1.22",
+                "pestphp/pest-plugin-laravel": "^1.3",
+                "phpstan/extension-installer": "^1.1",
+                "phpunit/phpunit": "^9.3",
+                "spatie/invade": "^1.0",
+                "spatie/laravel-typescript-transformer": "^2.1.6",
+                "spatie/pest-plugin-snapshots": "^1.1",
+                "spatie/phpunit-snapshot-assertions": "^4.2",
+                "spatie/test-time": "^1.2"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Cms\\Providers\\CmsServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Cms\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Marco Sottana",
+                    "email": "marco.sottana@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "homepage": "https://laraxot.github.io/module_cms",
+            "support": {
+                "issues": "https://github.com/laraxot/module_cms/issues",
+                "source": "https://github.com/laraxot/module_cms/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/laraxot",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-12-15T10:00:00+00:00"
+        },
+        {
+            "name": "laraxot/module_tenant",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laraxot/module_tenant.git",
+                "reference": "2e839831a4341d41ee4dec9a8e06205b1c5bf4ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laraxot/module_tenant/zipball/2e839831a4341d41ee4dec9a8e06205b1c5bf4ba",
+                "reference": "2e839831a4341d41ee4dec9a8e06205b1c5bf4ba",
+                "shasum": ""
+            },
+            "require": {
+                "laraxot/module_xot": "dev-master"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Tenant\\Providers\\TenantServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Tenant\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Marco Xot",
+                    "email": "marco.sottana@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/laraxot/module_tenant/issues",
+                "source": "https://github.com/laraxot/module_tenant/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/laraxot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/marco76tv",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-12-14T10:29:45+00:00"
         },
         {
             "name": "laraxot/module_xot",
@@ -11312,7 +11442,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "laraxot/module_xot": 20
+        "laraxot/module_xot": 20,
+        "laraxot/module_cms": 20,
+        "laraxot/module_tenant": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -11320,5 +11452,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
