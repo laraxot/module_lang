@@ -2,9 +2,13 @@ includes:
     - phpstan-baseline.neon
 
 parameters:
-    level: 4
+    level: 1
     paths:
-        - Models
+        - .
+
+    excludePaths:
+        - ./vendor/*
+        - ./docs/*
+        - ./Tests/*
     
     checkMissingIterableValueType: false
-    treatPhpDocTypesAsCertain: false
