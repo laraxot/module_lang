@@ -2148,12 +2148,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laraxot/module_cms.git",
-                "reference": "493f9ed88551feda5cc8a305787e9580a85997de"
+                "reference": "3706a2368115b386c654d48ebc9f5f34957f9169"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laraxot/module_cms/zipball/493f9ed88551feda5cc8a305787e9580a85997de",
-                "reference": "493f9ed88551feda5cc8a305787e9580a85997de",
+                "url": "https://api.github.com/repos/laraxot/module_cms/zipball/3706a2368115b386c654d48ebc9f5f34957f9169",
+                "reference": "3706a2368115b386c654d48ebc9f5f34957f9169",
                 "shasum": ""
             },
             "require": {
@@ -2218,7 +2218,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-16T15:20:47+00:00"
+            "time": "2022-12-16T15:40:49+00:00"
         },
         {
             "name": "laraxot/module_lu",
@@ -2383,12 +2383,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laraxot/module_theme.git",
-                "reference": "f02df99ffcbc1eecb160c70720b2cdb8a988b216"
+                "reference": "7b322d0ab61f3319b2934e49fc5045f66e0f328f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laraxot/module_theme/zipball/f02df99ffcbc1eecb160c70720b2cdb8a988b216",
-                "reference": "f02df99ffcbc1eecb160c70720b2cdb8a988b216",
+                "url": "https://api.github.com/repos/laraxot/module_theme/zipball/7b322d0ab61f3319b2934e49fc5045f66e0f328f",
+                "reference": "7b322d0ab61f3319b2934e49fc5045f66e0f328f",
                 "shasum": ""
             },
             "require": {
@@ -2449,7 +2449,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-16T10:07:14+00:00"
+            "time": "2022-12-16T15:29:17+00:00"
         },
         {
             "name": "laraxot/module_xot",
