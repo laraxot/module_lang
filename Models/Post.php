@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 // use Laravel\Scout\Searchable;
 use Modules\Xot\Traits\Updater;
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
 
 /**
  * Modules\Lang\Models\Post.
@@ -87,6 +89,7 @@ use Modules\Xot\Traits\Updater;
 class Post extends Model {
     // use Cachable;
     use Updater;
+    use HasSlug;
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -159,6 +162,16 @@ class Post extends Model {
         return inAdmin() ? 'guid' : 'post_id';
     }
     */
+
+    /**
+     * Get the options for generating the slug.
+     */
+    public function getSlugOptions(): SlugOptions {
+        return SlugOptions::create()
+            ->generateSlugsFrom('title')
+            ->saveSlugsTo('guid');
+    }
+
     // -------- relationship ------
 
     /**
