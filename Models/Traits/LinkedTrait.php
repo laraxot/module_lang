@@ -19,11 +19,11 @@ use Illuminate\Support\Facades\App;
 // use Modules\Blog\Models\Favorite;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
+use Modules\Cms\Services\PanelService;
 use Modules\Cms\Services\RouteService;
 use Modules\Lang\Models\Post;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Models\Image;
-use Modules\Cms\Services\PanelService;
 
 // per dizionario morph
 
