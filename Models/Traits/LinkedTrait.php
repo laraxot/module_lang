@@ -23,7 +23,7 @@ use Modules\Cms\Services\RouteService;
 use Modules\Lang\Models\Post;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Models\Image;
-use Modules\Xot\Services\PanelService;
+use Modules\Cms\Services\PanelService;
 
 // per dizionario morph
 

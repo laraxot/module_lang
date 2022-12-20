@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 // --- Services --
 
 use Modules\Xot\Contracts\RowsContract;
-use Modules\Xot\Models\Panels\XotBasePanel;
+use Modules\Cms\Models\Panels\XotBasePanel;
 
 class PostPanel extends XotBasePanel {
     /**
