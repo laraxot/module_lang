@@ -349,7 +349,7 @@ trait LinkedTrait {
        }
        */
        $post = $this->post;
-       if (null === $post) {
+       if (null == $post) {
            $this->post()->updateOrCreate($data);
        } else {
            $post->update($data);

@@ -30,7 +30,7 @@ class LangField implements CastsAttributes {
      * @param mixed               $value
      * @param array               $attributes
      * @param string              $key
-     * @param \App\Models\Address $value
+     * @param string         $value
      *
      * @return array
      */
