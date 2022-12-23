@@ -93,12 +93,12 @@ trait LinkedTrait {
             ->where('lang', $lang);
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
-     */
+    /*
+        -- spatie
     public function images() {
         return $this->morphMany(Image::class, 'post');
     }
+    */
 
     /**
      * @param object|string $related
@@ -265,19 +265,7 @@ trait LinkedTrait {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
 
-    /**
-     * param mixed $value.
-     *
-     * throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * throws \ReflectionException
-     *
-     * return mixed
-     *
-     * throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * throws \ReflectionException
-     *
-     * @return mixed
-     */
+   
     /* deprecated
     public function getUrlAttribute($value) {
 
