@@ -265,7 +265,6 @@ trait LinkedTrait {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
 
-   
     /* deprecated
     public function getUrlAttribute($value) {
 
