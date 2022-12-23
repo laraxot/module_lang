@@ -25,12 +25,12 @@ class LangField implements CastsAttributes {
     /**
      * Prepare the given value for storage.
      *
-     * @param BaseModelLang       $model
-     * @param string              $key
-     * @param mixed               $value
-     * @param array               $attributes
-     * @param string              $key
-     * @param string         $value
+     * @param BaseModelLang $model
+     * @param string        $key
+     * @param mixed         $value
+     * @param array         $attributes
+     * @param string        $key
+     * @param string        $value
      *
      * @return array
      */
