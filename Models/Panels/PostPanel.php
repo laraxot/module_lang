@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Models\Panels;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Modules\Lang\Models\Post;
 // --- Services --
 
-use Modules\Cms\Models\Panels\XotBasePanel;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Contracts\RowsContract;
+use Modules\Cms\Models\Panels\XotBasePanel;
 
 class PostPanel extends XotBasePanel {
     /**
@@ -25,10 +26,10 @@ class PostPanel extends XotBasePanel {
     /**
      * on select the option label.
      *
-     * @param mixed $row
+     * @param Post $row
      */
     public function optionLabel($row): string {
-        return $row->area_define_name;
+        return (string)$row->title;
     }
 
     /**
