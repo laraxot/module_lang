@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Models\Panels;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Modules\Lang\Models\Post;
 // --- Services --
 
-use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Contracts\RowsContract;
 use Modules\Cms\Models\Panels\XotBasePanel;
+use Modules\Lang\Models\Post;
+use Modules\Xot\Contracts\RowsContract;
 
 class PostPanel extends XotBasePanel {
     /**
@@ -29,7 +29,7 @@ class PostPanel extends XotBasePanel {
      * @param Post $row
      */
     public function optionLabel($row): string {
-        return (string)$row->title;
+        return (string) $row->title;
     }
 
     /**
