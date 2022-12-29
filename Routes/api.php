@@ -22,6 +22,6 @@ Route::middleware('auth:api')->get(
 );
 */
 
-//Route::middleware('auth:api')->get('/lang', function (Request $request) {
+// Route::middleware('auth:api')->get('/lang', function (Request $request) {
 //    return $request->user();
-//});
+// });
