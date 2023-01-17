@@ -223,7 +223,7 @@ class Post extends Model {
         }
         $this->title = $value;
 
-       
+
         $this->save(); dddx('qui');
 
         return $value;
