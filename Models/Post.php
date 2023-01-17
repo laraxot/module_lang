@@ -204,25 +204,35 @@ class Post extends Model {
     // -------------- MUTATORS ------------------
 
     public function setTitleAttribute(string $value): void {
+        
         $this->attributes['title'] = $value;
         $this->attributes['guid'] = Str::slug($value);
+        
     }
 
     /**
      * Undocumented function.
      */
     public function getTitleAttribute(?string $value): ?string {
+       
         if (null !== $value) {
+           
             return $value;
         }
+        
         if (isset($this->attributes['post_type']) && $this->attributes['post_id']) {
+           
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
+           
         } else {
+           
             $value = $this->post_type.' '.$this->post_id;
+            
         }
         $this->title = $value;
+       
         $this->save();
-
+      
         return $value;
     }
 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ---.
  */
@@ -35,11 +36,14 @@ use Modules\Xot\Models\Image;
  * @property \Modules\LU\Models\User|null $user
  * @property \Modules\Lang\Models\Post    $post
  */
-trait LinkedTrait {
+trait LinkedTrait
+{
     /**
      * @return string
      */
-    public function getRouteKeyName() {
+    public function getRouteKeyName()
+    {
+
         return RouteService::inAdmin() ? 'id' : 'guid';
     }
 
@@ -51,9 +55,11 @@ trait LinkedTrait {
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * @throws \ReflectionException
      */
-    public function post(): MorphOne {
+    public function post(): MorphOne
+    {
+
         $models = TenantService::config('morph_map');
-        if (! \is_array($models)) {
+        if (!\is_array($models)) {
             $models = [];
         }
         $class = static::class;
@@ -76,20 +82,22 @@ trait LinkedTrait {
             );
         }
 
-        return $this->morphOne(Post::class, 'post')// , null, 'id')
+        return $this->morphOne(Post::class, 'post') // , null, 'id')
             ->where('lang', App::getLocale());
     }
 
-    public function posts(): MorphMany {
-        return $this->morphMany(Post::class, 'post')// , null, 'id')
+    public function posts(): MorphMany
+    {
+        return $this->morphMany(Post::class, 'post') // , null, 'id')
             ->where('lang', App::getLocale());
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne
      */
-    public function postLang(string $lang) {
-        return $this->morphOne(Post::class, 'post')// , null, 'id')
+    public function postLang(string $lang)
+    {
+        return $this->morphOne(Post::class, 'post') // , null, 'id')
             ->where('lang', $lang);
     }
 
@@ -103,34 +111,36 @@ trait LinkedTrait {
     /**
      * @param object|string $related
      */
-    public function getTableMorph($related, bool $inverse): string {
+    public function getTableMorph($related, bool $inverse): string
+    {
         if ($inverse) {
-            $pivot = static::class.'Morph';
+            $pivot = static::class . 'Morph';
         } else {
             if (\is_string($related)) {
-                $pivot = $related.'Morph';
+                $pivot = $related . 'Morph';
             } else {
-                $pivot = \get_class($related).'Morph';
+                $pivot = \get_class($related) . 'Morph';
             }
         }
 
         return $pivot;
     }
 
-    public function morphRelatedWithKey(string $related, bool $inverse, string $table_key): MorphToMany {
+    public function morphRelatedWithKey(string $related, bool $inverse, string $table_key): MorphToMany
+    {
         $name = 'post';
         $pivot = $this->getTableMorph($related, $inverse);
         // $pivot_fields = app($pivot)->getFillable();
         $model_name = Str::snake(class_basename($this));
         $related_name = Str::snake(class_basename($related));
         if ($inverse) {
-            $foreignPivotKey = $model_name.'_id';
+            $foreignPivotKey = $model_name . '_id';
             $relatedPivotKey = $table_key;
             $parentKey = 'id';
             $relatedKey = $table_key;
         } else {
             $foreignPivotKey = $table_key;
-            $relatedPivotKey = $related_name.'_id';
+            $relatedPivotKey = $related_name . '_id';
             $parentKey = $table_key;
             $relatedKey = 'id';
         }
@@ -150,7 +160,8 @@ trait LinkedTrait {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function morphRelated(string $related, bool $inverse = false, ?string $table_key = null) {
+    public function morphRelated(string $related, bool $inverse = false, ?string $table_key = null)
+    {
         $name = 'post';
         $pivot = $this->getTableMorph($related, $inverse);
         $pivot_fields = app($pivot)->getFillable();
@@ -174,9 +185,10 @@ trait LinkedTrait {
 
     // ------- mutators -------------
 
-    public function postType(): string {
+    public function postType(): string
+    {
         $models = config('morph_map');
-        if (! \is_array($models)) {
+        if (!\is_array($models)) {
             $models = [];
         }
         $post_type = collect($models)->search(static::class);
@@ -187,11 +199,13 @@ trait LinkedTrait {
         return (string) $post_type;
     }
 
-    public function getUserHandleAttribute(?string $value): ?string {
+    public function getUserHandleAttribute(?string $value): ?string
+    {
         return $this->user->handle ?? $value;
     }
 
-    public function getPostTypeAttribute(?string $value): ?string {
+    public function getPostTypeAttribute(?string $value): ?string
+    {
         if (null !== $value) {
             return $value;
         }
@@ -207,7 +221,8 @@ trait LinkedTrait {
         */
     }
 
-    public function getLangAttribute(?string $value): ?string {
+    public function getLangAttribute(?string $value): ?string
+    {
         if (null !== $value) {
             return $value;
         }
@@ -220,7 +235,8 @@ trait LinkedTrait {
     /**
      * @return string|null
      */
-    public function getPostAttr(string $func, ?string $value) {
+    public function getPostAttr(string $func, ?string $value)
+    {
         $str0 = 'get';
         $str1 = 'Attribute';
         $name = substr($func, \strlen($str0), -\strlen($str1));
@@ -245,23 +261,28 @@ trait LinkedTrait {
 
     // ---- da mettere i mancanti ---
 
-    public function getTitleAttribute(?string $value): ?string {
+    public function getTitleAttribute(?string $value): ?string
+    {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
 
-    public function getSubtitleAttribute(?string $value): ?string {
+    public function getSubtitleAttribute(?string $value): ?string
+    {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
 
-    public function getGuidAttribute(?string $value): ?string {
+    public function getGuidAttribute(?string $value): ?string
+    {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
 
-    public function getImageSrcAttribute(?string $value): ?string {
+    public function getImageSrcAttribute(?string $value): ?string
+    {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
 
-    public function getTxtAttribute(?string $value): ?string {
+    public function getTxtAttribute(?string $value): ?string
+    {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
 
@@ -279,17 +300,20 @@ trait LinkedTrait {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
     */
-    public function setTitleAttribute(?string $value): void {
+    public function setTitleAttribute(?string $value): void
+    {
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
-    public function setSubtitleAttribute(?string $value): void {
+    public function setSubtitleAttribute(?string $value): void
+    {
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
-    public function setGuidAttribute(?string $value): void {
+    public function setGuidAttribute(?string $value): void
+    {
         if (('' === $value || null === $value) && null !== $this->post) {
-            $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
+            $this->post->guid = Str::slug($this->attributes['title'] . ' ' . $this->attributes['subtitle']);
             $res = $this->post->save();
         }
     }
@@ -300,25 +324,28 @@ trait LinkedTrait {
     }
     */
 
-    public function setImageSrcAttribute(?string $value): void {
+    public function setImageSrcAttribute(?string $value): void
+    {
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
-    public function setTxtAttribute(?string $value): void {
+    public function setTxtAttribute(?string $value): void
+    {
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
-    public function setUrlAttribute(?string $value): void {
+    public function setUrlAttribute(?string $value): void
+    {
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
-   /**
-    * @param mixed $value
-    * deprecated
-    *public function setRoutenameAttribute(?string $value) {
-    *    return $this->setPostAttr(__FUNCTION__, $value);
-    *}
-    */
+    /**
+     * @param mixed $value
+     * deprecated
+     *public function setRoutenameAttribute(?string $value) {
+     *    return $this->setPostAttr(__FUNCTION__, $value);
+     *}
+     */
 
     /* deprecated
     public function setRoutenameAttribute(?string $value) {
@@ -328,19 +355,20 @@ trait LinkedTrait {
     */
     // --- attribute e' risertvato
 
-   /**
-    * @param mixed $value
-    */
-   public function setPostAttr(string $func, $value): void {
-       $str0 = 'set';
-       $str1 = 'Attribute';
-       $name = substr($func, \strlen($str0), -\strlen($str1));
-       $name = Str::snake($name);
-       $data = [$name => $value];
-       $data['lang'] = App::getLocale();
-       // $this->post->$name=$value;
-       // $res=$this->post->save();
-       /*
+    /**
+     * @param mixed $value
+     */
+    public function setPostAttr(string $func, $value): void
+    {
+        $str0 = 'set';
+        $str1 = 'Attribute';
+        $name = substr($func, \strlen($str0), -\strlen($str1));
+        $name = Str::snake($name);
+        $data = [$name => $value];
+        $data['lang'] = App::getLocale();
+        // $this->post->$name=$value;
+        // $res=$this->post->save();
+        /*
        Else branch is unreachable because previous condition is always true.
        if (\is_object($this->post)) {
            $this->post->update($data);
@@ -348,13 +376,18 @@ trait LinkedTrait {
            $this->post()->updateOrCreate($data);
        }
        */
-       $post = $this->post;
-       if (null == $post) {
-           $this->post()->updateOrCreate($data);
-       } else {
-           $post->update($data);
-       }
-       /*
+
+        $post = $this->post;
+        if (null == $post) {
+
+            dddx($this->post()->updateOrCreate(['title'=>'test']));
+            $this->post()->updateOrCreate($data);
+            //dddx($data);
+
+        } else {
+            $post->update($data);
+        }
+        /*
        $rows=$this->post();
        $sql = Str::replaceArray('?', $rows->getBindings(), $rows->toSql());
        dddx(
@@ -367,8 +400,8 @@ trait LinkedTrait {
            ]
        );
        */
-       unset($this->attributes[$name]);
-   }
+        unset($this->attributes[$name]);
+    }
 
     /*//deprecated ??
    public function urlActFunc($func, $value) {
@@ -460,20 +493,21 @@ trait LinkedTrait {
      *
      * @return Model|\Modules\Lang\Models\BaseModelLang|null
      */
-    public function item(string $guid) {
+    public function item(string $guid)
+    {
         $post = app(Post::class);
         $post_table = $post->getTable();
         // $post_table = with(new Post())->getTable();
         if (RouteService::inAdmin()) {
-            $rows = $this->join($post_table, $post_table.'.post_id', '=', $this->getTable().'.id')
+            $rows = $this->join($post_table, $post_table . '.post_id', '=', $this->getTable() . '.id')
                 ->where('lang', $this->lang)
-                ->where($post_table.'.post_id', $guid)
-                ->where($post_table.'.post_type', $this->post_type);
+                ->where($post_table . '.post_id', $guid)
+                ->where($post_table . '.post_type', $this->post_type);
         } else {
-            $rows = $this->join($post_table, $post_table.'.post_id', '=', $this->getTable().'.id')
+            $rows = $this->join($post_table, $post_table . '.post_id', '=', $this->getTable() . '.id')
                 ->where('lang', $this->lang)
-                ->where($post_table.'.guid', $guid)
-                ->where($post_table.'.post_type', $this->post_type);
+                ->where($post_table . '.guid', $guid)
+                ->where($post_table . '.post_type', $this->post_type);
         }
 
         /*
@@ -498,7 +532,8 @@ trait LinkedTrait {
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * @throws \ReflectionException
      */
-    public function fixItemLang(string $item_guid): void {
+    public function fixItemLang(string $item_guid): void
+    {
         $item_guid = str_replace('%20', '%', $item_guid);
         $item_guid = str_replace(' ', '%', $item_guid);
         $panel = PanelService::make()->get($this);
@@ -522,11 +557,12 @@ trait LinkedTrait {
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopeOfItem($query, string $guid) {
+    public function scopeOfItem($query, string $guid)
+    {
         // getRouteKeyName
         if (RouteService::inAdmin()) {
             return $query->where('post_id', $guid);
-        // return $query->where('post.post_id',$guid);
+            // return $query->where('post.post_id',$guid);
         } else {
             return $query->whereHas(
                 'post',
@@ -542,7 +578,8 @@ trait LinkedTrait {
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopeWithPost($query, string $guid) {
+    public function scopeWithPost($query, string $guid)
+    {
         return $query; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         /* depreated ??
         $post_table = with(new Post())->getTable();
