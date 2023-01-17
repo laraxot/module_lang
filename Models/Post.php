@@ -211,7 +211,7 @@ class Post extends Model {
     /**
      * Undocumented function.
      */
-    public function getTitleAttribute(?string $value): ?string {
+    /*public function getTitleAttribute(?string $value): ?string {
         if (null !== $value) {
             return $value;
         }
@@ -223,10 +223,11 @@ class Post extends Model {
         }
         $this->title = $value;
 
-        $this->save();
+       
+        $this->save(); dddx('qui');
 
         return $value;
-    }
+    }*/
 
     /**
      * ---.
