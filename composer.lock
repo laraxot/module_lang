@@ -9606,6 +9606,7 @@
         },
         {
             "name": "inertiajs/inertia-laravel",
+<<<<<<< HEAD
             "version": "v0.6.9",
             "source": {
                 "type": "git",
@@ -9616,6 +9617,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/inertiajs/inertia-laravel/zipball/b983c6eb2fe7460df6170060cdd7b47b5ef6832a",
                 "reference": "b983c6eb2fe7460df6170060cdd7b47b5ef6832a",
+=======
+            "version": "v0.6.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inertiajs/inertia-laravel.git",
+                "reference": "c07625de0c1ba4d12d07e4063c56d813ef4a8e4c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inertiajs/inertia-laravel/zipball/c07625de0c1ba4d12d07e4063c56d813ef4a8e4c",
+                "reference": "c07625de0c1ba4d12d07e4063c56d813ef4a8e4c",
+>>>>>>> 6b34adb (Bump inertiajs/inertia-laravel from 0.6.6 to 0.6.8)
                 "shasum": ""
             },
             "require": {
@@ -9666,7 +9679,11 @@
             ],
             "support": {
                 "issues": "https://github.com/inertiajs/inertia-laravel/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/inertiajs/inertia-laravel/tree/v0.6.9"
+=======
+                "source": "https://github.com/inertiajs/inertia-laravel/tree/v0.6.8"
+>>>>>>> 6b34adb (Bump inertiajs/inertia-laravel from 0.6.6 to 0.6.8)
             },
             "funding": [
                 {
@@ -9674,7 +9691,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2023-01-17T01:02:51+00:00"
+=======
+            "time": "2023-01-14T13:48:00+00:00"
+>>>>>>> 6b34adb (Bump inertiajs/inertia-laravel from 0.6.6 to 0.6.8)
         },
         {
             "name": "mockery/mockery",
