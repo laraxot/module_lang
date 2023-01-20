@@ -10,8 +10,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 // use Laravel\Scout\Searchable;
 use Modules\Xot\Traits\Updater;
-use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
+use Modules\Xot\Models\Traits\HasSlug;
 
 /**
  * Modules\Lang\Models\Post.
