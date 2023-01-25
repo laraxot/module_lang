@@ -14,7 +14,8 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class ManageLangModuleAction.
  */
-class ManageLangModuleAction extends XotBasePanelAction {
+class ManageLangModuleAction extends XotBasePanelAction
+{
     public bool $onContainer = true; // onlyContainer
 
     public bool $onItem = true; // onlyContainer
@@ -23,14 +24,16 @@ class ManageLangModuleAction extends XotBasePanelAction {
 
     public string $module_name;
 
-    public function __construct(string $module_name) {
+    public function __construct(string $module_name)
+    {
         $this->module_name = $module_name;
     }
 
     /**
      * @return mixed
      */
-    public function handle() {
+    public function handle()
+    {
         /*$module = Module::find($this->module_name);
         dddx(
             [

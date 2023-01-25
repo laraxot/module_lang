@@ -7,7 +7,8 @@ namespace Modules\Lang\Casts;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use Modules\Lang\Models\BaseModelLang;
 
-class LangField implements CastsAttributes {
+class LangField implements CastsAttributes
+{
     /**
      * Cast the given value.
      *
@@ -18,7 +19,8 @@ class LangField implements CastsAttributes {
      *
      * @return mixed
      */
-    public function get($model, $key, $value, $attributes) {
+    public function get($model, $key, $value, $attributes)
+    {
         return $model->post->{$key};
     }
 
@@ -34,7 +36,8 @@ class LangField implements CastsAttributes {
      *
      * @return array
      */
-    public function set($model, $key, $value, $attributes) {
+    public function set($model, $key, $value, $attributes)
+    {
         $post = $model->post;
         $post->{$key} = $value;
         $res = tap($post)->save();
