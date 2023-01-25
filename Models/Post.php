@@ -216,11 +216,7 @@ class Post extends Model {
             return $value;
         }
 
-<<<<<<< HEAD
         if (! empty($this->attributes['post_type'])) {
-=======
-        if (!empty($this->attributes['post_type'])) {
->>>>>>> e6e81eb (.)
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
         } else {
             $value = $this->post_type.' '.$this->post_id;
