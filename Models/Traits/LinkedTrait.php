@@ -352,7 +352,7 @@ trait LinkedTrait {
 
         $post = $this->post;
         if (null == $post) {
-            dddx($this->post()->updateOrCreate(['title' => 'test']));
+            // dddx($this->post()->updateOrCreate(['title' => 'test']));
             $this->post()->updateOrCreate($data);
         // dddx($data);
         } else {

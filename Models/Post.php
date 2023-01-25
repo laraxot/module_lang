@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 // --- traits ---
 use Illuminate\Support\Str;
 // use Laravel\Scout\Searchable;
+use Modules\Xot\Models\Traits\HasSlug;
 use Modules\Xot\Traits\Updater;
-use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
 /**
@@ -211,23 +211,23 @@ class Post extends Model {
     /**
      * Undocumented function.
      */
-    /*public function getTitleAttribute(?string $value): ?string {
+    public function getTitleAttribute(?string $value): ?string {
         if (null !== $value) {
             return $value;
         }
 
-        if (isset($this->attributes['post_type']) && $this->attributes['post_id']) {
+        if (! empty($this->attributes['post_type'])) {
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
         } else {
             $value = $this->post_type.' '.$this->post_id;
         }
+
         $this->title = $value;
 
-
-        $this->save(); dddx('qui');
+        $this->save();
 
         return $value;
-    }*/
+    }
 
     /**
      * ---.
