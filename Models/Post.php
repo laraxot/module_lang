@@ -216,33 +216,7 @@ class Post extends Model {
             return $value;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 29b3034 (up)
         if (! empty($this->attributes['post_type'])) {
-=======
-        if (!empty($this->attributes['post_type'])) {
->>>>>>> e6e81eb (.)
-<<<<<<< HEAD
-=======
-        if (! empty($this->attributes['post_type'])) {
->>>>>>> 15a4b03 (Fix styling)
-=======
-        if (!empty($this->attributes['post_type'])) {
->>>>>>> 2ec0402 (.)
-=======
-        if (! empty($this->attributes['post_type'])) {
->>>>>>> 1acc60a (Fix styling)
-=======
->>>>>>> 29b3034 (up)
-=======
-        if (! empty($this->attributes['post_type'])) {
->>>>>>> 7586be1 (.)
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
         } else {
             $value = $this->post_type.' '.$this->post_id;
