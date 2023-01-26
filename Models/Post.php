@@ -12,6 +12,7 @@ use Illuminate\Support\Str;
 use Modules\Xot\Models\Traits\HasSlug;
 use Modules\Xot\Traits\Updater;
 use Spatie\Sluggable\SlugOptions;
+use Modules\Xot\Models\Traits\HasSlug;
 
 /**
  * Modules\Lang\Models\Post.

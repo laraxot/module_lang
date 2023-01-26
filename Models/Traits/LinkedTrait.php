@@ -352,7 +352,11 @@ trait LinkedTrait {
 
         $post = $this->post;
         if (null == $post) {
+<<<<<<< HEAD
             // dddx($this->post()->updateOrCreate(['title' => 'test']));
+=======
+            //dddx($this->post()->updateOrCreate(['title' => 'test']));
+>>>>>>> 257a23b (.)
             $this->post()->updateOrCreate($data);
         // dddx($data);
         } else {
