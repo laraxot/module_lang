@@ -355,6 +355,7 @@ trait LinkedTrait {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             // dddx($this->post()->updateOrCreate(['title' => 'test']));
 =======
             //dddx($this->post()->updateOrCreate(['title' => 'test']));
@@ -365,6 +366,9 @@ trait LinkedTrait {
 =======
             //dddx($this->post()->updateOrCreate(['title' => 'test']));
 >>>>>>> 11d112a (.)
+=======
+            // dddx($this->post()->updateOrCreate(['title' => 'test']));
+>>>>>>> 249730e (Fix styling)
             $this->post()->updateOrCreate($data);
         // dddx($data);
         } else {
