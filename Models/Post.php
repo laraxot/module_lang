@@ -86,8 +86,7 @@ use Spatie\Sluggable\SlugOptions;
  *
  * @mixin \Eloquent
  */
-class Post extends Model
-{
+class Post extends Model {
     // use Cachable;
     use Updater;
     use HasSlug;
@@ -167,8 +166,7 @@ class Post extends Model
     /**
      * Get the options for generating the slug.
      */
-    public function getSlugOptions(): SlugOptions
-    {
+    public function getSlugOptions(): SlugOptions {
         return SlugOptions::create()
             ->generateSlugsFrom('title')
             ->saveSlugsTo('guid');
@@ -179,8 +177,7 @@ class Post extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
-    public function linkable()
-    {
+    public function linkable() {
         return $this->morphTo('post');
     }
 
@@ -206,8 +203,7 @@ class Post extends Model
     // end function
     // -------------- MUTATORS ------------------
 
-    public function setTitleAttribute(string $value): void
-    {
+    public function setTitleAttribute(string $value): void {
         $this->attributes['title'] = $value;
         $this->attributes['guid'] = Str::slug($value);
     }
@@ -215,8 +211,7 @@ class Post extends Model
     /**
      * Undocumented function.
      */
-    public function getTitleAttribute(?string $value): ?string
-    {
+    public function getTitleAttribute(?string $value): ?string {
         if (null !== $value) {
             return $value;
         }
@@ -237,8 +232,7 @@ class Post extends Model
     /**
      * ---.
      */
-    public function getGuidAttribute(?string $value): ?string
-    {
+    public function getGuidAttribute(?string $value): ?string {
         if (\is_string($value) && '' !== $value && false === strpos($value, ' ')) {
             return $value;
         }
@@ -256,8 +250,7 @@ class Post extends Model
         return $value;
     }
 
-    public function getTxtAttribute(?string $value): ?string
-    {
+    public function getTxtAttribute(?string $value): ?string {
         return null === $value ? '' : $value;
     }
 
@@ -272,8 +265,7 @@ class Post extends Model
     /**
      * @return array
      */
-    public function toSearchableArray()
-    {
+    public function toSearchableArray() {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
 }// end class
