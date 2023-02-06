@@ -15,8 +15,7 @@ use Nwidart\Modules\Facades\Module;
 /**
  * Class ManageLangModule.
  */
-class ManageLangModule extends Component
-{
+class ManageLangModule extends Component {
     public string $module_name;
     public string $lang_name;
     public string $path;
@@ -28,8 +27,7 @@ class ManageLangModule extends Component
      */
     protected $listeners = ['updateArray'];
 
-    public function mount(string $module_name): void
-    {
+    public function mount(string $module_name): void {
         $this->module_name = $module_name;
         $lang = app()->getLocale();
         $path = Module::getModulePath($this->module_name);
@@ -41,8 +39,7 @@ class ManageLangModule extends Component
     /**
      * Undocumented function.
      */
-    public function render(): Renderable
-    {
+    public function render(): Renderable {
         // $model->translations  ???
 
         $files = File::files($this->path);
@@ -68,8 +65,7 @@ class ManageLangModule extends Component
     /**
      * Undocumented function.
      */
-    public function edit(string $lang_name): void
-    {
+    public function edit(string $lang_name): void {
         $this->lang_name = $lang_name;
         $mod_trad = $this->module_name.'::'.$this->lang_name;
         $form_data = Lang::get($mod_trad, []); // progressioni::prova
@@ -82,8 +78,7 @@ class ManageLangModule extends Component
     /**
      * Undocumented function.
      */
-    public function updateArray(array $form_data): void
-    {
+    public function updateArray(array $form_data): void {
         $filename = $this->path.'/'.$this->lang_name.'.php';
         ArrayService::save(['filename' => $filename, 'data' => $form_data]);
     }
