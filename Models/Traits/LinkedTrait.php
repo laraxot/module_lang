@@ -65,7 +65,7 @@ trait LinkedTrait {
             $panel = PanelService::make()->get($this);
             $alias = $panel->postType();
             $data[$alias] = $class;
-            TenantService::saveConfig(['name' => 'morph_map', 'data' => $data]);
+            TenantService::saveConfig('morph_map', $data);
             // throw new Exception('[class: '.$class.'][alias:'.$alias.']['.__LINE__.']['.class_basename(__CLASS__).']');
         }
 
