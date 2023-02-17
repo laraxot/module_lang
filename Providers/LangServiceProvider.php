@@ -18,7 +18,7 @@ class LangServiceProvider extends XotBaseServiceProvider {
     public string $module_name = 'lang';
 
     public function bootCallback(): void {
-        BladeService::registerComponents($this->module_dir.'/../View/Components', 'Modules\\Lang');
+       // BladeService::registerComponents($this->module_dir.'/../View/Components', 'Modules\\Lang');
     }
 
     public function registerCallback(): void {
