@@ -8,6 +8,7 @@ use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Lang;
 use Livewire\Component;
+use Modules\Cms\Actions\GetViewAction;
 use Modules\Xot\Services\ArrayService;
 use Modules\Xot\Services\FileService;
 use Nwidart\Modules\Facades\Module;
@@ -52,7 +53,7 @@ class ManageLangModule extends Component {
         /**
          * @phpstan-var view-string
          */
-        $view = 'xot::livewire.manage_lang_module';
+        $view = app(GetViewAction::class)->execute();
         $view_params = [
             'view' => $view,
             'files' => $files,
