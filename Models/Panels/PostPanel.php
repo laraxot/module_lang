@@ -46,7 +46,7 @@ class PostPanel extends XotBasePanel {
      *
      * @return RowsContract
      */
-    public static function indexQuery(array $data, $query) {
+    public function indexQuery(array $data, $query) {
         // return $query->where('user_id', $request->user()->id);
         return $query;
     }
