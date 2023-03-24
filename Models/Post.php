@@ -5,10 +5,11 @@ declare(strict_types=1);
 namespace Modules\Lang\Models;
 
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 // --- traits ---
-use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Model;
 // use Laravel\Scout\Searchable;
+use Illuminate\Support\Str;
 use Modules\Xot\Traits\Updater;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
@@ -91,6 +92,7 @@ class Post extends Model {
     // use Cachable;
     use Updater;
     use HasSlug;
+    use HasFactory;
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
