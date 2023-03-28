@@ -7,7 +7,7 @@ https://github.com/statikbe/laravel-filament-chained-translation-manager
 
 -----------------
 
-https://github.com/barryvdh/laravel-translation-manager?ref=madewithlaravel.com
+https://github.com/barryvdh/laravel-translation-manager
 
 
 ---
