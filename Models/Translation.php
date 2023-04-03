@@ -46,7 +46,8 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @mixin \Eloquent
  */
-class Translation extends Model {
+class Translation extends Model
+{
     protected $fillable = ['id', 'lang', 'value', 'created_at', 'updated_at', 'namespace', 'group', 'item'];
 
     public const STATUS_SAVED = 0;
@@ -55,11 +56,13 @@ class Translation extends Model {
     // protected $table = 'ltm_translations';
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function scopeOfTranslatedGroup($query, $group) {
+    public function scopeOfTranslatedGroup($query, $group)
+    {
         return $query->where('group', $group)->whereNotNull('value');
     }
 
-    public function scopeOrderByGroupKeys($query, $ordered) {
+    public function scopeOrderByGroupKeys($query, $ordered)
+    {
         if ($ordered) {
             $query->orderBy('group')->orderBy('key');
         }
@@ -67,7 +70,8 @@ class Translation extends Model {
         return $query;
     }
 
-    public function scopeSelectDistinctGroup($query) {
+    public function scopeSelectDistinctGroup($query)
+    {
         $select = '';
 
         switch (\DB::getDriverName()) {
