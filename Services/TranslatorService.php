@@ -12,7 +12,8 @@ use Illuminate\Events\Dispatcher;
 use Illuminate\Translation\Translator as LaravelTranslator;
 use Modules\Lang\Models\Translation;
 
-class TranslatorService extends LaravelTranslator {
+class TranslatorService extends LaravelTranslator
+{
     /** @var Dispatcher */
     protected $events;
 
@@ -24,7 +25,8 @@ class TranslatorService extends LaravelTranslator {
      *
      * @return string
      */
-    public function get($key, array $replace = [], $locale = null, $fallback = true) {
+    public function get($key, array $replace = [], $locale = null, $fallback = true)
+    {
         // Get without fallback
         $result = parent::get($key, $replace, $locale, false);
         if ($result === $key) {
@@ -43,7 +45,8 @@ class TranslatorService extends LaravelTranslator {
         $this->manager = $manager;
     }
     */
-    protected function notifyMissingKey($key) {
+    protected function notifyMissingKey($key)
+    {
         $lang = app()->getLocale();
         list($namespace, $group, $item) = $this->parseKey($key);
         $data = [
