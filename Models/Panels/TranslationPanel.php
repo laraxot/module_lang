@@ -180,6 +180,9 @@ class TranslationPanel extends XotBasePanel {
      * Get the actions available for the resource.
      */
     public function actions(): array {
-        return [];
+        return [
+            new Actions\PublishItemTransAction(),
+            new Actions\PublishContainerTransAction(),
+        ];
     }
 }
