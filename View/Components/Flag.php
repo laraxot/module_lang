@@ -11,14 +11,17 @@ use Modules\Cms\Actions\GetViewAction;
 /**
  * Undocumented class.
  */
-class Flag extends Component {
+class Flag extends Component
+{
     public string $name;
 
-    public function __construct(string $name) {
+    public function __construct(string $name)
+    {
         $this->name = $name;
     }
 
-    public function render(): Renderable {
+    public function render(): Renderable
+    {
         $view = app(GetViewAction::class)->execute();
         $view_params = [
             'view' => $view,
