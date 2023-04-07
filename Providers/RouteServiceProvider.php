@@ -6,7 +6,8 @@ namespace Modules\Lang\Providers;
 
 use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
-class RouteServiceProvider extends XotBaseRouteServiceProvider {
+class RouteServiceProvider extends XotBaseRouteServiceProvider
+{
     /**
      * The module namespace to assume when generating URLs to actions.
      */
@@ -16,15 +17,18 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider {
 
     protected string $module_ns = __NAMESPACE__;
 
-    public function bootCallback(): void {
+    public function bootCallback(): void
+    {
         $this->registerLang();
     }
 
-    public function registerCallback(): void {
+    public function registerCallback(): void
+    {
         // $this->registerLang();
     }
 
-    public function registerLang(): void {
+    public function registerLang(): void
+    {
         $locales = config('laravellocalization.supportedLocales');
         if (! \is_array($locales)) {
             // throw new \Exception('[.__LINE__.]['.class_basename(__CLASS__).']');

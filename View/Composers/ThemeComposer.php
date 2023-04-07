@@ -9,8 +9,10 @@ use Illuminate\Support\Facades\Route;
 /**
  * --.
  */
-class ThemeComposer {
-    public function languages() {
+class ThemeComposer
+{
+    public function languages()
+    {
         $lang = app()->getLocale();
         $langs = config('laravellocalization.supportedLocales');
         $langs = collect($langs)->map(
@@ -41,7 +43,8 @@ class ThemeComposer {
         return $langs;
     }
 
-    public function otherLanguages() {
+    public function otherLanguages()
+    {
         $curr = app()->getLocale();
         $langs = $this->languages()
             ->filter(function ($item) use ($curr) {
@@ -51,7 +54,8 @@ class ThemeComposer {
         return $langs;
     }
 
-    public function currentLang(string $field) {
+    public function currentLang(string $field)
+    {
         $curr = app()->getLocale();
         $lang = $this->languages()->get($curr);
 
