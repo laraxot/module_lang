@@ -254,6 +254,31 @@ trait LinkedTrait
             return $this->post->$name; // .'#NO-PIVOT';
         }
 
+        if($this->post==null && $this->getKey()!=null){
+            //Xdebug has detected a possible infinite loop, and aborted your script with a stack depth of '256' frames
+           //dddx(rowsToSql($this->post()));
+            $title=fake()->sentence();
+
+            $data=[
+                'post_type'=>Str::snake(class_basename($this)),
+                'post_id'=>$this->getKey(),
+                'guid'=>Str::slug($title),
+                'title'=>$title,
+                'lang'=>app()->getLocale(),
+            ];
+            
+           /*
+            $res=Post::firstOrCreate($data);
+            dddx([
+                'sql'=>rowsToSql($this->post()),
+                'data'=>$data,
+                'res'=>$res,
+            ]);
+            
+            //$res=$this->post()->create(['lang'=>app()->getLocale()]);
+            dddx($res);
+            //*/
+        }
         return $value;
     }
 
