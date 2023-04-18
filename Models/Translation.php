@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Modules\Lang\Models;
 
 use DB;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -56,12 +57,15 @@ class Translation extends Model
     // protected $table = 'ltm_translations';
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function scopeOfTranslatedGroup($query, $group)
+    /**
+     * Undocumented function.
+     */
+    public function scopeOfTranslatedGroup(Builder $query, string $group): Builder
     {
         return $query->where('group', $group)->whereNotNull('value');
     }
 
-    public function scopeOrderByGroupKeys($query, $ordered)
+    public function scopeOrderByGroupKeys(Builder $query, bool $ordered): Builder
     {
         if ($ordered) {
             $query->orderBy('group')->orderBy('key');
@@ -70,7 +74,7 @@ class Translation extends Model
         return $query;
     }
 
-    public function scopeSelectDistinctGroup($query)
+    public function scopeSelectDistinctGroup(Builder $query): Builder
     {
         $select = '';
 

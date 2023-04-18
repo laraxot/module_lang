@@ -27,7 +27,7 @@ class ThemeComposer
                 }
                 $url = '#'; // devo fare ancora front
                 if (inAdmin()) {
-                    $route_name = Route::currentRouteName();
+                    $route_name = strval(Route::currentRouteName());
                     $route_parameters = getRouteParameters();
                     $data = request()->all();
                     $route_parameters['lang'] = $k;
@@ -47,7 +47,7 @@ class ThemeComposer
         return $langs;
     }
 
-    public function otherLanguages()
+    public function otherLanguages(): Collection
     {
         $curr = app()->getLocale();
         $langs = $this->languages()
@@ -58,7 +58,7 @@ class ThemeComposer
         return $langs;
     }
 
-    public function currentLang(string $field)
+    public function currentLang(string $field): Collection
     {
         $curr = app()->getLocale();
         $lang = $this->languages()->get($curr);

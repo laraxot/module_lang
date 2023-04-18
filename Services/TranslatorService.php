@@ -46,6 +46,13 @@ class TranslatorService extends LaravelTranslator
         $this->manager = $manager;
     }
     */
+    /**
+     * Undocumented function.
+     *
+     * @param string $key
+     *
+     * @return void
+     */
     protected function notifyMissingKey($key)
     {
         $lang = app()->getLocale();
