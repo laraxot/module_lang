@@ -37,6 +37,9 @@ class TranslationData extends Data
         if (File::exists($filename)) {
             $data = File::getRequire($filename);
         }
+        if (! is_array($data)) {
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+        }
 
         return $data;
     }

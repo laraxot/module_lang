@@ -16,6 +16,11 @@ class PublishTranslationAction
 {
     use QueueableAction;
 
+    /**
+     * Undocumented function.
+     *
+     * @return void
+     */
     public function execute(TranslationData $row)
     {
         /*

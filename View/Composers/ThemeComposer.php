@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Lang\View\Composers;
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Route;
 
 /**
@@ -11,10 +12,13 @@ use Illuminate\Support\Facades\Route;
  */
 class ThemeComposer
 {
-    public function languages()
+    public function languages(): Collection
     {
         $lang = app()->getLocale();
         $langs = config('laravellocalization.supportedLocales');
+        if (! is_array($langs)) {
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+        }
         $langs = collect($langs)->map(
             function ($item, $k) {
                 $reg = collect(explode('_', $item['regional']))->first();

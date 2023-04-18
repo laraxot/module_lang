@@ -142,7 +142,18 @@ trait LinkedTrait
             $parentKey = $table_key;
             $relatedKey = 'id';
         }
-
+        $relation = null;
+        /*
+        @param  string  $related
+        * @param  string  $name
+        * @param  string|null  $table
+        * @param  string|null  $foreignPivotKey
+        * @param  string|null  $relatedPivotKey
+        * @param  string|null  $parentKey
+        * @param  string|null  $relatedKey
+        * @param  string|null  $relation
+        * @param  bool  $inverse
+        */
         return $this->morphToMany(
             $related,
             $name,
@@ -151,6 +162,7 @@ trait LinkedTrait
             $relatedPivotKey,
             $parentKey,
             $relatedKey,
+            $relation,
             $inverse
         );
     }

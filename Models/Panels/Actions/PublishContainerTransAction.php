@@ -24,7 +24,7 @@ class PublishContainerTransAction extends XotBasePanelAction
             ->where('value', '!=', null)
             ->get();
 
-        $rows = TranslationData::collection($rows);
+        $rows = TranslationData::collection($rows->all());
 
         foreach ($rows as $row) {
             app(PublishTranslationAction::class)->execute($row);
