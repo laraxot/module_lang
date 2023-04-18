@@ -25,6 +25,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string                          $namespace
  * @property string                          $group
  * @property string|null                     $item
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Translation newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Translation newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Translation ofTranslatedGroup($group)
@@ -42,6 +43,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Translation whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Translation whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Translation whereValue($value)
+ *
  * @mixin \Eloquent
  */
 class Translation extends Model
