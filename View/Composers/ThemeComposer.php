@@ -78,10 +78,15 @@ class ThemeComposer
         $curr = app()->getLocale();
         $lang = $this->languages()->first(
             function ($item) use ($curr) {
-                return 'id' == $curr;
+                if (! $item instanceof LangData) {
+                    throw new \Exception('['.__LINE__.']['.__FILE__.']');
+                }
+
+                return $item->id == $curr;
             }
         );
 
-        return $lang[$field];
+        return $lang->{$field};
+        // return $lang[$field];
     }
 }
