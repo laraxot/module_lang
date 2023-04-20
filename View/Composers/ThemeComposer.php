@@ -4,15 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Lang\View\Composers;
 
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Route;
+use Modules\Lang\Datas\LangData;
+use Spatie\LaravelData\DataCollection;
 
 /**
  * --.
  */
 class ThemeComposer
 {
-    public function languages(): Collection
+    /**
+     * Undocumented function.
+     *
+     * @return DataCollection<LangData>
+     */
+    public function languages(): DataCollection
     {
         $lang = app()->getLocale();
         $langs = config('laravellocalization.supportedLocales');
@@ -44,24 +50,37 @@ class ThemeComposer
             }
         );
 
-        return $langs;
+        return LangData::collection($langs->all());
     }
 
-    public function otherLanguages(): Collection
+    /**
+     * Undocumented function.
+     *
+     *  * @return DataCollection<LangData>
+     */
+    public function otherLanguages(): DataCollection
     {
         $curr = app()->getLocale();
         $langs = $this->languages()
             ->filter(function ($item) use ($curr) {
-                return $item['id'] != $curr;
+                if (! $item instanceof LangData) {
+                    throw new \Exception('['.__LINE__.']['.__FILE__.']');
+                }
+
+                return $item->id != $curr;
             });
 
         return $langs;
     }
 
-    public function currentLang(string $field): bool
+    public function currentLang(string $field): LangData
     {
         $curr = app()->getLocale();
-        $lang = $this->languages()->get($curr);
+        $lang = $this->languages()->first(
+            function ($item) use ($curr) {
+                return 'id' == $curr;
+            }
+        );
 
         return $lang[$field];
     }
