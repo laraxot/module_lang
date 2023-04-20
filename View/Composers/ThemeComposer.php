@@ -58,7 +58,7 @@ class ThemeComposer
         return $langs;
     }
 
-    public function currentLang(string $field)
+    public function currentLang(string $field): bool
     {
         $curr = app()->getLocale();
         $lang = $this->languages()->get($curr);
