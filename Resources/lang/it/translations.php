@@ -1,8 +1,11 @@
-<?php return array (
-  'tab' => 
-  array (
-    'index' => 'Indice',
-    'create' => 'Crea',
-    'edit' => 'Modifica',
-  ),
-);
+<?php
+
+declare(strict_types=1);
+
+return [
+    'tab' => [
+        'index' => 'Indice',
+        'create' => 'Crea',
+        'edit' => 'Modifica',
+    ],
+];
