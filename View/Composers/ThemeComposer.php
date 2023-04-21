@@ -73,7 +73,7 @@ class ThemeComposer
         return $langs;
     }
 
-    public function currentLang(string $field): LangData
+    public function currentLang(string $field): string
     {
         $curr = app()->getLocale();
         $lang = $this->languages()->first(
@@ -86,7 +86,6 @@ class ThemeComposer
             }
         );
 
-        return $lang->{$field};
-        // return $lang[$field];
+        return strval($lang->{$field});
     }
 }
