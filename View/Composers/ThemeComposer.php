@@ -87,9 +87,5 @@ class ThemeComposer
         );
 
         return strval($lang->{$field});
-<<<<<<< HEAD
-=======
-        // return $lang[$field];
->>>>>>> dcdf0a0 (up)
     }
 }
