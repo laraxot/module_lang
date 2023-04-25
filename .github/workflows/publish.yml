@@ -30,7 +30,7 @@ jobs:
       run: cd docs && npm run prod
 
     - name: CNAME
-      run: cd docs && echo "laraxot.github.io/module_geo" > ./build_production/CNAME
+      run: cd docs && echo "laraxot.github.io/module_lang" > ./build_production/CNAME
 
     - name: gh-pages
       uses: JamesIves/github-pages-deploy-action@v4.4.1
