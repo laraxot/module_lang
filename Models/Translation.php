@@ -13,19 +13,20 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Modules\Lang\Models\Translation
+ * Modules\Lang\Models\Translation.
  *
- * @property int $id
- * @property string|null $lang
- * @property string|null $key
- * @property string|null $value
- * @property string|null $created_by
- * @property string|null $updated_by
+ * @property int                             $id
+ * @property string|null                     $lang
+ * @property string|null                     $key
+ * @property string|null                     $value
+ * @property string|null                     $created_by
+ * @property string|null                     $updated_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string $namespace
- * @property string $group
- * @property string|null $item
+ * @property string                          $namespace
+ * @property string                          $group
+ * @property string|null                     $item
+ *
  * @method static Builder|Translation newModelQuery()
  * @method static Builder|Translation newQuery()
  * @method static Builder|Translation ofTranslatedGroup(string $group)
@@ -43,6 +44,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Translation whereUpdatedAt($value)
  * @method static Builder|Translation whereUpdatedBy($value)
  * @method static Builder|Translation whereValue($value)
+ *
  * @mixin \Eloquent
  */
 class Translation extends Model
