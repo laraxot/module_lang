@@ -13,38 +13,36 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Translation model.
+ * Modules\Lang\Models\Translation
  *
- * @property int                             $id
- * @property string|null                     $lang
- * @property string|null                     $key
- * @property string|null                     $value
- * @property string|null                     $created_by
- * @property string|null                     $updated_by
+ * @property int $id
+ * @property string|null $lang
+ * @property string|null $key
+ * @property string|null $value
+ * @property string|null $created_by
+ * @property string|null $updated_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string                          $namespace
- * @property string                          $group
- * @property string|null                     $item
- *
- * @method static \Illuminate\Database\Eloquent\Builder|Translation newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Translation newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Translation ofTranslatedGroup($group)
- * @method static \Illuminate\Database\Eloquent\Builder|Translation orderByGroupKeys($ordered)
- * @method static \Illuminate\Database\Eloquent\Builder|Translation query()
- * @method static \Illuminate\Database\Eloquent\Builder|Translation selectDistinctGroup()
- * @method static \Illuminate\Database\Eloquent\Builder|Translation whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Translation whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Translation whereGroup($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Translation whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Translation whereItem($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Translation whereKey($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Translation whereLang($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Translation whereNamespace($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Translation whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Translation whereUpdatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Translation whereValue($value)
- *
+ * @property string $namespace
+ * @property string $group
+ * @property string|null $item
+ * @method static Builder|Translation newModelQuery()
+ * @method static Builder|Translation newQuery()
+ * @method static Builder|Translation ofTranslatedGroup(string $group)
+ * @method static Builder|Translation orderByGroupKeys(bool $ordered)
+ * @method static Builder|Translation query()
+ * @method static Builder|Translation selectDistinctGroup()
+ * @method static Builder|Translation whereCreatedAt($value)
+ * @method static Builder|Translation whereCreatedBy($value)
+ * @method static Builder|Translation whereGroup($value)
+ * @method static Builder|Translation whereId($value)
+ * @method static Builder|Translation whereItem($value)
+ * @method static Builder|Translation whereKey($value)
+ * @method static Builder|Translation whereLang($value)
+ * @method static Builder|Translation whereNamespace($value)
+ * @method static Builder|Translation whereUpdatedAt($value)
+ * @method static Builder|Translation whereUpdatedBy($value)
+ * @method static Builder|Translation whereValue($value)
  * @mixin \Eloquent
  */
 class Translation extends Model
