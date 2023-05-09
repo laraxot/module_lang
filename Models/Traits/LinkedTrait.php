@@ -144,6 +144,11 @@ trait LinkedTrait
         }
         $relation = null;
 
+        /*
+        Builder $query, Model $parent, string $name, string $table, string $foreignPivotKey,
+        string $relatedPivotKey, string $parentKey, string $relatedKey, string|null $relationName = null,
+        bool $inverse = false
+        */
         return $this->morphToMany(
             $related,
             $name,
@@ -152,7 +157,7 @@ trait LinkedTrait
             $relatedPivotKey,
             $parentKey,
             $relatedKey,
-            //$relation,
+            null,
             $inverse
         );
     }
