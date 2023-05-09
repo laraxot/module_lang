@@ -8,7 +8,7 @@
 
     "require": {
         "php": "^8.1",
-        "illuminate/contracts": "^8.83|^9.30",
+        "illuminate/contracts": "^8.83|^9.30|^10.0",
         "laraxot/module_xot": "dev-master",
         "laraxot/module_cms": "dev-master",
         "laraxot/module_tenant": "dev-master",
