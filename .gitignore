@@ -27,6 +27,7 @@ Homestead.json
 *.cache
 *.lock
 *.log
+package-lock.json
 
 
 
