@@ -10,7 +10,7 @@
     <meta property="og:site_name" content="Modulo Lang" />
     <meta property="og:title" content="Modulo Lang" />
     <meta property="og:description" content="Modulo Lang" />
-    <meta property="og:url" content="https://laraxot.github.io/module_lang/404" />
+    <meta property="og:url" content="https://laraxot.github.io/module_lang/docs" />
     <meta property="og:image" content="https://laraxot.github.io/module_lang/assets/img/logo.png" />
     <meta property="og:type" content="website" />
 
@@ -54,18 +54,60 @@
             </header>
 
     <main role="main" class="w-full flex-auto">
-        <div class="flex flex-col items-center mt-32 text-gray-700">
-    <h1 class="text-6xl font-light leading-none mb-2">404</h1>
+            <h1>Doc Posts</h1>
+    
+            <h2><a href="/docs/installation">Installazione Automatizzata</a></h2>
+        <h3>By </h3>
+        &lt;h1 id=&quot;installazione&quot;&gt;Installazione&lt;/h1&gt;
 
-    <h2 class="text-3xl">Page not found</h2>
+&lt;p&gt;Un&#039;applicazione Laravel fresca è il modo ideale per iniziare con questo pacchetto.&lt;/p&gt;
 
-    <hr class="block w-full max-w-lg mx-auto my-8 border">
+&lt;p&gt;Per installare il bacchetto basta mettere il seguente comando nella linea di comando:&lt;/p&gt;
 
-    <p class="text-xl">
-        Need to update this page? See the <a title="404 Page Documentation" href="https://jigsaw.tighten.co/docs/custom-404-page/"> Jigsaw documentation</a>.
-    </p>
-</div>
-    </main>
+&lt;pre&gt;&lt;code class=&quot;language-console&quot;&gt;composer require laraxot/module_lang
+
+php artisan module_lang:install
+&lt;/code&gt;&lt;/pre&gt;
+
+            <h2><a href="/docs/introduction">Introducendo Lang</a></h2>
+        <h3>By </h3>
+        &lt;h1 id=&quot;introducendo-lang&quot;&gt;Introducendo Lang&lt;/h1&gt;
+
+&lt;p&gt;Il module_lang in Laravel è un pacchetto che serve a gestire le traduzioni in lingua.&lt;/p&gt;
+
+&lt;p&gt;In Laravel, le traduzioni servono a consentire all&#039;applicazione di mostrare testo in diverse lingue.&lt;/p&gt;
+
+&lt;p&gt;Ad esempio, se si sta costruendo un&#039;applicazione che dovrà essere utilizzata in Italia, Francia e Germania, si potrebbero creare file di lingua per ognuna di queste lingue che contengono le traduzioni del testo utilizzato nell&#039;applicazione.&lt;/p&gt;
+
+&lt;p&gt;In questo modo, quando l&#039;applicazione viene utilizzata in Italia, verrà visualizzato il testo tradotto in italiano;&lt;/p&gt;
+
+&lt;p&gt;quando viene utilizzata in Francia, verrà visualizzato il testo tradotto in francese, e così via.&lt;/p&gt;
+
+            <h2><a href="/docs/upgrade">Aggiornamenti</a></h2>
+        <h3>By </h3>
+        &lt;h1 id=&quot;aggiornamenti&quot;&gt;Aggiornamenti&lt;/h1&gt;
+
+&lt;p&gt;Cms onsiste in un pacchetto PHP.&lt;/p&gt;
+
+&lt;p&gt;Quindi per aggiornare basta dare il comando in console:&lt;/p&gt;
+
+&lt;p&gt;composer update laraxot/module_lang&lt;/p&gt;
+
+&lt;p&gt;Assicurarsi di cancellare la cache delle viste di Laravel dopo l&#039;aggiornamento:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-console&quot;&gt;php artisan view:clear
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Infine, se si sono pubblicati il file di configurazione o i modelli Blade, assicurarsi che le personalizzazioni siano aggiornate con i valori predefiniti.&lt;/p&gt;
+
+&lt;h3&gt;Verifica dei pacchetti installati&lt;/h3&gt;
+
+&lt;p&gt;È possibile utilizzare il comando Artisan incorporato per visualizzare le versioni installate dei pacchetti:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-console&quot;&gt;php artisan module_lang:show-versions
+&lt;/code&gt;&lt;/pre&gt;
+
+        </main>
 
     <script src="https://laraxot.github.io/module_lang/assets/build/js/main.js"></script>
 
