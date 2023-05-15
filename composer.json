@@ -1,11 +1,13 @@
 {
     "name": "laraxot/module_lang",
     "description": "",
-    "authors": [{
-        "name": "Marco Sottana",
-        "email": "marco.sottana@gmail.com"
-    }],
-
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com"
+        }
+    ],
     "require": {
         "php": "^8.1",
         "illuminate/contracts": "^9.0|^10.0",
@@ -41,7 +43,6 @@
             "Modules\\Lang\\": ""
         }
     },
-
     "scripts": {
         "post-autoload-dump": [
             "@php vendor/bin/testbench package:discover --ansi"
@@ -66,9 +67,7 @@
             "providers": [
                 "Modules\\Lang\\Providers\\LangServiceProvider"
             ],
-            "aliases": {
-
-            }
+            "aliases": {}
         }
     },
     "minimum-stability": "dev",
