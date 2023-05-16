@@ -18,9 +18,11 @@ parameters:
     bootstrapFiles:
         # - ./Services/vendor/autoload.php
         # - ./phpstan_constants.php
+        
 
     scanFiles:
         # - ./Helpers/Helper.php
+        - ./vendor/laraxot/module_xot/Helpers/Helper.php
 
     tmpDir: build/phpstan
     reportUnmatchedIgnoredErrors: false
