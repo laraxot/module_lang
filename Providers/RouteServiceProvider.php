@@ -39,7 +39,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
         if (! \is_array($langs)) {
             throw new \Exception('[.__LINE__.]['.class_basename(__CLASS__).']');
         }
-        $route_params = getRouteParameters();
+        $route_params = \getRouteParameters();
         $n = 1;
         if (inAdmin()) {
             $n = 3;
