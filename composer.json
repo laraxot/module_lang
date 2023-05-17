@@ -15,7 +15,7 @@
         "laraxot/module_cms": "dev-master",
         "laraxot/module_lu": "dev-master",
         "laraxot/module_tenant": "dev-master",
-        "laraxot/module_xot": "*",
+        "laraxot/module_xot": "dev-master",
         "spatie/laravel-package-tools": "^1.11.3",
         "spatie/laravel-sluggable": "^3.4"
     },
