@@ -16,7 +16,8 @@
         "laraxot/module_lu": "dev-master",
         "laraxot/module_tenant": "dev-master",
         "laraxot/module_xot": "*",
-        "spatie/laravel-package-tools": "^1.11.3"
+        "spatie/laravel-package-tools": "^1.11.3",
+        "spatie/laravel-sluggable": "^3.4"
     },
     "require-dev": {
         "laravel/pint": "^1.0",

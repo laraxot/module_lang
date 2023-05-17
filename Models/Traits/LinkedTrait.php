@@ -233,9 +233,9 @@ trait LinkedTrait
     }
 
     /**
-     * @return string|null
+     * ---.
      */
-    public function getPostAttr(string $func, ?string $value)
+    public function getPostAttr(string $func, ?string $value): ?string
     {
         $str0 = 'get';
         $str1 = 'Attribute';
@@ -252,7 +252,7 @@ trait LinkedTrait
             return $this->pivot->$name; // .'#PIVOT';
         }
 
-        if (isset($this->post) && \is_object($this->post)) {
+        if (isset($this->post) /* && \is_object($this->post) */) {
             return $this->post->$name; // .'#NO-PIVOT';
         }
 
