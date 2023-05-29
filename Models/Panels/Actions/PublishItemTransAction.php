@@ -19,9 +19,6 @@ class PublishItemTransAction extends XotBasePanelAction
 
     public string $icon = '<i class="fas fa-language"></i>';
 
-    /**
-     * @return mixed
-     */
     public function handle()
     {
         $row = TranslationData::from($this->row);

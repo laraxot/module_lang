@@ -15,9 +15,6 @@ class PublishContainerTransAction extends XotBasePanelAction
 
     public string $icon = '<i class="fas fa-language"></i>';
 
-    /**
-     * @return mixed
-     */
     public function handle()
     {
         $rows = Translation::where('item', '!=', null)

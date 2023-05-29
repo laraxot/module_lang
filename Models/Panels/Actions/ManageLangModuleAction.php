@@ -29,9 +29,6 @@ class ManageLangModuleAction extends XotBasePanelAction
         $this->module_name = $module_name;
     }
 
-    /**
-     * @return mixed
-     */
     public function handle()
     {
         /*$module = Module::find($this->module_name);
