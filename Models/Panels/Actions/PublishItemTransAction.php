@@ -13,7 +13,8 @@ use Modules\Lang\Datas\TranslationData;
 use Modules\Xot\Services\ArrayService;
 use Modules\Xot\Services\FileService;
 
-class PublishItemTransAction extends XotBasePanelAction {
+class PublishItemTransAction extends XotBasePanelAction
+{
     public bool $onItem = true; // onlyContainer
 
     public string $icon = '<i class="fas fa-language"></i>';
@@ -21,7 +22,8 @@ class PublishItemTransAction extends XotBasePanelAction {
     /**
      * ---.
      */
-    public function handle() {
+    public function handle()
+    {
         $row = TranslationData::from($this->row);
         app(PublishTranslationAction::class)->execute($row);
         /*
