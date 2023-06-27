@@ -33,7 +33,7 @@ use Modules\Xot\Models\Image;
 /**
  * Modules\Lang\Models\Traits\LinkedTrait.
  *
- * @property \Modules\LU\Models\User|null $user
+ * @property \Modules\User\Models\User|null $user
  * @property \Modules\Lang\Models\Post    $post
  */
 trait LinkedTrait
