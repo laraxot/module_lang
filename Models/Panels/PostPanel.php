@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Models\Panels;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 // --- Services --
 

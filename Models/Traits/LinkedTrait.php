@@ -34,7 +34,7 @@ use Modules\Xot\Models\Image;
  * Modules\Lang\Models\Traits\LinkedTrait.
  *
  * @property \Modules\User\Models\User|null $user
- * @property \Modules\Lang\Models\Post    $post
+ * @property \Modules\Lang\Models\Post      $post
  */
 trait LinkedTrait
 {
