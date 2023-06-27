@@ -36,7 +36,7 @@ abstract class BaseModel extends Model
     /**
      * @var string
      */
-    protected $connection = 'mysql'; // this will use the specified database conneciton
+    protected $connection = 'mysql'; // this will use the specified database connection
 
     /**
      * @var string[]
