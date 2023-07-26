@@ -7,9 +7,9 @@ namespace Modules\Lang\Models\Panels;
 use Illuminate\Http\Request;
 // --- Services --
 
+use Modules\Cms\Contracts\RowsContract;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Lang\Models\Post;
-use Modules\Cms\Contracts\RowsContract;
 
 class PostPanel extends XotBasePanel
 {

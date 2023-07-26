@@ -6,9 +6,9 @@ namespace Modules\Lang\Models\Panels;
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
+use Modules\Cms\Contracts\RowsContract;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Lang\Models\Translation;
-use Modules\Cms\Contracts\RowsContract;
 
 class TranslationPanel extends XotBasePanel
 {
