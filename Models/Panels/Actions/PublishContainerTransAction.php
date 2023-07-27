@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Models\Panels\Actions;
 
+use Illuminate\Contracts\Support\Responsable;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Actions\PublishTranslationAction;
 use Modules\Lang\Datas\TranslationData;
@@ -15,7 +16,8 @@ class PublishContainerTransAction extends XotBasePanelAction
 
     public string $icon = '<i class="fas fa-language"></i>';
 
-    public function handle()
+
+    public function handle():Responsable
     {
         $rows = Translation::where('item', '!=', null)
             ->where('value', '!=', null)
