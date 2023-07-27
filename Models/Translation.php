@@ -25,6 +25,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string                          $namespace
  * @property string                          $group
  * @property string|null                     $item
+ *
  * @method static Builder|Translation newModelQuery()
  * @method static Builder|Translation newQuery()
  * @method static Builder|Translation ofTranslatedGroup(string $group)
@@ -42,6 +43,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Translation whereUpdatedAt($value)
  * @method static Builder|Translation whereUpdatedBy($value)
  * @method static Builder|Translation whereValue($value)
+ *
  * @mixin IdeHelperTranslation
  * @mixin \Eloquent
  */
