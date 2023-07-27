@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace Modules\Lang\Models\Panels\Actions;
 
 use Exception;
+use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
-use Modules\Xot\Services\FileService;
-use Modules\Xot\Services\ArrayService;
-use Modules\Lang\Datas\TranslationData;
-use Illuminate\Contracts\Support\Responsable;
-use Modules\Lang\Actions\PublishTranslationAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+use Modules\Lang\Actions\PublishTranslationAction;
+use Modules\Lang\Datas\TranslationData;
+use Modules\Xot\Services\ArrayService;
+use Modules\Xot\Services\FileService;
 
 class PublishItemTransAction extends XotBasePanelAction
 {
@@ -22,6 +22,7 @@ class PublishItemTransAction extends XotBasePanelAction
 
     /**
      * ---.
+     *
      * @return Responsable
      */
     public function handle()

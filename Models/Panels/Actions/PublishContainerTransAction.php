@@ -16,8 +16,7 @@ class PublishContainerTransAction extends XotBasePanelAction
 
     public string $icon = '<i class="fas fa-language"></i>';
 
-
-    public function handle():Responsable
+    public function handle(): Responsable
     {
         $rows = Translation::where('item', '!=', null)
             ->where('value', '!=', null)
