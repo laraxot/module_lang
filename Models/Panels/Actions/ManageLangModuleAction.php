@@ -31,7 +31,7 @@ class ManageLangModuleAction extends XotBasePanelAction
         $this->module_name = $module_name;
     }
 
-    public function handle():View
+    public function handle(): View
     {
         /*$module = Module::find($this->module_name);
         dddx(

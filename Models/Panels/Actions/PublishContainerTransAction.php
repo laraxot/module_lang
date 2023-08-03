@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Models\Panels\Actions;
 
-use Modules\Lang\Models\Translation;
 use Illuminate\Http\RedirectResponse;
-use Modules\Lang\Datas\TranslationData;
-use Illuminate\Contracts\Support\Responsable;
-use Modules\Lang\Actions\PublishTranslationAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+use Modules\Lang\Actions\PublishTranslationAction;
+use Modules\Lang\Datas\TranslationData;
+use Modules\Lang\Models\Translation;
 
 class PublishContainerTransAction extends XotBasePanelAction
 {
