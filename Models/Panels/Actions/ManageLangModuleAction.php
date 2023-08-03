@@ -9,6 +9,8 @@ use Nwidart\Modules\Facades\Module;
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Services\FileService;
 */
+
+use Illuminate\Contracts\View\View;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 
 /**
@@ -29,7 +31,7 @@ class ManageLangModuleAction extends XotBasePanelAction
         $this->module_name = $module_name;
     }
 
-    public function handle()
+    public function handle():View
     {
         /*$module = Module::find($this->module_name);
         dddx(
