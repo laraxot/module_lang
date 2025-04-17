@@ -44,6 +44,7 @@ class LangServiceProvider extends XotBaseServiceProvider
             $trans = new TranslatorService($loader, $locale);
 
             $trans->setFallback($app['config']['app.fallback_locale']);
+
             /*
             if($app->bound('translation-manager')){
                 $trans->setTranslationManager($app['translation-manager']);

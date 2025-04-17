@@ -34,7 +34,7 @@ use Modules\Xot\Models\Image;
  * Modules\Lang\Models\Traits\LinkedTrait.
  *
  * @property \Modules\User\Models\User|null $user
- * @property \Modules\Lang\Models\Post      $post
+ * @property Post                           $post
  */
 trait LinkedTrait
 {
@@ -91,7 +91,7 @@ trait LinkedTrait
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     * @return MorphOne
      */
     public function postLang(string $lang)
     {
@@ -158,9 +158,9 @@ trait LinkedTrait
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     * @return MorphToMany
      */
-    public function morphRelated(string $related, bool $inverse = false, string $table_key = null)
+    public function morphRelated(string $related, bool $inverse = false, ?string $table_key = null)
     {
         $name = 'post';
         $pivot = $this->getTableMorph($related, $inverse);
@@ -403,7 +403,7 @@ trait LinkedTrait
         $post = $this->post;
         if (null == $post) {
             $this->post()->updateOrCreate($data);
-            // dddx($data);
+        // dddx($data);
         } else {
             $post->update($data);
         }
@@ -582,7 +582,7 @@ trait LinkedTrait
         // getRouteKeyName
         if (RouteService::inAdmin()) {
             return $query->where('post_id', $guid);
-            // return $query->where('post.post_id',$guid);
+        // return $query->where('post.post_id',$guid);
         } else {
             return $query->whereHas(
                 'post',
