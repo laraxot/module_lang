@@ -10,6 +10,6 @@
     "devDependencies": {
         "cross-env": "^7.0",
         "laravel-mix": "^6.0.49",
-        "laravel-mix-merge-manifest": "^0.1.2"
+        "laravel-mix-merge-manifest": "^2.1.0"
     }
 }
